@@ -1,0 +1,46 @@
+@keyframes moveX {
+	0% { transform: translateX(0); }
+	50% { transform: translateX(40px); }
+	100% { transform: translateX(0); }
+}
+@keyframes moveY {
+	0% { transform: translateY(0); }
+	50% { transform: translateY(30px); }
+	100% { transform: translateY(0); }
+}
+.bg-animate-x {
+	animation: moveX 6s ease-in-out infinite;
+}
+.bg-animate-y {
+	animation: moveY 8s ease-in-out infinite;
+}
+
+
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes spin_reverse {
+  to { transform: rotate(-360deg); }
+}
+@keyframes sweep {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes spin-reverse {
+  100% { transform: rotate(-360deg); }
+}
+
+.animate-spin-reverse {
+  animation: spin-reverse 4s linear infinite;
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+

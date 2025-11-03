@@ -1,0 +1,45 @@
+.flip-card {
+  perspective: 1000px;
+  width: 100%;
+  height: 320px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.flip-card-front {
+  background: white;
+}
+
+.flip-card-back {
+  /* Remove previous gradient */
+  /* background: linear-gradient(to bottom right, #1a2332, #0a1128); */
+  color: white;
+  transform: rotateY(180deg);
+}
+
+/* Optional: smooth button hover effect on back side */
+.flip-card-back span:hover {
+  transform: scale(1.05);
+}
