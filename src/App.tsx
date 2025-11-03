@@ -14,10 +14,10 @@ import NotFound from './pages/NotFound';
 import Home1 from './pages/Home1';
 import About from './pages/About';
 import Services from './pages/Services';
-import BusinessLocations from './pages/BusinessLocations';
-import CaseStudies from './pages/CaseStudies';
-import Testimonials from './pages/Testimonials';
-import Resources from './pages/Resources';
+// import BusinessLocations from './pages/BusinessLocations';
+// import CaseStudies from './pages/CaseStudies';
+// import Testimonials from './pages/Testimonials';
+// import Resources from './pages/Resources';
 import Contact from './pages/Contact';
 import OmanBusinessSetup from './pages/business-setup/Oman';
 import IranBusinessSetup from './pages/business-setup/Iran';
@@ -78,10 +78,10 @@ function App() {
               <Route path="/ar" element={<Home1 />} />
               <Route path="/about" element={<About />} />
               <Route path="/services" element={<Services />} />
-              <Route path="/business-locations" element={<BusinessLocations />} />
+              {/* <Route path="/business-locations" element={<BusinessLocations />} />
               <Route path="/case-studies" element={<CaseStudies />} />
               <Route path="/testimonials" element={<Testimonials />} />
-              <Route path="/resources" element={<Resources />} />
+              <Route path="/resources" element={<Resources />} /> */}
               <Route path="/services/:id" element={<ServiceDetail />} />
               <Route path="/business-setup/oman" element={<OmanBusinessSetup />} />
               <Route path="/business-setup/iran" element={<IranBusinessSetup />} />
