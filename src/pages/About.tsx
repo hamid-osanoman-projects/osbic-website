@@ -7,14 +7,17 @@ export default function About() {
   const { t } = useTranslation();
 
   const team = [
-    { name: "AYOOB SALEEM", roleKey: "about.team.roles.businessDevelopmentExecutive", image: "/images/TEAM/AYOOB.jpg" },
-    { name: "SUVAID MAHMOOD", roleKey: "about.team.roles.businessConsultant", image: "../public/images/TEAM/SUWAID.jpg" },
-    { name: "NAFIH NASSER", roleKey: "about.team.roles.businessConsultant", image: "../public/images/TEAM/NAFIH.jpg" },
-    { name: "AMEENA RAFEEK", roleKey: "about.team.roles.businessConsultant", image: "../public/images/TEAM/AMEENA.jpg" },
-    { name: "MISBA SADIA", roleKey: "about.team.roles.businessConsultant", image: "../public/images/TEAM/MISBA.jpg" },
-    { name: "SADAF ETEHAD", roleKey: "about.team.roles.businessConsultant", image: "../public/images/TEAM/SADAF.jpg" },
-    { name: "ALBIN THOMAS", roleKey: "about.team.roles.businessConsultant", image: "../public/images/TEAM/ALBIN.jpg" },
-  ];
+  { name: "AYOOB SALEEM", roleKey: "about.team.roles.businessDevelopmentExecutive", image: "/images/TEAM/AYOOB.JPG" },
+  { name: "SUVAID MAHMOOD", roleKey: "about.team.roles.businessConsultant", image: "/images/TEAM/SUWAID.JPG" },
+  { name: "NAFIH NASSER", roleKey: "about.team.roles.businessConsultant", image: "/images/TEAM/NAFIH.JPG" },
+  { name: "AMEENA RAFEEK", roleKey: "about.team.roles.businessConsultant", image: "/images/TEAM/AMEENA.JPG" },
+  { name: "MISBA SADIA", roleKey: "about.team.roles.businessConsultant", image: "/images/TEAM/MISBA.JPG" },
+  { name: "SADAF ETEHAD", roleKey: "about.team.roles.businessConsultant", image: "/images/TEAM/SADAF.JPG" },
+  { name: "ALBIN THOMAS", roleKey: "about.team.roles.businessConsultant", image: "/images/TEAM/ALBIN.JPG" },
+];
+
+
+
 
   const infoCards = [
     {
