@@ -7,7 +7,7 @@ export default function About() {
   const { t } = useTranslation();
 
   const team = [
-    { name: "AYOOB SALEEM", roleKey: "about.team.roles.businessDevelopmentExecutive", image: "../public/images/TEAM/AYOOB.jpg" },
+    { name: "AYOOB SALEEM", roleKey: "about.team.roles.businessDevelopmentExecutive", image: "/images/TEAM/AYOOB.jpg" },
     { name: "SUVAID MAHMOOD", roleKey: "about.team.roles.businessConsultant", image: "../public/images/TEAM/SUWAID.jpg" },
     { name: "NAFIH NASSER", roleKey: "about.team.roles.businessConsultant", image: "../public/images/TEAM/NAFIH.jpg" },
     { name: "AMEENA RAFEEK", roleKey: "about.team.roles.businessConsultant", image: "../public/images/TEAM/AMEENA.jpg" },
