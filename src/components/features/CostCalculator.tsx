@@ -158,7 +158,14 @@ const CostCalculator = ({ open, onOpenChange }: CostCalculatorProps) => {
     if (!validateStep()) return;
     setIsSubmitting(true);
 
-    const payload = { ...formData, timestamp: new Date().toISOString(), _token: WEB_APP_TOKEN };
+    // const payload = { ...formData, timestamp: new Date().toISOString(), _token: WEB_APP_TOKEN };
+    const payload = { 
+  ...formData,
+  timestamp: new Date().toISOString(),
+  processed: "Pending",   // ✅ default status
+  _token: WEB_APP_TOKEN
+};
+
 
     try {
       if (USE_NO_CORS) {

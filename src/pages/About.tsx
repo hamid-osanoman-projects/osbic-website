@@ -6,14 +6,74 @@ import { useTranslation, Trans } from "react-i18next";
 export default function About() {
   const { t } = useTranslation();
 
-  const team = [
-  { name: "AYOOB SALEEM", roleKey: "about.team.roles.businessDevelopmentExecutive", image: "/images/TEAM/AYOOB.JPG" },
-  { name: "SUVAID MAHMOOD", roleKey: "about.team.roles.businessConsultant", image: "/images/TEAM/SUWAID.JPG" },
-  { name: "NAFIH NASSER", roleKey: "about.team.roles.businessConsultant", image: "/images/TEAM/NAFIH.JPG" },
-  { name: "AMEENA RAFEEK", roleKey: "about.team.roles.businessConsultant", image: "/images/TEAM/AMEENA.JPG" },
-  { name: "MISBA SADIA", roleKey: "about.team.roles.businessConsultant", image: "/images/TEAM/MISBA.JPG" },
-  { name: "SADAF ETEHAD", roleKey: "about.team.roles.businessConsultant", image: "/images/TEAM/SADAF.JPG" },
-  { name: "ALBIN THOMAS", roleKey: "about.team.roles.businessConsultant", image: "/images/TEAM/ALBIN.JPG" },
+//   const team = [
+//   { name: "AYOOB SALEEM", roleKey: "about.team.roles.businessDevelopmentManager", image: "/images/TEAM/ayoob.3.jpeg" },
+//   { name: "SUVAID MAHMOOD", roleKey: "about.team.roles.businessDevelopmentExecutive", image: "/images/TEAM/suvia.1.JPG" },
+//   { name: "NAFIH NASSER", roleKey: "about.team.roles.businessDevelopmentExecutive", image: "/images/TEAM/nafi.1.jpg" },
+//   { name: "AMEENA RAFEEK", roleKey: "about.team.roles.businessDevelopmentExecutive", image: "/images/TEAM/ameena.1.jpg" },
+//   { name: "MISBA SADIA", roleKey: "about.team.roles.businessDevelopmentExecutive", image: "/images/TEAM/misba.1.jpg" },
+//   { name: "SADAF ETEHAD", roleKey: "about.team.roles.businessDevelopmentExecutive", image: "/images/TEAM/sadaf.2.jpg" },
+//   { name: "ALBIN THOMAS", roleKey: "about.team.roles.businessDevelopmentExecutive", image: "/images/TEAM/albin.1.jpg" },
+//   { name: "MAADIR", roleKey: "about.team.roles.businessDevelopmentExecutive", image: "/images/TEAM/maadir.1.jpg" },
+// ];
+
+const team = [
+  {
+    name: "Ayoob Saleem",
+    image: "/images/TEAM/ayoob.5.jpeg",
+    roleKey: "about.team.roles.businessDevelopmentManager",
+    objectPosition: "center center",
+    // scale: "scale-85", // zoom OUT 
+  },
+  {
+    name: "Suvaid Mahmood",
+    image: "/images/TEAM/suvia.2.JPG",
+    roleKey: "about.team.roles.businessDevelopmentExecutive",
+    objectPosition: "top center", // more headspace
+    // scale: "scale-100",
+  },
+  {
+    name: "Nafih Nasser",
+    image: "/images/TEAM/nafi.2.jpg",
+    roleKey: "about.team.roles.businessDevelopmentExecutive",
+    objectPosition: "top center",
+    // scale: "scale-100",
+  },
+  {
+    name: "Ameena Rafeek",
+    image: "/images/TEAM/ameena.1.jpg",
+    roleKey: "about.team.roles.businessDevelopmentExecutive",
+    objectPosition: "top center",
+    // scale: "scale-100",
+  },
+  {
+    name: "Misba Sadia",
+    image: "/images/TEAM/misba.1.jpg",
+    roleKey: "about.team.roles.businessDevelopmentExecutive",
+    objectPosition: "top center",
+    // scale: "scale-100",
+  },
+  {
+    name: "Sadaf Etehad",
+    image: "/images/TEAM/sadaf.2.jpg",
+    roleKey: "about.team.roles.businessDevelopmentExecutive",
+    objectPosition: "center center", // this one already perfect
+    // scale: "scale-100",
+  },
+  {
+    name: "Albin Thomas",
+    image: "/images/TEAM/albin.1.jpg",
+    roleKey: "about.team.roles.businessDevelopmentExecutive",
+    objectPosition: "top center",
+    // scale: "scale-100",
+  },
+  {
+    name: "Maadir",
+    image: "/images/TEAM/maadir.1.jpg",
+    roleKey: "about.team.roles.businessDevelopmentExecutive",
+    objectPosition: "center center",
+    // scale: "scale-100",
+  },
 ];
 
 
@@ -59,7 +119,7 @@ export default function About() {
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            src="/images/osbic-office.jpg"
+            src="/images/office.2.JPG"
             alt={t("about.story.officeAlt")}
             className="rounded-2xl shadow-xl object-cover"
           />
@@ -77,6 +137,9 @@ export default function About() {
             </p>
             <p className="text-gray-600 mb-4 leading-relaxed">
               {t("about.story.p2")}
+            </p>
+             <p className="text-gray-600 mb-4 leading-relaxed">
+              {t("about.story.p3")}
             </p>
           </motion.div>
         </div>
@@ -135,7 +198,7 @@ export default function About() {
             <div className="grid md:grid-cols-3 gap-10 items-center">
               <div>
                 <img
-                  src="/images/TEAM/founder.png"
+                  src="/images/IMG_3874.JPG"
                   alt={t("about.founder.name")}
                   className="rounded-xl shadow-lg w-full object-cover"
                 />
@@ -148,6 +211,9 @@ export default function About() {
                 <p className="text-gray-600 leading-relaxed">
                   {t("about.founder.bio")}
                 </p>
+                <p className="text-gray-600 leading-relaxed mt-4">
+                  {t("about.founder.bio1")}
+                </p>
               </div>
             </div>
           </div>
@@ -155,7 +221,7 @@ export default function About() {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-28 bg-gray-50">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -172,59 +238,43 @@ export default function About() {
             </p>
           </motion.div>
 
-          {/* Top Row */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto mb-8">
-            {team.slice(0, 4).map((member, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="text-center"
-              >
-                <div className="relative mb-4 group">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full aspect-square object-cover rounded-xl shadow-lg group-hover:shadow-2xl transition"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1a2332]/80 to-transparent opacity-0 group-hover:opacity-100 transition rounded-xl"></div>
-                </div>
-                <h3 className="text-lg font-semibold text-[#1a2332] mb-1">
-                  {member.name}
-                </h3>
-                <p className="text-sm text-gray-600">{t(member.roleKey)}</p>
-              </motion.div>
-            ))}
-          </div>
+          {/* Team Grid */}
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+  {team.map((member, index) => (
+    <motion.div
+      key={index}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: index * 0.1 }}
+      className="text-center"
+    >
+      <div className="relative mb-4 group">
+        {/* <img
+          src={member.image}
+          alt={member.name}
+          className="w-full h-72 object-cover object-center rounded-xl shadow-lg group-hover:shadow-2xl transition"
+        /> */}
+        <img
+  src={member.image}
+  alt={member.name}
+  className={`
+    w-full h-72 object-cover rounded-xl shadow-lg transition
+    ${member.objectPosition ? `object-[${member.objectPosition}]` : "object-center"}
+    group-hover:scale-100
+  `}
+/>
 
-          {/* Bottom Row */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {team.slice(4).map((member, index) => (
-              <motion.div
-                key={index + 4}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="text-center"
-              >
-                <div className="relative mb-4 group">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full aspect-square object-cover rounded-xl shadow-lg group-hover:shadow-2xl transition"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1a2332]/80 to-transparent opacity-0 group-hover:opacity-100 transition rounded-xl"></div>
-                </div>
-                <h3 className="text-lg font-semibold text-[#1a2332] mb-1">
-                  {member.name}
-                </h3>
-                <p className="text-sm text-gray-600">{t(member.roleKey)}</p>
-              </motion.div>
-            ))}
-          </div>
+        <div className="absolute inset-0 bg-gradient-to-t from-[#1a2332]/80 to-transparent opacity-0 group-hover:opacity-100 transition rounded-xl"></div>
+      </div>
+      <h3 className="text-lg font-semibold text-[#1a2332] mb-1">
+        {member.name}
+      </h3>
+      <p className="text-sm text-gray-600">{t(member.roleKey)}</p>
+    </motion.div>
+  ))}
+</div>
+
         </div>
       </section>
 
@@ -256,10 +306,10 @@ export default function About() {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="rounded-2xl overflow-hidden shadow-2xl max-w-6xl mx-auto"
+            className="rounded-2xl overflow-hidden shadow-2xl max-w-4xl mx-auto"
           >
             <img
-              src="/images/osbic-team.jpg"
+              src="/images/teampic.JPG"
               alt={t("about.group.imageAlt")}
               className="w-full object-cover"
             />
@@ -293,12 +343,12 @@ export default function About() {
             items-center justify-items-center
           ">
             {[
-              { name: "Maisarah Accounting", logo: "/images/maisarah-logo.png" },
-              { name: "Osan Studio", logo: "/images/osan-studio-logo.png" },
-              { name: "ASAS Service Center", logo: "/images/asas-logo.png" },
-              { name: "Maisarah Accounting", logo: "/images/maisarah-logo.png" },
-              { name: "Osan Studio", logo: "/images/osan-studio-logo.png" },
-              { name: "ASAS Service Center", logo: "/images/asas-logo.png" },
+              { name: "Maisarah Accounting", logo: "/images/Maisarah.png" },
+              { name: "Osan Studio", logo: "/OsanStudio.png" },
+              { name: "ASAS Service Center", logo: "/images/ASAS.png" },
+              { name: "Thamkeen Service Center", logo: "/images/TAMKEEN.png" },
+              { name: "Amer Service Center", logo: "/images/AMER.png" },
+              { name: "Nameer Properties", logo: "/Nameer Properties.png" },
             ].map((company, i) => (
               <motion.div
                 key={i}

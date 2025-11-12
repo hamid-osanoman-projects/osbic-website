@@ -136,8 +136,9 @@
   "story": {
     "heading": "Our Story",
     "officeAlt": "OSBIC Office",
-    "p1": "Founded in 2009, OSBIC International has grown from a local consultancy in Oman into a regional powerhouse offering end-to-end business setup, corporate, and government liaison services across the GCC.",
-    "p2": "With over 15 years of experience, our team has served 3,000+ clients across diverse industries — providing reliable, transparent, and innovative business solutions that drive growth and compliance."
+    "p1": "Founded in 2009, OSBIC International has grown from a local consultancy in Muscat, Oman, into one of the GCC’s leading business setup and corporate service providers.With over 15 years of expertise, OSBIC has helped more than 3,000 entrepreneurs, investors, and companies successfully establish and expand their businesses in Oman, the UAE, Saudi Arabia, Qatar, Bahrain, and other Gulf countries.",
+    "p2": "As a trusted business setup company in Oman, we offer end-to-end corporate services — including commercial registration (CR), company formation, visa and PRO services, and government liaison support.Whether you’re a foreign investor looking to start a new company in Oman or a local entrepreneur seeking to expand across the GCC, OSBIC ensures your setup process is compliant, transparent, and efficient.",
+    "p3":"Today, OSBIC continues to lead as a top-rated business consultancy in Oman, known for transparency, professionalism, and innovation. Our dedicated team ensures every client receives tailored business setup guidance, strategic advice, and seamless support throughout their journey in Oman and beyond."
   },
   "core": {
     "heading": "Our Core Principles",
@@ -162,14 +163,15 @@
     "sub": "Leadership that inspires trust, growth, and vision.",
     "name": "Abdullah Al-Hasani",
     "role": "Founder & CEO",
-    "bio": "Abdullah Al-Hasani founded OSBIC International with a mission to redefine corporate services across the GCC. His 20+ years of experience in business consulting and government relations have shaped OSBIC into a trusted regional partner for entrepreneurs and enterprises alike."
+    "bio": "Abdullah Al-Hasani is the Founder and Chief Executive Officer of OSBIC International, a leading business setup and corporate services firm based in Muscat, Oman. With over 20 years of experience in business consultancy, investment advisory, and government relations across the GCC, he established OSBIC with a vision to simplify company formation and empower entrepreneurs to grow their businesses in Oman and the wider Gulf region.",
+    "bio1": "Under his leadership, OSBIC International has become one of the most trusted names in business setup, corporate structuring, and PRO services—recognized for its transparency, innovation, and client-centric approach."
   },
   "team": {
     "heading": "Our Experts",
     "sub": "Experienced professionals committed to delivering excellence.",
     "roles": {
-      "businessDevelopmentExecutive": "Business Development Executive",
-      "businessConsultant": "Business Consultant"
+      "businessDevelopmentManager": "Business Development Manager",
+      "businessDevelopmentExecutive": "Business Development Executive"
     }
   },
   "group": {
