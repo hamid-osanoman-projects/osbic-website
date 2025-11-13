@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import {
   Building2,
@@ -11,9 +11,11 @@ import {
   Briefcase,
 } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
+import { useState } from "react";
 
 export default function QatarBusinessSetup() {
   const { t, i18n } = useTranslation();
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const benefits = [
     t("businessSetup.qatar.benefits.b1"),
@@ -27,36 +29,41 @@ export default function QatarBusinessSetup() {
     t("businessSetup.qatar.benefits.b9"),
   ];
 
-  const businessTypes = [
-    {
-      title: t("businessSetup.qatar.types.llc.title"),
-      description: t("businessSetup.qatar.types.llc.desc"),
-      ownership: t("businessSetup.qatar.types.llc.ownership"),
-      minCapital: "QAR 200,000",
-      setup: "10-14 " + t("businessSetup.global.days"),
-    },
-    {
-      title: t("businessSetup.qatar.types.qfc.title"),
-      description: t("businessSetup.qatar.types.qfc.desc"),
-      ownership: t("businessSetup.qatar.types.qfc.ownership"),
-      minCapital: "QAR 1,000",
-      setup: "7-10 " + t("businessSetup.global.days"),
-    },
-    {
-      title: t("businessSetup.qatar.types.branch.title"),
-      description: t("businessSetup.qatar.types.branch.desc"),
-      ownership: t("businessSetup.qatar.types.branch.ownership"),
-      minCapital: t("businessSetup.qatar.types.branch.cap"),
-      setup: "14-21 " + t("businessSetup.global.days"),
-    },
-    {
-      title: t("businessSetup.qatar.types.rep.title"),
-      description: t("businessSetup.qatar.types.rep.desc"),
-      ownership: t("businessSetup.qatar.types.rep.ownership"),
-      minCapital: t("businessSetup.qatar.types.rep.cap"),
-      setup: "10-15 " + t("businessSetup.global.days"),
-    },
-  ];
+  // const businessTypes = [
+  //   {
+  //     title: t("businessSetup.qatar.businessTypes.types.title"),
+  //     description: t("businessSetup.qatar.businessTypes.llc.desc"),
+  //     ownership: t("businessSetup.qatar.businessTypes.llc.ownership"),
+  //     minCapital: "QAR 200,000",
+  //     setup: "10-14 " + t("businessSetup.global.days"),
+  //   },
+  //   {
+  //     title: t("businessSetup.qatar.types.qfc.title"),
+  //     description: t("businessSetup.qatar.types.qfc.desc"),
+  //     ownership: t("businessSetup.qatar.types.qfc.ownership"),
+  //     minCapital: "QAR 1,000",
+  //     setup: "7-10 " + t("businessSetup.global.days"),
+  //   },
+  //   {
+  //     title: t("businessSetup.qatar.types.branch.title"),
+  //     description: t("businessSetup.qatar.types.branch.desc"),
+  //     ownership: t("businessSetup.qatar.types.branch.ownership"),
+  //     minCapital: t("businessSetup.qatar.types.branch.cap"),
+  //     setup: "14-21 " + t("businessSetup.global.days"),
+  //   },
+  //   {
+  //     title: t("businessSetup.qatar.types.rep.title"),
+  //     description: t("businessSetup.qatar.types.rep.desc"),
+  //     ownership: t("businessSetup.qatar.types.rep.ownership"),
+  //     minCapital: t("businessSetup.qatar.types.rep.cap"),
+  //     setup: "10-15 " + t("businessSetup.global.days"),
+  //   },
+  // ];
+   const businessTypesData = t("businessSetup.qatar.businessTypes", { returnObjects: true }) as {
+  title: string;
+  description: string;
+  types: { title: string; description: string }[];
+};
 
   const setupSteps = [
     {
@@ -174,59 +181,77 @@ export default function QatarBusinessSetup() {
         </div>
       </section>
 
-      {/* Business Types */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-6">
+      {/* BUSINESS TYPES - Qatar */}
+{/* BUSINESS TYPES - Qatar */}
+<section className="py-20 bg-gray-50">
+  <div className="container mx-auto px-6">
+    {/* Section Header */}
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      className="text-center mb-16"
+    >
+      <h2 className="text-4xl font-semibold text-[#0f172a] mb-4">
+        {t("businessSetup.qatar.businessTypes.title")}
+      </h2>
+      <p className="text-gray-600">
+        {t("businessSetup.qatar.businessTypes.description")}
+      </p>
+    </motion.div>
+
+    {/* Accordion List */}
+    <ul className="grid md:grid-cols-2 gap-4 text-lg items-start">
+  {businessTypesData.types.map((type, index) => (
+    <motion.li
+      key={index}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: index * 0.05 }}
+      onClick={() => setActiveIndex(activeIndex === index ? null : index)}
+      className="flex flex-col bg-white rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer border-l-4 border-transparent hover:border-[#42A5E1] overflow-hidden"
+      layout
+    >
+      <div className="flex items-center justify-between p-5">
+        <span className="font-medium text-gray-800 transition-colors group-hover:text-[#42A5E1]">
+          {type.title}
+        </span>
+        <motion.svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-5 w-5 text-gray-400 transition-colors group-hover:text-[#42A5E1]"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          animate={{ rotate: activeIndex === index ? 90 : 0 }}
+          transition={{ type: "spring", stiffness: 300, damping: 25 }}
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+        </motion.svg>
+      </div>
+
+      <AnimatePresence>
+        {activeIndex === index && (
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
+            layout
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.25 }}
+            className="px-5 pb-4 text-gray-600 border-t border-gray-100 text-sm leading-relaxed"
           >
-            <h2 className="text-4xl font-semibold text-[#0f172a] mb-4">{t("businessSetup.qatar.types.title")}</h2>
+            {type.description}
           </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.li>
+  ))}
+</ul>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {businessTypes.map((type, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition"
-              >
-                <h3 className="text-2xl font-semibold text-[#42A5E1] mb-3">{type.title}</h3>
-                <p className="text-gray-600 mb-6">{type.description}</p>
+  </div>
+</section>
 
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3">
-                    <Users className="text-[#42A5E1]" size={20} />
-                    <div>
-                      <div className="text-sm text-gray-500">{t("businessSetup.qatar.types.ownership")}</div>
-                      <div className="font-medium text-gray-700">{type.ownership}</div>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <DollarSign className="text-[#42A5E1]" size={20} />
-                    <div>
-                      <div className="text-sm text-gray-500">{t("businessSetup.qatar.types.capital")}</div>
-                      <div className="font-medium text-gray-700">{type.minCapital}</div>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Clock className="text-[#42A5E1]" size={20} />
-                    <div>
-                      <div className="text-sm text-gray-500">{t("businessSetup.qatar.types.time")}</div>
-                      <div className="font-medium text-gray-700">{type.setup}</div>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       {/* Setup Process */}
       <section className="py-20 bg-white">

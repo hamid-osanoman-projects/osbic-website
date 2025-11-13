@@ -469,36 +469,9 @@
             "minimumCapital": "Minimum Capital",
             "setupTime": "Setup Time"
           },
-          "types": [
-            {
-              "title": "Limited Liability Company (LLC)",
-              "description": "Most popular business structure for foreign investors",
-              "ownership": "Minimum 30% Omani ownership required for mainland",
-              "minCapital": "OMR 20,000",
-              "setup": "10-14 days"
-            },
-            {
-              "title": "Free Zone Company",
-              "description": "Perfect for international business operations",
-              "ownership": "100% foreign ownership allowed",
-              "minCapital": "OMR 1,000",
-              "setup": "7-10 days"
-            },
-            {
-              "title": "Branch Office",
-              "description": "Extension of parent company in Oman",
-              "ownership": "100% foreign ownership",
-              "minCapital": "As per parent company",
-              "setup": "14-21 days"
-            },
-            {
-              "title": "Representative Office",
-              "description": "For market research and promotion",
-              "ownership": "100% foreign ownership",
-              "minCapital": "No minimum capital",
-              "setup": "10-15 days"
-            }
-          ]
+            "types": [ { "title": "Joint Partnership", "description": "A business owned by two or more partners sharing profits, losses, and responsibilities equally or as per agreement." }, { "title": "Individual Firm / Merchant", "description": "A single-owner business where the individual operates under their trade name, commonly used for small local businesses." }, { "title": "Limited Partnership", "description": "Includes both general and limited partners, where limited partners have restricted liability based on their investment." }, { "title": "Limited Liability Company (LLC)", "description": "Most common structure for SMEs in Oman, offering limited liability and flexible ownership options." }, { "title": "Sole Proprietor Company", "description": "Owned and managed by a single individual who assumes full responsibility for the company’s assets and obligations." }, { "title": "Closed Joint Stock Company", "description": "A company with shareholders (minimum 3) whose shares are privately held and not publicly traded." }, { "title": "Public Joint Stock Company", "description": "A larger corporate entity whose shares can be publicly offered, regulated under Omani commercial law." }, { "title": "Foreign Company Branch", "description": "Allows foreign companies to establish a branch in Oman for executing specific government or private contracts." }, { "title": "Commercial Representative Office", "description": "Set up mainly for marketing and research purposes, without engaging in direct trading activities." }, { "title": "Non-Profit Organization", "description": "Formed to support social, charitable, or cultural activities under Omani regulations." }, { "title": "Freelance", "description": "An individual professional license allowing self-employed individuals to offer services independently." } ]
+
+
         },
         "setupProcess": {
           "title": "Business Setup Process",
@@ -715,34 +688,22 @@
       "minimumCapital": "Minimum Capital",
       "setupTime": "Setup Time"
     },
-    "types": [
+     "types": [
       {
         "title": "Limited Liability Company (LLC)",
-        "description": "Common mainland structure for investors",
-        "ownership": "Minimum 25% Saudi ownership required for mainland",
-        "minCapital": "SAR 500,000",
-        "setup": "10-14 days"
+        "description": "Common mainland structure for investors."
       },
       {
         "title": "Joint Stock Company",
-        "description": "For larger scale operations and public offerings",
-        "ownership": "Flexible shareholding structure",
-        "minCapital": "SAR 2,000,000",
-        "setup": "20-30 days"
+        "description": "For larger scale operations and public offerings."
       },
       {
         "title": "Branch Office",
-        "description": "Extension of foreign company in KSA",
-        "ownership": "100% foreign ownership",
-        "minCapital": "As per parent company",
-        "setup": "14-21 days"
+        "description": "Extension of a foreign company in KSA."
       },
       {
         "title": "Representative Office",
-        "description": "For market research and promotion only",
-        "ownership": "100% foreign ownership",
-        "minCapital": "No minimum capital",
-        "setup": "10-15 days"
+        "description": "For market research and promotion only."
       }
     ]
   },
@@ -829,34 +790,31 @@
             "b8": "World-class infrastructure",
             "b9": "Stable government and policies"
           },
-          "types": {
-            "title": "Types of Business Structures",
-            "ownership": "Ownership",
-            "capital": "Minimum Capital",
-            "time": "Setup Time",
-            "llc": {
-              "title": "Limited Liability Company (LLC)",
-              "desc": "Common structure for mainland business operations",
-              "ownership": "Minimum 51% Qatari ownership required"
-            },
-            "qfc": {
-              "title": "Qatar Financial Centre (QFC) Company",
-              "desc": "International company structure with 100% foreign ownership",
-              "ownership": "100% foreign ownership allowed"
-            },
-            "branch": {
-              "title": "Branch Office",
-              "desc": "Extension of a foreign company in Qatar",
-              "ownership": "100% foreign ownership",
-              "cap": "As per parent company"
-            },
-            "rep": {
-              "title": "Representative Office",
-              "desc": "Only for marketing and market research activities",
-              "ownership": "100% foreign ownership",
-              "cap": "No minimum capital"
-            }
-          },
+          
+  "businessTypes": {
+    "title": "Types of Business Structures",
+    "description": "Choose the right business structure for your Qatar venture.",
+    "types": [
+      {
+        "title": "Limited Liability Company (LLC)",
+        "description": "Common structure for mainland business operations."
+      },
+      {
+        "title": "Qatar Financial Centre (QFC) Company",
+        "description": "International company structure with 100% foreign ownership."
+      },
+      {
+        "title": "Branch Office",
+        "description": "Extension of a foreign company in Qatar."
+      },
+      {
+        "title": "Representative Office",
+        "description": "Only for marketing and market research activities."
+      }
+    ]
+  
+},
+
           "steps": {
             "title": "Business Setup Process",
             "s1": { "title": "Business Activity & Name Selection", "desc": "Choose business activity and reserve trade name" },
@@ -915,26 +873,43 @@
             "b9": "GCC member"
           },
           "services": {
-  "title": "Our Services",
-  "s1": "Business Setup",
-  "s2": "Trade License",
-  "s3": "Work Visa Services",
-  "s4": "Partnership Arrangements",
-  "s5": "Legal Documentation",
-  "s6": "Ministry Approvals",
-  "s7": "Company Registration",
-  "s8": "Banking Support",
-  "desc": {
-    "s1": "Professional Business Setup services",
-    "s2": "Professional Trade License services",
-    "s3": "Professional Work Visa services",
-    "s4": "Professional Partnership services",
-    "s5": "Professional Legal Documentation services",
-    "s6": "Professional Ministry Approvals services",
-    "s7": "Professional Company Registration services",
-    "s8": "Professional Banking Support services"
-  }
-}
+      "title": "Our Professional Services",
+      "description": "Explore our comprehensive services designed to help businesses establish, operate, and thrive in Kuwait with ease and compliance.",
+      "types": [
+        {
+          "title": "Business Setup",
+          "description": "Expert guidance to establish your company in Kuwait, ensuring compliance with all local regulations and requirements."
+        },
+        {
+          "title": "Trade License",
+          "description": "Professional support in obtaining and renewing trade licenses for your business operations in Kuwait."
+        },
+        {
+          "title": "Work Visa Services",
+          "description": "Efficient processing of work visas for employees and executives, ensuring smooth onboarding and legal compliance."
+        },
+        {
+          "title": "Partnership Arrangements",
+          "description": "Facilitating partnership agreements and collaborations tailored to your business needs in Kuwait."
+        },
+        {
+          "title": "Legal Documentation",
+          "description": "Assistance in preparing and managing all legal documents required for corporate and operational compliance."
+        },
+        {
+          "title": "Ministry Approvals",
+          "description": "Guidance and support to obtain approvals from relevant ministries and regulatory authorities in Kuwait."
+        },
+        {
+          "title": "Company Registration",
+          "description": "Comprehensive services for registering your company, including CR, permits, and official documentation."
+        },
+        {
+          "title": "Banking Support",
+          "description": "Helping you open corporate bank accounts and manage financial operations effectively."
+        }
+      ]
+    }
 
       },
         "bahrain": {
@@ -963,29 +938,21 @@
             "b9": "Liberal economy"
           },
           "types": {
-            "title": "Business Structure Options",
-            "llc": {
-              "title": "Limited Liability Company (LLC)",
-              "desc": "Common legal form for small and medium businesses",
-              "ownership": "Up to 100% foreign ownership",
-              "minCapital": "BHD 10,000",
-              "setup": "5-10 days"
-            },
-            "branch": {
-              "title": "Branch Office",
-              "desc": "Extension of a foreign company in Bahrain",
-              "ownership": "100% parent company",
-              "minCapital": "As per parent company",
-              "setup": "7-12 days"
-            },
-            "rep": {
-              "title": "Representative Office",
-              "desc": "For marketing and liaison purposes only",
-              "ownership": "100% parent company",
-              "minCapital": "No minimum",
-              "setup": "5-8 days"
-            }
-          },
+  "title": "Business Structure Options",
+  "llc": {
+    "title": "Limited Liability Company (LLC)",
+    "desc": "A common legal form for small and medium-sized businesses in Bahrain."
+  },
+  "branch": {
+    "title": "Branch Office",
+    "desc": "An extension of a foreign company, allowing it to operate in Bahrain."
+  },
+  "rep": {
+    "title": "Representative Office",
+    "desc": "Used for marketing, liaison, and business promotion purposes only."
+  }
+},
+
           "docs": {
             "title": "Required Documents",
             "d1": "Passport copies of shareholders and directors",
@@ -1034,43 +1001,27 @@
           },
       
           "business_structures": {
-            "title": "Business Structure Options",
-            "types": [
-              {
-                "title": "Limited Liability Company (LLC)",
-                "description": "Most common legal form for foreign investors",
-                "ownership": "Up to 100% foreign ownership",
-                "minCapital": "IRR 10,000,000 (~USD 20)",
-                "setup": "10–15 days"
-              },
-              {
-                "title": "Joint Stock Company (Private or Public)",
-                "description": "Ideal for larger operations and investment projects",
-                "ownership": "Up to 100% foreign ownership",
-                "minCapital": "IRR 100,000,000 (~USD 200)",
-                "setup": "15–20 days"
-              },
-              {
-                "title": "Branch Office",
-                "description": "Extension of a foreign company in Iran",
-                "ownership": "100% parent company",
-                "minCapital": "As per parent company",
-                "setup": "15–20 days"
-              },
-              {
-                "title": "Representative Office",
-                "description": "For market research and liaison purposes",
-                "ownership": "100% parent company",
-                "minCapital": "As per parent company",
-                "setup": "10–12 days"
-              }
-            ],
-            "labels": {
-              "ownership": "Ownership",
-              "minimumCapital": "Minimum Capital",
-              "setupTime": "Setup Time"
-            }
-          },
+  "title": "Business Structure Options in Iran",
+  "types": [
+    {
+      "title": "Limited Liability Company (LLC)",
+      "description": "The most common legal form for foreign investors in Iran."
+    },
+    {
+      "title": "Joint Stock Company (Private or Public)",
+      "description": "Suitable for larger operations and investment projects."
+    },
+    {
+      "title": "Branch Office",
+      "description": "Extension of a foreign company to operate in Iran."
+    },
+    {
+      "title": "Representative Office",
+      "description": "For market research, marketing, and liaison purposes."
+    }
+  ]
+},
+
       
           "process": {
             "title": "Setup Process",
@@ -1147,20 +1098,45 @@
         "Strategic location"
       ]
     },
-    "services": {
-      "title": "Our Services",
-      "desc": "Comprehensive support for all India company registration and setup needs.",
-      "list": [
-        "Complete Private Limited Company assistance",
-        "Complete LLP Registration assistance",
-        "Complete Branch Office Setup assistance",
-        "Complete Liaison Office assistance",
-        "Complete GST Registration assistance",
-        "Complete Import Export Code assistance",
-        "Complete PAN & TAN Registration assistance",
-        "Complete Trademark Registration assistance"
-      ]
+   "services": {
+  "title": "Our Professional Services",
+  "description": "Comprehensive support for businesses to establish, register, and operate in India with compliance and efficiency.",
+  "types": [
+    {
+      "title": "Private Limited Company",
+      "description": "Complete assistance to register and manage your Private Limited Company in India, including all regulatory filings."
     },
+    {
+      "title": "LLP Registration",
+      "description": "Expert guidance for registering a Limited Liability Partnership, ensuring compliance with Indian laws."
+    },
+    {
+      "title": "Branch Office Setup",
+      "description": "Support in establishing a branch office in India as an extension of your foreign company."
+    },
+    {
+      "title": "Liaison Office",
+      "description": "Assistance in setting up a liaison office for marketing, communication, and coordination purposes."
+    },
+    {
+      "title": "GST Registration",
+      "description": "Professional services for registering under Goods and Services Tax, ensuring smooth taxation compliance."
+    },
+    {
+      "title": "Import Export Code (IEC)",
+      "description": "Guidance in obtaining IEC to legally engage in import and export activities across India."
+    },
+    {
+      "title": "PAN & TAN Registration",
+      "description": "Complete support to obtain PAN and TAN numbers for your company and employees in India."
+    },
+    {
+      "title": "Trademark Registration",
+      "description": "Assistance to register your trademarks in India and protect your brand legally."
+    }
+  ]
+}
+,
     "cta": {
       "title": "Ready to Start Your Business in India?",
       "desc": "Our expert team will guide you through every step of the process.",

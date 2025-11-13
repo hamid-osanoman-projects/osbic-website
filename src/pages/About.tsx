@@ -198,7 +198,7 @@ const team = [
             <div className="grid md:grid-cols-3 gap-10 items-center">
               <div>
                 <img
-                  src="/images/IMG_3874.JPG"
+                  src="/images/IMG_3928.jpg"
                   alt={t("about.founder.name")}
                   className="rounded-xl shadow-lg w-full object-cover"
                 />
@@ -309,7 +309,7 @@ const team = [
             className="rounded-2xl overflow-hidden shadow-2xl max-w-4xl mx-auto"
           >
             <img
-              src="/images/teampic.JPG"
+              src="/images/IMG_3953 (1).JPG"
               alt={t("about.group.imageAlt")}
               className="w-full object-cover"
             />

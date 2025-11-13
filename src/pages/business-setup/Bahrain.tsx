@@ -1,7 +1,8 @@
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import { CheckCircle, Users, Clock, DollarSign, Briefcase } from "lucide-react";
+import { CheckCircle,Briefcase } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
+import { useState } from "react";
 
 export default function BahrainBusinessSetup() {
   const { t } = useTranslation();
@@ -18,29 +19,29 @@ export default function BahrainBusinessSetup() {
     t("businessSetup.bahrain.benefits.b9"),
   ];
 
-  const businessTypes = [
-    {
-      title: t("businessSetup.bahrain.types.llc.title"),
-      description: t("businessSetup.bahrain.types.llc.desc"),
-      ownership: t("businessSetup.bahrain.types.llc.ownership"),
-      minCapital: t("businessSetup.bahrain.types.llc.minCapital"),
-      setup: t("businessSetup.bahrain.types.llc.setup"),
-    },
-    {
-      title: t("businessSetup.bahrain.types.branch.title"),
-      description: t("businessSetup.bahrain.types.branch.desc"),
-      ownership: t("businessSetup.bahrain.types.branch.ownership"),
-      minCapital: t("businessSetup.bahrain.types.branch.minCapital"),
-      setup: t("businessSetup.bahrain.types.branch.setup"),
-    },
-    {
-      title: t("businessSetup.bahrain.types.rep.title"),
-      description: t("businessSetup.bahrain.types.rep.desc"),
-      ownership: t("businessSetup.bahrain.types.rep.ownership"),
-      minCapital: t("businessSetup.bahrain.types.rep.minCapital"),
-      setup: t("businessSetup.bahrain.types.rep.setup"),
-    },
-  ];
+  // const businessTypes = [
+  //   {
+  //     title: t("businessSetup.bahrain.types.llc.title"),
+  //     description: t("businessSetup.bahrain.types.llc.desc"),
+  //     ownership: t("businessSetup.bahrain.types.llc.ownership"),
+  //     minCapital: t("businessSetup.bahrain.types.llc.minCapital"),
+  //     setup: t("businessSetup.bahrain.types.llc.setup"),
+  //   },
+  //   {
+  //     title: t("businessSetup.bahrain.types.branch.title"),
+  //     description: t("businessSetup.bahrain.types.branch.desc"),
+  //     ownership: t("businessSetup.bahrain.types.branch.ownership"),
+  //     minCapital: t("businessSetup.bahrain.types.branch.minCapital"),
+  //     setup: t("businessSetup.bahrain.types.branch.setup"),
+  //   },
+  //   {
+  //     title: t("businessSetup.bahrain.types.rep.title"),
+  //     description: t("businessSetup.bahrain.types.rep.desc"),
+  //     ownership: t("businessSetup.bahrain.types.rep.ownership"),
+  //     minCapital: t("businessSetup.bahrain.types.rep.minCapital"),
+  //     setup: t("businessSetup.bahrain.types.rep.setup"),
+  //   },
+  // ];
 
   const documents = [
     t("businessSetup.bahrain.docs.d1"),
@@ -59,6 +60,22 @@ export default function BahrainBusinessSetup() {
     t("businessSetup.bahrain.sectors.s4"),
     t("businessSetup.bahrain.sectors.s5"),
     t("businessSetup.bahrain.sectors.s6"),
+  ];
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
+  const businessTypes = [
+    {
+      title: t("businessSetup.bahrain.types.llc.title"),
+      description: t("businessSetup.bahrain.types.llc.desc"),
+    },
+    {
+      title: t("businessSetup.bahrain.types.branch.title"),
+      description: t("businessSetup.bahrain.types.branch.desc"),
+    },
+    {
+      title: t("businessSetup.bahrain.types.rep.title"),
+      description: t("businessSetup.bahrain.types.rep.desc"),
+    },
   ];
 
   return (
@@ -110,53 +127,69 @@ export default function BahrainBusinessSetup() {
         </div>
       </section>
 
-      {/* Business Types */}
       <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-6 max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-semibold text-[#0f172a] mb-4">{t("businessSetup.bahrain.types.title")}</h2>
-            {/* <p className="text-gray-600">{t("businessSetup.bahrain.types.subtitle")}</p> */}
-          </div>
-          <div className="grid md:grid-cols-2 gap-8">
-            {businessTypes.map((type, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition"
-              >
-                <h3 className="text-2xl font-semibold text-[#42A5E1] mb-3">{type.title}</h3>
-                <p className="text-gray-600 mb-6">{type.description}</p>
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3">
-                    <Users className="text-[#42A5E1]" size={20} />
-                    <div>
-                      <div className="text-sm text-gray-500">{t("businessSetup.bahrain.subtitle.ownershipHead")}</div>
-                      <div className="font-medium text-gray-700">{type.ownership}</div>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <DollarSign className="text-[#42A5E1]" size={20} />
-                    <div>
-                      <div className="text-sm text-gray-500">{t("businessSetup.bahrain.subtitle.minimumCapital")}</div>
-                      <div className="font-medium text-gray-700">{type.minCapital}</div>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Clock className="text-[#42A5E1]" size={20} />
-                    <div>
-                      <div className="text-sm text-gray-500">{t("businessSetup.bahrain.subtitle.minimumCapital")}</div>
-                      <div className="font-medium text-gray-700">{type.setup}</div>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+      <div className="container mx-auto px-6 max-w-6xl">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-semibold text-[#0f172a] mb-4">
+            {t("businessSetup.bahrain.types.title")}
+          </h2>
         </div>
-      </section>
+
+        {/* Accordion List */}
+        <ul className="grid md:grid-cols-2 gap-4 text-lg items-start">
+          {businessTypes.map((type, index) => (
+            <motion.li
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.05 }}
+              onClick={() => setActiveIndex(activeIndex === index ? null : index)}
+              className="flex flex-col bg-white rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer border-l-4 border-transparent hover:border-[#42A5E1] overflow-hidden"
+              layout
+            >
+              {/* Header */}
+              <div className="flex items-center justify-between p-5">
+                <span className="font-medium text-gray-800">{type.title}</span>
+                <motion.svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5 text-gray-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  animate={{ rotate: activeIndex === index ? 90 : 0 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 25 }}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </motion.svg>
+              </div>
+
+              {/* Expandable Content */}
+              <AnimatePresence>
+                {activeIndex === index && (
+                  <motion.div
+                    layout
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.25 }}
+                    className="px-5 pb-4 text-gray-600 border-t border-gray-100 text-sm leading-relaxed"
+                  >
+                    {type.description}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.li>
+          ))}
+        </ul>
+      </div>
+    </section>
 
       {/* Documents & Sectors */}
       <section className="py-20 bg-white">

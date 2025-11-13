@@ -1,7 +1,8 @@
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { CheckCircle } from 'lucide-react';
 import { FaWhatsapp } from "react-icons/fa";
+import { useState } from 'react';
 
 export default function KuwaitBusinessSetup() {
   const { t, i18n } = useTranslation();
@@ -19,7 +20,16 @@ export default function KuwaitBusinessSetup() {
   ];
 
   
-const serviceKeys = ['s1','s2','s3','s4','s5','s6','s7','s8'];
+const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
+   // Get services array directly from JSON translation
+  // const services = t("businessSetup.kuwait.services.types", { returnObjects: true });
+
+  // ✅ Correct typing
+const services = t("businessSetup.kuwait.services.types", {
+  returnObjects: true,
+}) as { title: string; description: string }[];
+
 
   return (
     <div
@@ -73,42 +83,78 @@ const serviceKeys = ['s1','s2','s3','s4','s5','s6','s7','s8'];
         </div>
       </section>
 
-      {/* Services */}
+       {/* Services Accordion Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-6">
+          {/* Section Header */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-semibold text-[#0f172a] mb-4">{t('businessSetup.kuwait.services.title')}</h2>
+            <h2 className="text-4xl font-semibold text-[#0f172a] mb-4">
+              {t("businessSetup.kuwait.services.title")}
+            </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              {t('businessSetup.kuwait.hero.subtitle')}
+              {t("businessSetup.kuwait.services.description")}
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-  {serviceKeys.map((key, index) => (
-    <motion.div
-      key={index}
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ delay: index * 0.05 }}
-      className="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition"
-    >
-      <h3 className="text-2xl font-semibold text-[#42A5E1] mb-3">
-        {t(`businessSetup.kuwait.services.${key}`)}
-      </h3>
-      <p className="text-gray-600">
-        {t(`businessSetup.kuwait.services.desc.${key}`)}
-      </p>
-    </motion.div>
-  ))}
-</div>
+          {/* Accordion List */}
+          <ul className="grid md:grid-cols-2 gap-4 text-lg items-start">
+            {services.map((service: any, index: number) => (
+              <motion.li
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.05 }}
+                onClick={() => setActiveIndex(activeIndex === index ? null : index)}
+                className="flex flex-col bg-white rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer border-l-4 border-transparent hover:border-[#42A5E1] overflow-hidden"
+                layout
+              >
+                {/* Header */}
+                <div className="flex items-center justify-between p-5">
+                  <span className="font-medium text-gray-800 transition-colors group-hover:text-[#42A5E1]">
+                    {service.title}
+                  </span>
+                  <motion.svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5 text-gray-400 transition-colors group-hover:text-[#42A5E1]"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    animate={{ rotate: activeIndex === index ? 90 : 0 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 25 }}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
+                  </motion.svg>
+                </div>
 
-
+                {/* Expandable content */}
+                <AnimatePresence>
+                  {activeIndex === index && (
+                    <motion.div
+                      layout
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 0.25 }}
+                      className="px-5 pb-4 text-gray-600 border-t border-gray-100 text-sm leading-relaxed"
+                    >
+                      {service.description}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.li>
+            ))}
+          </ul>
         </div>
       </section>
     </div>
