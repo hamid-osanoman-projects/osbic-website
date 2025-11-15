@@ -112,38 +112,42 @@ const team = [
         </div>
       </section>
 
-      {/* Story Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-6 grid md:grid-cols-2 gap-14 items-center">
-          <motion.img
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            src="/images/office.2.JPG"
-            alt={t("about.story.officeAlt")}
-            className="rounded-2xl shadow-xl object-cover"
-          />
+      {/* Story Section (UPDATED: mobile & tablet show only one paragraph) */}
+<section className="py-20 bg-white">
+  <div className="container mx-auto px-6 grid md:grid-cols-2 gap-14 items-center">
+    <motion.img
+      initial={{ opacity: 0, x: -40 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      src="/images/office.2.JPG"
+      alt={t("about.story.officeAlt")}
+      className="rounded-2xl shadow-xl object-cover"
+    />
 
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl font-light text-[#1a2332] mb-6">
-              {t("about.story.heading")}
-            </h2>
-            <p className="text-gray-600 mb-4 leading-relaxed">
-              {t("about.story.p1")}
-            </p>
-            <p className="text-gray-600 mb-4 leading-relaxed">
-              {t("about.story.p2")}
-            </p>
-             <p className="text-gray-600 mb-4 leading-relaxed">
-              {t("about.story.p3")}
-            </p>
-          </motion.div>
-        </div>
-      </section>
+    <motion.div
+      initial={{ opacity: 0, x: 40 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+    >
+      <h2 className="text-4xl font-light text-[#1a2332] mb-6">
+        {t("about.story.heading")}
+      </h2>
+
+      {/* Single paragraph for mobile & tablet (md and below) */}
+      <p className="text-gray-600 mb-4 leading-relaxed lg:hidden">
+        {t("about.story.p1")}
+      </p>
+
+      {/* Full content for desktop (lg and up) */}
+      <div className="hidden lg:block">
+        <p className="text-gray-600 mb-4 leading-relaxed">{t("about.story.p1")}</p>
+        <p className="text-gray-600 mb-4 leading-relaxed">{t("about.story.p2")}</p>
+        <p className="text-gray-600 mb-4 leading-relaxed">{t("about.story.p3")}</p>
+      </div>
+    </motion.div>
+  </div>
+</section>
+
 
       {/* Core Values Section */}
       <section className="py-20 bg-gradient-to-br from-[#f9fafb] to-[#eef1f5]">
@@ -177,106 +181,122 @@ const team = [
         </div>
       </section>
 
-      {/* Founder Section */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-6 max-w-6xl">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-4xl font-light text-[#1a2332] mb-4">
-              {t("about.founder.heading")}
-            </h2>
-            <p className="text-gray-600">
-              {t("about.founder.sub")}
-            </p>
-          </motion.div>
-
-          <div className="bg-gray-50 rounded-2xl p-10 md:p-14 shadow-lg">
-            <div className="grid md:grid-cols-3 gap-10 items-center">
-              <div>
-                <img
-                  src="/images/IMG_3928.jpg"
-                  alt={t("about.founder.name")}
-                  className="rounded-xl shadow-lg w-full object-cover"
-                />
-              </div>
-              <div className="md:col-span-2">
-                <h3 className="text-3xl font-semibold text-[#1a2332] mb-2">
-                  {t("about.founder.name")}
-                </h3>
-                <p className="text-[#42A5E1] font-medium mb-4">{t("about.founder.role")}</p>
-                <p className="text-gray-600 leading-relaxed">
-                  {t("about.founder.bio")}
-                </p>
-                <p className="text-gray-600 leading-relaxed mt-4">
-                  {t("about.founder.bio1")}
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Team Section */}
-      <section className="py-28 bg-gray-50">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-14"
-          >
-            <Users className="w-14 h-14 text-[#42A5E1] mx-auto mb-4" />
-            <h2 className="text-4xl font-light text-[#1a2332] mb-4">
-              {t("about.team.heading")}
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              {t("about.team.sub")}
-            </p>
-          </motion.div>
-
-          {/* Team Grid */}
-<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-  {team.map((member, index) => (
+      {/* Founder Section (UPDATED: mobile & tablet show only short text) */}
+<section className="py-24 bg-white">
+  <div className="container mx-auto px-6 max-w-6xl">
     <motion.div
-      key={index}
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ delay: index * 0.1 }}
-      className="text-center"
+      className="text-center mb-12"
     >
-      <div className="relative mb-4 group">
-        {/* <img
-          src={member.image}
-          alt={member.name}
-          className="w-full h-72 object-cover object-center rounded-xl shadow-lg group-hover:shadow-2xl transition"
-        /> */}
-        <img
-  src={member.image}
+      <h2 className="text-4xl font-light text-[#1a2332] mb-4">
+        {t("about.founder.heading")}
+      </h2>
+      <p className="text-gray-600">{t("about.founder.sub")}</p>
+    </motion.div>
+
+    <div className="bg-gray-50 rounded-2xl p-10 md:p-14 shadow-lg">
+      <div className="grid md:grid-cols-3 gap-10 items-center">
+        
+        {/* Founder Image (UNCHANGED for all screens) */}
+        <div>
+          <img
+            src="/images/IMG_3928.jpg"
+            alt={t("about.founder.name")}
+            className="rounded-xl shadow-lg w-full object-cover"
+          />
+        </div>
+
+        <div className="md:col-span-2">
+          <h3 className="text-3xl font-semibold text-[#1a2332] mb-2">
+            {t("about.founder.name")}
+          </h3>
+          <p className="text-[#42A5E1] font-medium mb-4">
+            {t("about.founder.role")}
+          </p>
+
+          {/* Short content for mobile & tablet (md and below) */}
+          <p className="text-gray-600 leading-relaxed lg:hidden">
+            {t("about.founder.bio")}
+          </p>
+
+          {/* Full content only for desktop */}
+          <div className="hidden lg:block">
+            <p className="text-gray-600 leading-relaxed">
+              {t("about.founder.bio")}
+            </p>
+            <p className="text-gray-600 leading-relaxed mt-4">
+              {t("about.founder.bio1")}
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+      
+      {/* Team Section */}
+<section className="py-28 bg-gray-50">
+  <div className="container mx-auto px-6">
+    {/* Heading */}
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      className="text-center mb-14"
+    >
+      <Users className="w-14 h-14 text-[#42A5E1] mx-auto mb-4" />
+      <h2 className="text-4xl font-light text-[#1a2332] mb-4">
+        {t("about.team.heading")}
+      </h2>
+      <p className="text-gray-600 max-w-2xl mx-auto">
+        {t("about.team.sub")}
+      </p>
+    </motion.div>
+
+    {/* Team Grid */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+      {team.map((member, index) => (
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: index * 0.1 }}
+          className="text-center"
+        >
+          <div className="relative mb-4 group">
+            <img
+  src={member.image}      // e.g., "/images/TEAM/ayoob.jpg"
   alt={member.name}
   className={`
-    w-full h-72 object-cover rounded-xl shadow-lg transition
-    ${member.objectPosition ? `object-[${member.objectPosition}]` : "object-center"}
-    group-hover:scale-100
+    w-full 
+    rounded-xl 
+    shadow-lg
+    transition-transform duration-300
+    h-auto sm:h-auto lg:h-72
+    object-contain sm:object-contain lg:object-cover
+    object-center
+    group-hover:scale-105
   `}
 />
 
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1a2332]/80 to-transparent opacity-0 group-hover:opacity-100 transition rounded-xl"></div>
-      </div>
-      <h3 className="text-lg font-semibold text-[#1a2332] mb-1">
-        {member.name}
-      </h3>
-      <p className="text-sm text-gray-600">{t(member.roleKey)}</p>
-    </motion.div>
-  ))}
-</div>
+          </div>
 
-        </div>
-      </section>
+          <h3 className="text-lg font-semibold text-[#1a2332] mb-1">
+            {member.name}
+          </h3>
+          <p className="text-sm text-gray-600">{t(member.roleKey)}</p>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       {/* Group Photo */}
       <section className="py-24 bg-white">
