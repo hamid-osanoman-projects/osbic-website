@@ -383,7 +383,7 @@ const proTeam = [
   />
 
   {/* HOVER OVERLAY */}
-  <div
+  {/* <div
     className="
       absolute inset-0 
       bg-gradient-to-t from-black/70 to-transparent
@@ -394,7 +394,7 @@ const proTeam = [
       text-left
     "
   >
-    {/* <h4 className="text-white text-lg font-semibold mb-2 text-blue-500">SPECIALIZED IN</h4> */}
+    
     <h4 className="text-white text-lg font-semibold mb-3 tracking-wide flex items-center gap-2">
   <span className="text-blue-500">|</span>
   SPECIALIZED IN
@@ -406,7 +406,7 @@ const proTeam = [
         <li key={i}>• {item}</li>
       ))}
     </ul>
-  </div>
+  </div> */}
 
 </div>
 
