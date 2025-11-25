@@ -9,7 +9,7 @@ import {
 import { FaWhatsapp } from "react-icons/fa";
 import { Building2, FileText, Users, Clock } from "lucide-react";
 import { useState } from "react";
-
+import Marquee from "react-fast-marquee";
 
 
 
@@ -265,6 +265,61 @@ const setupStepsIcons = [Building2, FileText, Users, Clock];
           </a>
         </motion.div>
       </section> */}
+
+    
+
+{/* Government Authorities Section */}
+<section className="py-20 bg-white">
+  <div className="container mx-auto px-6 text-center">
+    {/* Bigger Heading */}
+    <h2 className="text-3xl md:text-4xl font-bold tracking-wide text-gray-800 mb-12">
+      Official <span className="text-[#42A5E1] tracking-wider">Government Authorities</span> | We Work With
+    </h2>
+
+    <div className="relative overflow-hidden w-full">
+      <Marquee gradient={false} speed={50} pauseOnHover={true}>
+        {[
+          { name: "Ministry of Finance", img: "/images/power/power.jpeg", link: "https://www.mof.gov.om/" },
+          { name: "Oman Chamber of Commerce", img: "/images/power/power7.png", link: "https://omanchamber.om/" },
+          { name: "Ministry of Heritage and Tourism", img: "/images/power/power2.jpeg", link: "https://mht.gov.om/" },
+          { name: "Foreign Ministry", img: "/images/power/power3.jpeg", link: "https://www.fm.gov.om/" },
+          { name: "Ministry of Justice & Legal Affairs", img: "/images/power/power12.png", link: "https://www.mjla.gov.om/" },
+          { name: "Royal Oman Police", img: "/images/power/power5.png", link: "https://www.rop.gov.om/" },
+        ]
+          .concat([
+            { name: "Muscat Municipality", img: "/images/power/power6.png", link: "https://www.mm.gov.om/default.aspx" },
+            { name: "Tax Authority", img: "/images/power/power1.jpeg", link: "https://taxoman.gov.om/" },
+            { name: "Madayn", img: "/images/power/power9.png", link: "https://madayn.om/en/pages/home.aspx" },
+            { name: "Ministry of Labour", img: "/images/power/power8.png", link: "https://www.mol.gov.om/" },
+            { name: "Ministry of Health", img: "/images/power/power10.png", link: "https://www.moh.gov.om/" },
+            { name: "Oman Business Platform", img: "/images/power/power11.jpg", link: "https://www.business.gov.om/" },
+          ])
+          .map((authority, index) => (
+            <a
+              key={`${authority.name}-${index}`}
+              href={authority.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={authority.img}
+                alt={authority.name}
+                className="h-20 md:h-24 object-contain opacity-80 hover:opacity-100 transition px-12 cursor-pointer"
+              />
+            </a>
+          ))}
+      </Marquee>
+
+      {/* Gradient edges */}
+      <div className="absolute top-0 left-0 h-full w-24 md:w-32 bg-gradient-to-r from-white to-transparent pointer-events-none" />
+      <div className="absolute top-0 right-0 h-full w-24 md:w-32 bg-gradient-to-l from-white to-transparent pointer-events-none" />
+    </div>
+  </div>
+</section>
+
+
+    
+      
     </div>
   );
 }

@@ -6,15 +6,65 @@ import { useTranslation, Trans } from "react-i18next";
 export default function About() {
   const { t } = useTranslation();
 
-//   const team = [
-//   { name: "AYOOB SALEEM", roleKey: "about.team.roles.businessDevelopmentManager", image: "/images/TEAM/ayoob.3.jpeg" },
-//   { name: "SUVAID MAHMOOD", roleKey: "about.team.roles.businessDevelopmentExecutive", image: "/images/TEAM/suvia.1.JPG" },
-//   { name: "NAFIH NASSER", roleKey: "about.team.roles.businessDevelopmentExecutive", image: "/images/TEAM/nafi.1.jpg" },
-//   { name: "AMEENA RAFEEK", roleKey: "about.team.roles.businessDevelopmentExecutive", image: "/images/TEAM/ameena.1.jpg" },
-//   { name: "MISBA SADIA", roleKey: "about.team.roles.businessDevelopmentExecutive", image: "/images/TEAM/misba.1.jpg" },
-//   { name: "SADAF ETEHAD", roleKey: "about.team.roles.businessDevelopmentExecutive", image: "/images/TEAM/sadaf.2.jpg" },
-//   { name: "ALBIN THOMAS", roleKey: "about.team.roles.businessDevelopmentExecutive", image: "/images/TEAM/albin.1.jpg" },
-//   { name: "MAADIR", roleKey: "about.team.roles.businessDevelopmentExecutive", image: "/images/TEAM/maadir.1.jpg" },
+
+
+// const team = [
+//   {
+//     name: "Ayoob Saleem",
+//     image: "/images/TEAM/ayoob.5.jpeg",
+//     roleKey: "about.team.roles.businessDevelopmentManager",
+//     objectPosition: "center center",
+//     // scale: "scale-85", // zoom OUT 
+//   },
+//   {
+//     name: "Suvaid Mahmood",
+//     image: "/images/TEAM/suvia.2.JPG",
+//     roleKey: "about.team.roles.businessDevelopmentExecutive",
+//     objectPosition: "top center", // more headspace
+//     // scale: "scale-100",
+//   },
+//   {
+//     name: "Nafih Nasser",
+//     image: "/images/TEAM/nafi.2.jpg",
+//     roleKey: "about.team.roles.businessDevelopmentExecutive",
+//     objectPosition: "top center",
+//     // scale: "scale-100",
+//   },
+//   {
+//     name: "Ameena Rafeek",
+//     image: "/images/TEAM/ameena.1.jpg",
+//     roleKey: "about.team.roles.businessDevelopmentExecutive",
+//     objectPosition: "top center",
+//     // scale: "scale-100",
+//   },
+//   {
+//     name: "Misba Sadia",
+//     image: "/images/TEAM/misba.1.jpg",
+//     roleKey: "about.team.roles.businessDevelopmentExecutive",
+//     objectPosition: "top center",
+//     // scale: "scale-100",
+//   },
+//   {
+//     name: "Sadaf Etehad",
+//     image: "/images/TEAM/sadaf.2.jpg",
+//     roleKey: "about.team.roles.businessDevelopmentExecutive",
+//     objectPosition: "center center", // this one already perfect
+//     // scale: "scale-100",
+//   },
+//   {
+//     name: "Albin Thomas",
+//     image: "/images/TEAM/albin.1.jpg",
+//     roleKey: "about.team.roles.businessDevelopmentExecutive",
+//     objectPosition: "top center",
+//     // scale: "scale-100",
+//   },
+//   {
+//     name: "Maadir",
+//     image: "/images/TEAM/maadir.1.jpg",
+//     roleKey: "about.team.roles.businessDevelopmentExecutive",
+//     objectPosition: "center center",
+//     // scale: "scale-100",
+//   },
 // ];
 
 const team = [
@@ -23,60 +73,91 @@ const team = [
     image: "/images/TEAM/ayoob.5.jpeg",
     roleKey: "about.team.roles.businessDevelopmentManager",
     objectPosition: "center center",
-    // scale: "scale-85", // zoom OUT 
+    expertise: ["Business Setup", "CR Registration", "Investor Visa"],
   },
   {
     name: "Suvaid Mahmood",
     image: "/images/TEAM/suvia.2.JPG",
     roleKey: "about.team.roles.businessDevelopmentExecutive",
-    objectPosition: "top center", // more headspace
-    // scale: "scale-100",
+    objectPosition: "top center",
+    expertise: ["Visa Processing", "PRO Services", "License Renewal"],
   },
   {
     name: "Nafih Nasser",
     image: "/images/TEAM/nafi.2.jpg",
     roleKey: "about.team.roles.businessDevelopmentExecutive",
     objectPosition: "top center",
-    // scale: "scale-100",
+    expertise: ["LLC Setup", "Document Clearance", "MoCI Services"],
   },
   {
     name: "Ameena Rafeek",
     image: "/images/TEAM/ameena.1.jpg",
     roleKey: "about.team.roles.businessDevelopmentExecutive",
     objectPosition: "top center",
-    // scale: "scale-100",
+    expertise: ["Visa Services", "PRO Work", "CR Updates"],
   },
   {
     name: "Misba Sadia",
     image: "/images/TEAM/misba.1.jpg",
     roleKey: "about.team.roles.businessDevelopmentExecutive",
     objectPosition: "top center",
-    // scale: "scale-100",
+    expertise: ["Business Licensing", "Sponsor Transfer", "Employment Visa"],
   },
   {
     name: "Sadaf Etehad",
     image: "/images/TEAM/sadaf.2.jpg",
     roleKey: "about.team.roles.businessDevelopmentExecutive",
-    objectPosition: "center center", // this one already perfect
-    // scale: "scale-100",
+    objectPosition: "center center",
+    expertise: ["Typing Services", "Visa Typing", "Document Support"],
   },
   {
     name: "Albin Thomas",
     image: "/images/TEAM/albin.1.jpg",
     roleKey: "about.team.roles.businessDevelopmentExecutive",
     objectPosition: "top center",
-    // scale: "scale-100",
+    expertise: ["Company Amendments", "MoCI Portal", "CR Related Work"],
   },
   {
     name: "Maadir",
     image: "/images/TEAM/maadir.1.jpg",
     roleKey: "about.team.roles.businessDevelopmentExecutive",
     objectPosition: "center center",
-    // scale: "scale-100",
+    expertise: ["Admin Support", "Business Setup Coordination", "Client Handling"],
   },
 ];
 
-
+const proTeam = [
+  {
+    nameKey: "about.pro.members.salim.name",
+    roleKey: "about.pro.members.salim.role",
+    image: "/images/pros/mohammed.jpg",
+    expertiseKeys: [
+      "about.pro.members.salim.expertise.0",
+      "about.pro.members.salim.expertise.1",
+      "about.pro.members.salim.expertise.2",
+    ],
+  },
+  {
+    nameKey: "about.pro.members.abdul.name",
+    roleKey: "about.pro.members.abdul.role",
+    image: "/images/pros/fahad.jpg",
+    expertiseKeys: [
+      "about.pro.members.abdul.expertise.0",
+      "about.pro.members.abdul.expertise.1",
+      "about.pro.members.abdul.expertise.2",
+    ],
+  },
+  {
+    nameKey: "about.pro.members.waleed.name",
+    roleKey: "about.pro.members.waleed.role",
+    image: "/images/pros/rashid.jpg",
+    expertiseKeys: [
+      "about.pro.members.waleed.expertise.0",
+      "about.pro.members.waleed.expertise.1",
+      "about.pro.members.waleed.expertise.2",
+    ],
+  },
+];
 
 
   const infoCards = [
@@ -269,7 +350,7 @@ const team = [
           transition={{ delay: index * 0.1 }}
           className="text-center"
         >
-          <div className="relative mb-4 group">
+          {/* <div className="relative mb-4 group">
             <img
   src={member.image}      // e.g., "/images/TEAM/ayoob.jpg"
   alt={member.name}
@@ -285,17 +366,150 @@ const team = [
   `}
 />
 
-          </div>
+          </div> */}
+
+          <div className="relative mb-4 group overflow-hidden rounded-xl shadow-lg">
+
+  {/* IMAGE */}
+  <img
+    src={member.image}
+    alt={member.name}
+    className="
+      w-full h-72 object-cover 
+      transition duration-300
+      group-hover:scale-105
+      group-hover:brightness-50
+    "
+  />
+
+  {/* HOVER OVERLAY */}
+  <div
+    className="
+      absolute inset-0 
+      bg-gradient-to-t from-black/70 to-transparent
+      translate-y-full 
+      group-hover:translate-y-0
+      transition-all duration-500 ease-out
+      flex flex-col justify-end p-5
+      text-left
+    "
+  >
+    {/* <h4 className="text-white text-lg font-semibold mb-2 text-blue-500">SPECIALIZED IN</h4> */}
+    <h4 className="text-white text-lg font-semibold mb-3 tracking-wide flex items-center gap-2">
+  <span className="text-blue-500">|</span>
+  SPECIALIZED IN
+</h4>
+
+
+    <ul className="text-gray-200 text-sm space-y-1">
+      {member.expertise.map((item, i) => (
+        <li key={i}>• {item}</li>
+      ))}
+    </ul>
+  </div>
+
+</div>
+
 
           <h3 className="text-lg font-semibold text-[#1a2332] mb-1">
             {member.name}
           </h3>
           <p className="text-sm text-gray-600">{t(member.roleKey)}</p>
-        </motion.div>
+        </motion.div> 
       ))}
     </div>
   </div>
 </section>
+
+{/* PRO Team Section */}
+{/* <section className="py-24 bg-white">
+  <div className="container mx-auto px-6 max-w-6xl">
+
+ 
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      className="text-center mb-14"
+    >
+      <h2 className="text-4xl font-light text-[#1a2332] mb-4">
+        {t("about.pro.heading")}
+      </h2>
+      <p className="text-gray-600 max-w-2xl mx-auto">
+        {t("about.pro.sub")}
+      </p>
+    </motion.div>
+
+  
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+      {proTeam.map((pro, index) => (
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: index * 0.1 }}
+          viewport={{ once: true }}
+          className="bg-gray-50 rounded-2xl p-6 shadow-md hover:shadow-xl transition-all"
+        >
+          <div className="overflow-hidden rounded-xl mb-5">
+            <img
+              src={pro.image}
+              alt={t(pro.nameKey)}
+              className="w-full h-56 object-cover transition duration-300 hover:scale-105"
+            />
+          </div>
+
+          <h3 className="text-xl font-semibold text-[#1a2332]">
+            {t(pro.nameKey)}
+          </h3>
+
+          <p className="text-[#42A5E1] text-sm mb-3">
+            {t(pro.roleKey)}
+          </p>
+
+          <ul className="text-gray-600 text-sm space-y-1">
+            {pro.expertiseKeys.map((item, i) => (
+              <li key={i}>• {t(item)}</li>
+            ))}
+          </ul>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section> */}
+
+      {/* Client Logos (About Page) */}
+{/* <section className="py-16 bg-white">
+  <div className="container mx-auto px-6 text-center">
+    <h2 className="text-3xl font-light text-[#1a2332] mb-10">
+      {t("about.clients.heading")}
+    </h2>
+
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-10 items-center">
+      {[
+        "/logos/1.png",
+        "/logos/2.png",
+        "/logos/3.png",
+        "/logos/4.png",
+        "/logos/5.png",
+      ].map((logo, i) => (
+        <motion.div
+          key={i}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="flex items-center justify-center"
+        >
+          <img
+            src={logo}
+            alt="Client Logo"
+            className="h-12 object-contain grayscale hover:grayscale-0 transition"
+          />
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section> */}
 
 
       {/* Group Photo */}
@@ -311,7 +525,7 @@ const team = [
             {t("about.group.heading")}
           </motion.h2>
 
-          <motion.p
+          {/* <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -319,7 +533,7 @@ const team = [
             className="text-gray-600 mb-10 max-w-2xl mx-auto"
           >
             {t("about.group.sub")}
-          </motion.p>
+          </motion.p> */}
 
           <motion.div
             initial={{ opacity: 0, scale: 0.98 }}
@@ -329,7 +543,7 @@ const team = [
             className="rounded-2xl overflow-hidden shadow-2xl max-w-4xl mx-auto"
           >
             <img
-              src="/images/IMG_3953 (1).JPG"
+              src="/images/TEAM/TeamPhoto.jpg"
               alt={t("about.group.imageAlt")}
               className="w-full object-cover"
             />
@@ -338,59 +552,63 @@ const team = [
       </section>
 
       {/* Group Companies */}
-      <section className="py-20 bg-gradient-to-br from-[#f9fafb] to-[#eef1f5]">
-        <div className="container mx-auto px-6 text-center">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-4xl font-light text-[#1a2332] mb-4"
-          >
-            {t("about.groupCompanies.heading")}
-          </motion.h2>
+     <section className="py-20 bg-gradient-to-br from-[#f9fafb] to-[#eef1f5]">
+  <div className="container mx-auto px-6 text-center">
+    <motion.h2
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      className="text-4xl font-light text-[#1a2332] mb-4"
+    >
+      {t("about.groupCompanies.heading")}
+    </motion.h2>
 
-          <p className="text-gray-600 max-w-2xl mx-auto mb-10 text-sm md:text-base">
-            {t("about.groupCompanies.sub")}
-          </p>
+    <p className="text-gray-600 max-w-2xl mx-auto mb-10 text-sm md:text-base">
+      {t("about.groupCompanies.sub")}
+    </p>
 
-          <div className="
-            grid grid-cols-2
-            sm:grid-cols-3 
-            md:grid-cols-3 
-            lg:grid-cols-6 
-            gap-8 md:gap-12 lg:gap-10 
-            items-center justify-items-center
-          ">
-            {[
-              { name: "Maisarah Accounting", logo: "/images/Maisarah.png" },
-              { name: "Osan Studio", logo: "/OsanStudio.png" },
-              { name: "ASAS Service Center", logo: "/images/ASAS.png" },
-              { name: "Thamkeen Service Center", logo: "/images/TAMKEEN.png" },
-              { name: "Amer Service Center", logo: "/images/AMER.png" },
-              { name: "Nameer Properties", logo: "/Nameer Properties.png" },
-            ].map((company, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1 }}
-                viewport={{ once: true }}
-                className="flex flex-col items-center text-center"
-              >
-                <div className="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-all p-5 md:p-6 flex items-center justify-center w-36 h-24">
-                  <img
-                    src={company.logo}
-                    alt={company.name}
-                    className="max-h-10 object-contain"
-                  />
-                </div>
-                <p className="text-sm text-gray-600 mt-3">{company.name}</p>
-              </motion.div>
-            ))}
+    <div className="
+      grid grid-cols-2
+      sm:grid-cols-3 
+      md:grid-cols-3 
+      lg:grid-cols-6 
+      gap-8 md:gap-12 lg:gap-10 
+      items-center justify-items-center
+    ">
+      {[
+        { name: "Maisarah Accounting", logo: "/images/Maisarah.png", link: "https://maisarah.net/" },
+        { name: "Osan Studio", logo: "/OsanStudio.png", link: "https://osanstudio.net/" },
+        { name: "ASAS Service Center", logo: "/images/ASAS.png", link: "https://asas.om/" },
+        { name: "Thamkeen Service Center", logo: "/images/TAMKEEN.png", link: "#" },
+        { name: "Amer Service Center", logo: "/images/AMER.png", link: "#" },
+        { name: "Nameer Properties", logo: "/Nameer Properties.png", link: "#" },
+      ].map((company, i) => (
+        <motion.a
+          key={i}
+          href={company.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: i * 0.1 }}
+          viewport={{ once: true }}
+          className="flex flex-col items-center text-center"
+        >
+          <div className="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-all p-5 md:p-6 flex items-center justify-center w-36 h-24">
+            <img
+              src={company.logo}
+              alt={company.name}
+              className="max-h-10 object-contain"
+            />
           </div>
-        </div>
-      </section>
+          <p className="text-sm text-gray-600 mt-3">{company.name}</p>
+        </motion.a>
+      ))}
+    </div>
+  </div>
+</section>
+
     </div>
   );
 }

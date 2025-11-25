@@ -123,6 +123,8 @@ export default function Home1() {
     { target: 3000, label: t("home.stats.clients"), suffix: "+" },
   ];
 
+
+
   return (
     <div>
       {/* === HERO SECTION === */}
@@ -232,13 +234,89 @@ export default function Home1() {
         </div>
       </section>
 
+      {/* Client Logos Section */}
+{/* <section className="py-16 bg-white border-t">
+  <div className="container mx-auto px-6 text-center">
+    <h2 className="text-3xl font-light text-[#1a2332] mb-10">
+      {t("home.clients.heading")}
+    </h2>
+
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-10 items-center">
+      {[
+        "/logos/1.png",
+        "/logos/2.png",
+        "/logos/3.png",
+        "/logos/4.png",
+        "/logos/5.png"
+      ].map((logo, i) => (
+        <motion.div
+          key={i}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: i * 0.1 }}
+          viewport={{ once: true }}
+          className="flex items-center justify-center"
+        >
+          <img
+            src={logo}
+            alt="Client Logo"
+            className="h-12 object-contain grayscale hover:grayscale-0 transition"
+          />
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section> */}
+
+      {/* Testimonials Section */}
+{/* <section className="py-20 bg-gray-50">
+  <div className="container mx-auto px-6 text-center">
+
+    <h2 className="text-3xl font-light text-[#1a2332] mb-12">
+      {t("home.testimonials.heading")}
+    </h2>
+
+    <div className="grid md:grid-cols-3 gap-10">
+      {(t("home.testimonials.list", { returnObjects: true }) as {
+        name: string;
+        feedback: string;
+        image?: string;
+      }[]).map((item, i) => (
+        <motion.div
+          key={i}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          whileHover={{ scale: 1.05, rotate: -1 }}
+          transition={{ delay: i * 0.1, type: "spring", stiffness: 100 }}
+          viewport={{ once: true }}
+          className="bg-white p-8 rounded-2xl shadow-lg text-center"
+        >
+          <img
+            src={item.image || "/images/default-avatar.png"}
+            alt={item.name}
+            className="w-16 h-16 rounded-full mx-auto mb-4 object-cover"
+          />
+
+          <p className="text-gray-600 italic mb-4">“{item.feedback}”</p>
+          <h4 className="text-lg font-semibold text-[#1a2332]">{item.name}</h4>
+        </motion.div>
+      ))}
+    </div>
+
+  </div>
+</section> */}
+
+
+
       {/* === GCC Registration SECTION === */}
       <section className="py-24 bg-white text-center">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-light text-[#1a2332] mb-4">
-            <Trans i18nKey="home.gcc.title">
+            {/* <Trans i18nKey="home.gcc.title">
               Registering a Company in <span className="text-[#42A5E1]">OMAN</span> or in the <span className="text-[#42A5E1]">GCC</span>?
-            </Trans>
+            </Trans> */}
+            <Trans i18nKey="home.gcc.title" components={{ 0: <span className="text-[#42A5E1]" />, 1: <span className="text-[#42A5E1]" /> }} />
+
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto mb-12">
             {t("home.gcc.subtitle")}
@@ -309,7 +387,7 @@ export default function Home1() {
             <div className="bg-white flex-1 flex flex-col justify-center p-10 space-y-10">
               <div className="overflow-hidden mx-auto w-[1100px]">
                 <ContinuousScrollingLogos
-                  images={["power.jpeg","power7.png","power2.jpeg","power3.jpeg","power4.png","power5.png"]}
+                  images={["power.jpeg","power7.png","power2.jpeg","power3.jpeg","power11.jpg","power5.png"]}
                   size={{ width: 150, height: 150 }}
                   gap={24}
                   speed={80}
@@ -318,7 +396,7 @@ export default function Home1() {
               </div>
               <div className="overflow-hidden mx-auto w-[1100px]">
                 <ContinuousScrollingLogos
-                  images={["power6.png","power1.jpeg","power9.png","power8.png","power10.png","power11.jpg","power12.png"]}
+                  images={["power6.png","power1.jpeg","power9.png","power8.png","power10.png","power12.png",]}
                   size={{ width: 150, height: 150 }}
                   gap={24}
                   speed={90}

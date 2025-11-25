@@ -108,15 +108,39 @@
       "expertTeam": "Expert team with 15+ years experience",
       "fastTurnaround": "Fast turnaround times",
       "transparentPricing": "100% transparent pricing",
-      "dedicatedManager": "Dedicated account manager",
+      "dedicatedManager": "Dedicated Business Setup",
       "multiLingualSupport": "Multi-lingual support",
-      "comprehensivePortfolio": "Comprehensive service portfolio"
+      "comprehensivePortfolio": "Comprehensive service"
     },
     "cta": {
       "title": "Ready to Get Started?",
       "subtitle": "Contact us today for a free consultation and let us help you achieve your business goals in Oman.",
       "button": "Contact Us Now"
+    },
+    "clients": {
+      "heading": "Our Clients"
+    },
+     "testimonials": {
+  "heading": "What Our Clients Say",
+  "list": [
+    {
+      "name": "Mohammed Al Rashidi",
+      "feedback": "OSBIC handled my full company registration smoothly and professionally.",
+      "image": "/images/testimonials/mohammed.jpg"
+    },
+    {
+      "name": "Sarah K.",
+      "feedback": "Very fast visa processing and supportive team. Highly recommended!",
+      "image": "/images/testimonials/sarah.jpg"
+    },
+    {
+      "name": "Ahmed Hussain",
+      "feedback": "Transparent pricing and excellent customer communication.",
+      "image": "/images/testimonials/ahmed.jpg"
     }
+  ]
+}
+
   },
   "countries": {
     "oman": "OMAN",
@@ -172,6 +196,40 @@
     "roles": {
       "businessDevelopmentManager": "Business Development Manager",
       "businessDevelopmentExecutive": "Business Development Executive"
+    }
+  },
+   "pro": {
+    "heading": "Oman PRO & Government Relations Specialists",
+    "sub": "Our dedicated PRO team ensures fast and reliable processing for all government-related services—visa work, documentation, licensing, and more.",
+
+    "members": {
+      "salim": {
+        "name": "Salim",
+        "role": "Senior PRO Specialist",
+        "expertise": [
+          "Visa Processing",
+          "Labor Clearance",
+          "PRO Documentation"
+        ]
+      },
+      "abdul": {
+        "name": "Abdul Rahman",
+        "role": "Government Relations Officer",
+        "expertise": [
+          "ROP Clearance",
+          "License Renewal",
+          "CR Amendments"
+        ]
+      },
+      "waleed": {
+        "name": "Waleed",
+        "role": "Corporate PRO Executive",
+        "expertise": [
+          "Immigration Services",
+          "MoCI Works",
+          "Sponsor Transfers"
+        ]
+      }
     }
   },
   "group": {
