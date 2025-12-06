@@ -5,20 +5,24 @@ import { motion, AnimatePresence } from "framer-motion";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import toast from "react-hot-toast";
+import { useTranslation } from "react-i18next";
 
 interface CostCalculatorProps {
   open: boolean;
-  onOpenChange: (open: boolean) => void; 
+  onOpenChange: (open: boolean) => void;
 }
 
-const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbyfvrNRR-t6Z1BanJvYG9WBadUxAjzKuBmekRlaSyMHQmAEi9JqxQS5cJ4LvDD1H7QF/exec";
+const WEB_APP_URL =
+  "https://script.google.com/macros/s/AKfycbyfvrNRR-t6Z1BanJvYG9WBadUxAjzKuBmekRlaSyMHQmAEi9JqxQS5cJ4LvDD1H7QF/exec";
 const WEB_APP_TOKEN = "osbic";
 const USE_NO_CORS = true;
 
 const CostCalculator = ({ open, onOpenChange }: CostCalculatorProps) => {
+  const { t } = useTranslation();
   const [step, setStep] = useState(1);
   const [success, setSuccess] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+
   const [formData, setFormData] = useState({
     country: "",
     businessType: "",
@@ -35,8 +39,6 @@ const CostCalculator = ({ open, onOpenChange }: CostCalculatorProps) => {
     shareholderAgreement: "",
     haveBankAccount: "",
     needVisaProcessing: "",
-    accounting: "",
-    websiteBranding: "",
     addOns: [] as string[],
     name: "",
     email: "",
@@ -44,84 +46,101 @@ const CostCalculator = ({ open, onOpenChange }: CostCalculatorProps) => {
     notes: "",
   });
 
-  const steps = [
-    { label: "Country & Type" },
-    { label: "Business Details" },
-    { label: "Industry & Timeline" },
-    { label: "Legal & Office" },
-    { label: "Add-ons & Services" },
-    { label: "Contact & Info " },
-    { label: "Review Details" },
-  ];
+  // ------------------------------------------
+  // STEP LABELS (multilingual)
+  // ------------------------------------------
+  const steps = t("calculator.steps", { returnObjects: true }) as string[];
 
-  const updateFormData = (field: string, value: string | string[]) =>
+  const updateFormData = (field: string, value: any) =>
     setFormData((prev) => ({ ...prev, [field]: value }));
 
+  // ------------------------------------------
+  // VALIDATION with translation
+  // ------------------------------------------
   const validateStep = (s = step) => {
+    // const err = t("calculator.errors");
+    const err = t("calculator.errors", { returnObjects: true }) as Record<string, string>;
+
+
     switch (s) {
       case 1:
         if (!formData.country || !formData.businessType) {
-          toast.error("Please select a country and business type.");
+          toast.error(err.countryType);
           return false;
         }
         return true;
+
       case 2:
         if (!formData.shareholders || !formData.visas || !formData.businessActivity) {
-          toast.error("Please complete shareholders, visas and business activity.");
+          toast.error(err.shareholdersVisasActivity);
           return false;
         }
         return true;
+
       case 3:
         if (!formData.industryCategory || !formData.timeline) {
-          toast.error("Please select industry category and timeline.");
+          toast.error(err.industryTimeline);
           return false;
         }
         return true;
+
       case 4:
         if (formData.country === "Oman" && !formData.localSponsor) {
-          toast.error("Please indicate if you need a local sponsor in Oman.");
+          toast.error(err.omanSponsor);
           return false;
         }
         if (parseInt(formData.shareholders || "0") > 1 && !formData.shareholderAgreement) {
-          toast.error("Please indicate whether you need a shareholder agreement.");
+          toast.error(err.shareholderAgreement);
           return false;
         }
         if (!formData.officeRequired) {
-          toast.error("Please indicate office setup requirement.");
+          toast.error(err.officeRequired);
           return false;
         }
         return true;
+
       case 5:
-        if (formData.addOns.includes("Bank Account Assistance") && !formData.haveBankAccount) {
-          toast.error("Please indicate whether you already have a corporate bank account.");
+        if (
+          formData.addOns.includes("Bank Account Assistance") &&
+          !formData.haveBankAccount
+        ) {
+          toast.error(err.bankAccount);
           return false;
         }
-        if (formData.addOns.includes("PRO Services") && !formData.needVisaProcessing) {
-          toast.error("Please indicate whether you need visa processing.");
+        if (
+          formData.addOns.includes("PRO Services") &&
+          !formData.needVisaProcessing
+        ) {
+          toast.error(err.visaProcessing);
           return false;
         }
         return true;
+
       case 6:
         if (!formData.name || !formData.email || !formData.phone) {
-          toast.error("Please fill in your contact details.");
+          toast.error(err.contactDetails);
           return false;
         }
         if (!/^\S+@\S+\.\S+$/.test(formData.email)) {
-          toast.error("Please enter a valid email address.");
+          toast.error(err.emailInvalid);
           return false;
         }
         return true;
+
       case 7:
         for (let i = 1; i <= 6; i++) {
           if (!validateStep(i)) return false;
         }
         return true;
+
       default:
         return true;
     }
   };
 
-  const handleNext = () => validateStep() && setStep((p) => Math.min(p + 1, steps.length));
+  const handleNext = () =>
+    validateStep() && setStep((p) => Math.min(p + 1, steps.length));
+
   const handleBack = () => setStep((p) => Math.max(p - 1, 1));
 
   const handleClose = () => {
@@ -143,8 +162,6 @@ const CostCalculator = ({ open, onOpenChange }: CostCalculatorProps) => {
       shareholderAgreement: "",
       haveBankAccount: "",
       needVisaProcessing: "",
-      accounting: "",
-      websiteBranding: "",
       addOns: [],
       name: "",
       email: "",
@@ -154,18 +171,19 @@ const CostCalculator = ({ open, onOpenChange }: CostCalculatorProps) => {
     onOpenChange(false);
   };
 
+  // ------------------------------------------
+  // SUBMIT HANDLER
+  // ------------------------------------------
   const handleSubmit = async () => {
     if (!validateStep()) return;
     setIsSubmitting(true);
 
-    // const payload = { ...formData, timestamp: new Date().toISOString(), _token: WEB_APP_TOKEN };
-    const payload = { 
-  ...formData,
-  timestamp: new Date().toISOString(),
-  processed: "Pending",   // ✅ default status
-  _token: WEB_APP_TOKEN
-};
-
+    const payload = {
+      ...formData,
+      timestamp: new Date().toISOString(),
+      processed: "Pending",
+      _token: WEB_APP_TOKEN,
+    };
 
     try {
       if (USE_NO_CORS) {
@@ -175,25 +193,30 @@ const CostCalculator = ({ open, onOpenChange }: CostCalculatorProps) => {
           headers: { "Content-Type": "application/json" } as any,
           body: JSON.stringify(payload),
         });
-        toast.success("Estimate submitted. We'll contact you.");
+        toast.success(t("calculator.errors.submissionNoCors"));
         setSuccess(true);
       } else {
         const res = await fetch(WEB_APP_URL, {
           method: "POST",
-          headers: { "Content-Type": "application/json", "x-webhook-token": WEB_APP_TOKEN },
+          headers: {
+            "Content-Type": "application/json",
+            "x-webhook-token": WEB_APP_TOKEN,
+          },
           body: JSON.stringify(payload),
         });
 
         if (!res.ok) throw new Error(`Server error ${res.status}`);
+
         const json = await res.json();
         if (json.status === "success") {
-          toast.success("Estimate submitted successfully!");
+          toast.success(t("calculator.errors.submissionSuccess"));
           setSuccess(true);
-        } else throw new Error(json.message || "Submission failed");
+        } else {
+          throw new Error(json.message || "Error");
+        }
       }
-    } catch (err: any) {
-      console.error(err);
-      toast.error("Submission failed. Please try again.");
+    } catch {
+      toast.error(t("calculator.errors.submissionFailed"));
     } finally {
       setIsSubmitting(false);
     }
@@ -202,8 +225,15 @@ const CostCalculator = ({ open, onOpenChange }: CostCalculatorProps) => {
   if (!open) return null;
 
   const progress = ((step - 1) / (steps.length - 1)) * 100;
+  const opts = t("calculator.options", { returnObjects: true }) as any;
+  const labels = t("calculator.stepLabels", { returnObjects: true }) as any;
+  const ph = t("calculator.placeholders", { returnObjects: true }) as any;
+  const buttons = t("calculator.buttons", { returnObjects: true }) as any;
+  const successText = t("calculator.success", { returnObjects: true }) as any;
+
   const showOmanSponsor = formData.country === "Oman";
-  const needShareholderAgreement = parseInt(formData.shareholders || "0") > 1;
+  const needShareholderAgreement =
+    parseInt(formData.shareholders || "0") > 1;
 
   return (
     <AnimatePresence>
@@ -220,43 +250,47 @@ const CostCalculator = ({ open, onOpenChange }: CostCalculatorProps) => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 40 }}
         >
-          {/* Close button */}
+          {/* CLOSE BUTTON */}
           <button
             className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-xl font-bold z-10"
             onClick={handleClose}
-            aria-label="Close"
           >
             ✕
           </button>
 
           {!success ? (
             <>
-              {/* Header */}
+              {/* HEADER */}
               <div className="p-4 sm:p-6 bg-blue-50 border-b">
-                <h2 className="text-lg sm:text-xl md:text-2xl font-semibold flex items-center gap-2 sm:gap-3 text-gray-800">
-                  <Calculator className="w-5 h-5 sm:w-6 sm:h-6 text-blue-500" />
-                  Get Instant Quote
+                <h2 className="text-lg sm:text-xl md:text-2xl font-semibold flex items-center gap-2 text-gray-800">
+                  {/* <Calculator className="w-5 h-5 text-blue-500" /> */}
+                  {t("calculator.title")}
                 </h2>
               </div>
 
-              {/* Step indicator */}
+              {/* STEP INDICATOR */}
               <div className="p-4 sm:px-6 flex flex-col gap-2">
                 <div className="flex items-center justify-between mb-1">
-                  {steps.map((s, i) => (
-                    // <div key={i} className="flex flex-col items-center w-1/7">
+                  {steps.map((label, i) => (
                     <div key={i} className="flex flex-col items-center flex-1 min-w-0">
-
                       <div
-                        className={`w-6 h-6 sm:w-7 sm:h-7 rounded-full flex items-center justify-center text-white font-medium transition ${
-                          step === i + 1 ? "bg-blue-500 shadow-md" : step > i + 1 ? "bg-green-500" : "bg-gray-300"
+                        className={`w-6 h-6 sm:w-7 sm:h-7 rounded-full flex items-center justify-center text-white font-medium ${
+                          step === i + 1
+                            ? "bg-blue-500"
+                            : step > i + 1
+                            ? "bg-green-500"
+                            : "bg-gray-300"
                         }`}
                       >
                         {i + 1}
                       </div>
-                      <span className="text-[9px] sm:text-xs text-gray-600 text-center">{s.label}</span>
+                      <span className="text-[9px] sm:text-xs text-gray-600 text-center">
+                        {label}
+                      </span>
                     </div>
                   ))}
                 </div>
+
                 <div className="h-1 sm:h-2 w-full bg-gray-200 rounded-full">
                   <motion.div
                     className="h-1 sm:h-2 bg-blue-500 rounded-full"
@@ -267,317 +301,483 @@ const CostCalculator = ({ open, onOpenChange }: CostCalculatorProps) => {
                 </div>
               </div>
 
-              {/* Content area */}
+              {/* CONTENT AREA */}
               <div className="flex-1 overflow-y-auto p-4 sm:p-6 space-y-4">
-                {/* All step content goes here */}
-                {/* Reduce font size and input padding for mobile */}
-                {/* Example STEP 1 */}
+                {/* ------------------------------------------
+                    STEP 1
+                ------------------------------------------- */}
                 {step === 1 && (
-                  <motion.div key="s1" className="space-y-3 sm:space-y-4 text-sm sm:text-base">
+                  <div className="space-y-4">
+                    {/* Country */}
                     <div>
-                      <label className="block mb-1 font-medium text-gray-700">Country</label>
+                      <label className="block mb-1 font-medium text-gray-700">
+                        {labels.country}
+                      </label>
                       <select
                         value={formData.country}
-                        onChange={(e) => updateFormData("country", e.target.value)}
-                        className="w-full border border-gray-300 px-3 py-2 sm:px-4 sm:py-2 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition shadow-sm text-sm sm:text-base"
+                        onChange={(e) =>
+                          updateFormData("country", e.target.value)
+                        }
+                        className="w-full border px-4 py-2 rounded-xl"
                       >
-                        <option value="">Select Country</option>
-                        <option value="Oman">Oman</option>
-                        <option value="UAE">UAE</option>
-                        <option value="Saudi">Saudi Arabia</option>
-                        <option value="Qatar">Qatar</option>
+                        <option value="">{ph.selectCountry}</option>
+                        {opts.countries.map((c: string) => (
+                          <option key={c} value={c}>
+                            {c}
+                          </option>
+                        ))}
                       </select>
                     </div>
+
+                    {/* Business Type */}
                     <div>
-                      <label className="block mb-1 font-medium text-gray-700">Business Type</label>
+                      <label className="block mb-1 font-medium text-gray-700">
+                        {labels.businessType}
+                      </label>
                       <select
                         value={formData.businessType}
-                        onChange={(e) => updateFormData("businessType", e.target.value)}
-                        className="w-full border border-gray-300 px-3 py-2 sm:px-4 sm:py-2 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition shadow-sm text-sm sm:text-base"
+                        onChange={(e) =>
+                          updateFormData("businessType", e.target.value)
+                        }
+                        className="w-full border px-4 py-2 rounded-xl"
                       >
-                        <option value="">Select Type</option>
-                        <option value="LLC">LLC</option>
-                        <option value="Free Zone">Free Zone</option>
-                        <option value="Branch">Branch</option>
-                        <option value="Offshore">Offshore</option>
+                        <option value="">{ph.selectType}</option>
+                        {opts.businessTypes.map((type: string) => (
+                          <option key={type} value={type}>
+                            {type}
+                          </option>
+                        ))}
                       </select>
                     </div>
-                  </motion.div>
+                  </div>
                 )}
 
-                 {/* STEP 2 */}
-                 {step === 2 && (
-                    <motion.div key="s2" initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -40 }} className="space-y-4">
+                {/* ------------------------------------------
+                    STEP 2
+                ------------------------------------------- */}
+                {step === 2 && (
+                  <div className="space-y-4">
+                    {/* Shareholders */}
+                    <div>
+                      <label className="block mb-1 text-gray-700">
+                        {labels.shareholders}
+                      </label>
+                      <input
+                        type="number"
+                        min={1}
+                        placeholder={ph.shareholders}
+                        value={formData.shareholders}
+                        onChange={(e) =>
+                          updateFormData("shareholders", e.target.value)
+                        }
+                        className="w-full border px-4 py-2 rounded-xl"
+                      />
+                      <p className="text-xs text-gray-500">
+                        {labels.shareholdersHint}
+                      </p>
+                    </div>
+
+                    {/* Visas */}
+                    <div>
+                      <label className="block mb-1 text-gray-700">
+                        {labels.visas}
+                      </label>
+                      <input
+                        type="number"
+                        min={0}
+                        placeholder={ph.visas}
+                        value={formData.visas}
+                        onChange={(e) =>
+                          updateFormData("visas", e.target.value)
+                        }
+                        className="w-full border px-4 py-2 rounded-xl"
+                      />
+                    </div>
+
+                    {/* Activity */}
+                    <div>
+                      <label className="block mb-1 text-gray-700">
+                        {labels.businessActivity}
+                      </label>
+                      <input
+                        type="text"
+                        placeholder={ph.businessActivity}
+                        value={formData.businessActivity}
+                        onChange={(e) =>
+                          updateFormData("businessActivity", e.target.value)
+                        }
+                        className="w-full border px-4 py-2 rounded-xl"
+                      />
+                    </div>
+
+                    {/* Capital + Employees */}
+                    <div className="grid grid-cols-2 gap-4">
                       <div>
-                        <label className="block mb-1 font-medium text-gray-700">Number of Shareholders</label>
-                        <input type="number" min={1} placeholder="1" value={formData.shareholders} onChange={(e) => updateFormData("shareholders", e.target.value)} className="w-full border border-gray-300 px-4 py-2 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition shadow-sm" />
-                        <p className="text-xs text-gray-500 mt-1">If more than 1, we may recommend shareholder agreement/legal docs.</p>
+                        <label className="block mb-1 text-gray-700">
+                          {labels.capital}
+                        </label>
+                        <input
+                          type="number"
+                          placeholder={ph.capital}
+                          value={formData.capital}
+                          onChange={(e) =>
+                            updateFormData("capital", e.target.value)
+                          }
+                          className="w-full border px-4 py-2 rounded-xl"
+                        />
                       </div>
-
-                      <div>
-                        <label className="block mb-1 font-medium text-gray-700">Number of Visas Required</label>
-                        <input type="number" min={0} placeholder="0" value={formData.visas} onChange={(e) => updateFormData("visas", e.target.value)} className="w-full border border-gray-300 px-4 py-2 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition shadow-sm" />
-                      </div>
-
-                      <div>
-                        <label className="block mb-1 font-medium text-gray-700">Primary Business Activity</label>
-                        <input type="text" placeholder="Trading, Services, Tech..." value={formData.businessActivity} onChange={(e) => updateFormData("businessActivity", e.target.value)} className="w-full border border-gray-300 px-4 py-2 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition shadow-sm" />
-                      </div>
-
-                      <div className="grid grid-cols-2 gap-4">
-                        <div>
-                          <label className="block mb-1 font-medium text-gray-700">Approx. Capital (USD)</label>
-                          <input type="number" placeholder="5000" value={formData.capital} onChange={(e) => updateFormData("capital", e.target.value)} className="w-full border border-gray-300 px-4 py-2 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition shadow-sm" />
-                        </div>
-                        <div>
-                          <label className="block mb-1 font-medium text-gray-700">Estimated Employees</label>
-                          <input type="number" placeholder="0" value={formData.employees} onChange={(e) => updateFormData("employees", e.target.value)} className="w-full border border-gray-300 px-4 py-2 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition shadow-sm" />
-                        </div>
-                      </div>
-                    </motion.div>
-                  )}
-
-                  {/* STEP 3 */}
-                  {step === 3 && (
-                    <motion.div key="s3" initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -40 }} className="space-y-4">
-                      <div>
-                        <label className="block mb-1 font-medium text-gray-700">Industry Category</label>
-                        <select value={formData.industryCategory} onChange={(e) => updateFormData("industryCategory", e.target.value)} className="w-full border border-gray-300 px-4 py-2 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition shadow-sm">
-                          <option value="">Select Industry</option>
-                          <option value="Trading">Trading</option>
-                          <option value="Services">Services</option>
-                          <option value="Tech">Tech / Software</option>
-                          <option value="Manufacturing">Manufacturing</option>
-                          <option value="Consulting">Consulting</option>
-                        </select>
-                      </div>
-
-                      <div>
-                        <label className="block mb-1 font-medium text-gray-700">Planned Start Timeline</label>
-                        <select value={formData.timeline} onChange={(e) => updateFormData("timeline", e.target.value)} className="w-full border border-gray-300 px-4 py-2 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition shadow-sm">
-                          <option value="">Select</option>
-                          <option value="Immediately">Immediately</option>
-                          <option value="Within a month">Within a month</option>
-                          <option value="1-3 months">1-3 months</option>
-                          <option value="3+ months">3+ months</option>
-                        </select>
-                      </div>
-
-                      <div>
-                        <label className="block mb-1 font-medium text-gray-700">Urgency</label>
-                        <select value={formData.urgency} onChange={(e) => updateFormData("urgency", e.target.value)} className="w-full border border-gray-300 px-4 py-2 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition shadow-sm">
-                          <option value="">Select</option>
-                          <option value="Normal">Normal</option>
-                          <option value="Expedited (+fees)">Expedited</option>
-                        </select>
-                        <p className="text-xs text-gray-500 mt-1">Expedited processing can incur extra fees.</p>
-                      </div>
-                    </motion.div>
-                  )}
-
-                  {/* STEP 4 */}
-                  {step === 4 && (
-                    <motion.div key="s4" initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -40 }} className="space-y-4">
-                      {showOmanSponsor && (
-                        <div>
-                          <label className="block mb-1 font-medium text-gray-700">Local Sponsor Required?</label>
-                          <select value={formData.localSponsor} onChange={(e) => updateFormData("localSponsor", e.target.value)} className="w-full border border-gray-300 px-4 py-2 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition shadow-sm">
-                            <option value="">Select</option>
-                            <option value="Yes">Yes</option>
-                            <option value="No">No</option>
-                          </select>
-                          <p className="text-xs text-gray-500 mt-1">For Oman: many company types require a local sponsor/agent.</p>
-                        </div>
-                      )}
-
-                      {needShareholderAgreement && (
-                        <div>
-                          <label className="block mb-1 font-medium text-gray-700">Do you need a shareholder agreement?</label>
-                          <select value={formData.shareholderAgreement} onChange={(e) => updateFormData("shareholderAgreement", e.target.value)} className="w-full border border-gray-300 px-4 py-2 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition shadow-sm">
-                            <option value="">Select</option>
-                            <option value="Yes">Yes</option>
-                            <option value="No">No</option>
-                          </select>
-                        </div>
-                      )}
 
                       <div>
-                        <label className="block mb-1 font-medium text-gray-700">Office Setup Required?</label>
-                        <select value={formData.officeRequired} onChange={(e) => updateFormData("officeRequired", e.target.value)} className="w-full border border-gray-300 px-4 py-2 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition shadow-sm">
-                          <option value="">Select</option>
-                          <option value="Yes">Yes — physical office</option>
-                          <option value="Serviced">Serviced / virtual office</option>
-                          <option value="No">No</option>
-                        </select>
+                        <label className="block mb-1 text-gray-700">
+                          {labels.employees}
+                        </label>
+                        <input
+                          type="number"
+                          placeholder={ph.employees}
+                          value={formData.employees}
+                          onChange={(e) =>
+                            updateFormData("employees", e.target.value)
+                          }
+                          className="w-full border px-4 py-2 rounded-xl"
+                        />
                       </div>
-                    </motion.div>
-                  )}
+                    </div>
+                  </div>
+                )}
 
-                  {/* STEP 5 */}
-                  {step === 5 && (
-                    <motion.div key="s5" initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -40 }} className="space-y-4">
-                      <label className="block mb-2 font-medium text-gray-700">Add-ons & Services</label>
-                      <div className="flex flex-wrap gap-3">
-                        {["PRO Services", "Office Space Setup", "Bank Account Assistance", "Accounting / Bookkeeping", "Website / Branding"].map((addon) => (
-                          <label key={addon} className="flex items-center gap-2 cursor-pointer border rounded-xl px-3 py-2">
-                            <input type="checkbox" checked={formData.addOns.includes(addon)} onChange={(e) => {
-                              const newAddOns = e.target.checked ? [...formData.addOns, addon] : formData.addOns.filter((a) => a !== addon);
-                              updateFormData("addOns", newAddOns);
-                            }} className="accent-blue-500 w-4 h-4" />
-                            <span className="text-gray-700 font-medium">{addon}</span>
-                          </label>
+                {/* ------------------------------------------
+                    STEP 3
+                ------------------------------------------- */}
+                {step === 3 && (
+                  <div className="space-y-4">
+                    {/* Industry */}
+                    <div>
+                      <label className="block mb-1">{labels.industryCategory}</label>
+                      <select
+                        value={formData.industryCategory}
+                        onChange={(e) =>
+                          updateFormData("industryCategory", e.target.value)
+                        }
+                        className="w-full border px-4 py-2 rounded-xl"
+                      >
+                        <option value="">{ph.selectType}</option>
+                        {opts.industries.map((i: string) => (
+                          <option key={i} value={i}>
+                            {i}
+                          </option>
                         ))}
+                      </select>
+                    </div>
+
+                    {/* Timeline */}
+                    <div>
+                      <label className="block mb-1">{labels.timeline}</label>
+                      <select
+                        value={formData.timeline}
+                        onChange={(e) => updateFormData("timeline", e.target.value)}
+                        className="w-full border px-4 py-2 rounded-xl"
+                      >
+                        <option value="">Select</option>
+                        {opts.timelines.map((t: string) => (
+                          <option key={t} value={t}>
+                            {t}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+
+                    {/* Urgency */}
+                    <div>
+                      <label className="block mb-1">{labels.urgency}</label>
+                      <select
+                        value={formData.urgency}
+                        onChange={(e) =>
+                          updateFormData("urgency", e.target.value)
+                        }
+                        className="w-full border px-4 py-2 rounded-xl"
+                      >
+                        <option value="">Select</option>
+                        {opts.urgency.map((u: string) => (
+                          <option key={u} value={u}>
+                            {u}
+                          </option>
+                        ))}
+                      </select>
+                      <p className="text-xs text-gray-500">{labels.urgencyHint}</p>
+                    </div>
+                  </div>
+                )}
+
+                {/* ------------------------------------------
+                    STEP 4
+                ------------------------------------------- */}
+                {step === 4 && (
+                  <div className="space-y-4">
+                    {/* Sponsor (Oman only) */}
+                    {showOmanSponsor && (
+                      <div>
+                        <label className="block mb-1">{labels.localSponsor}</label>
+                        <select
+                          value={formData.localSponsor}
+                          onChange={(e) =>
+                            updateFormData("localSponsor", e.target.value)
+                          }
+                          className="w-full border px-4 py-2 rounded-xl"
+                        >
+                          <option value="">Select</option>
+                          {opts.yesNo.map((v: string) => (
+                            <option key={v} value={v}>
+                              {v}
+                            </option>
+                          ))}
+                        </select>
                       </div>
+                    )}
 
-                      {formData.addOns.includes("Bank Account Assistance") && (
-                        <div>
-                          <label className="block mb-1 font-medium text-gray-700">Do you already have a corporate bank account?</label>
-                          <select value={formData.haveBankAccount} onChange={(e) => updateFormData("haveBankAccount", e.target.value)} className="w-full border border-gray-300 px-4 py-2 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition shadow-sm">
-                            <option value="">Select</option>
-                            <option value="Yes">Yes</option>
-                            <option value="No">No</option>
-                          </select>
-                        </div>
-                      )}
+                    {/* Shareholder Agreement */}
+                    {needShareholderAgreement && (
+                      <div>
+                        <label className="block mb-1">
+                          {labels.shareholderAgreement}
+                        </label>
+                        <select
+                          value={formData.shareholderAgreement}
+                          onChange={(e) =>
+                            updateFormData("shareholderAgreement", e.target.value)
+                          }
+                          className="w-full border px-4 py-2 rounded-xl"
+                        >
+                          <option value="">Select</option>
+                          {opts.yesNo.map((v: string) => (
+                            <option key={v} value={v}>
+                              {v}
+                            </option>
+                          ))}
+                        </select>
+                      </div>
+                    )}
 
-                      {formData.addOns.includes("PRO Services") && (
-                        <div>
-                          <label className="block mb-1 font-medium text-gray-700">Do you need visa processing for employees?</label>
-                          <select value={formData.needVisaProcessing} onChange={(e) => updateFormData("needVisaProcessing", e.target.value)} className="w-full border border-gray-300 px-4 py-2 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition shadow-sm">
-                            <option value="">Select</option>
-                            <option value="Yes">Yes</option>
-                            <option value="No">No</option>
-                          </select>
-                        </div>
-                      )}
-                    </motion.div>
-                  )}
+                    {/* Office Requirement */}
+                    <div>
+                      <label className="block mb-1">{labels.officeRequired}</label>
+                      <select
+                        value={formData.officeRequired}
+                        onChange={(e) =>
+                          updateFormData("officeRequired", e.target.value)
+                        }
+                        className="w-full border px-4 py-2 rounded-xl"
+                      >
+                        <option value="">Select</option>
+                        {opts.office.map((o: string) => (
+                          <option key={o} value={o}>
+                            {o}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                  </div>
+                )}
 
-                  {/* STEP 6 */}
-                  {step === 6 && (
-  <motion.div
-    key="s6"
-    initial={{ opacity: 0, x: 40 }}
-    animate={{ opacity: 1, x: 0 }}
-    exit={{ opacity: 0, x: -40 }}
-    className="space-y-4"
-  >
-    {/* Full Name */}
-    <div>
-      <label className="block mb-1 font-medium text-gray-700">Full Name</label>
-      <input
-        type="text"
-        placeholder="John Doe"
-        value={formData.name}
-        onChange={(e) => updateFormData("name", e.target.value)}
-        className="w-full border border-gray-300 px-4 py-2 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition shadow-sm"
-      />
-    </div>
+                {/* ------------------------------------------
+                    STEP 5
+                ------------------------------------------- */}
+                {step === 5 && (
+                  <div className="space-y-4">
+                    <label className="block mb-2 font-medium">
+                      {labels.addOns}
+                    </label>
 
-    {/* Email */}
-    <div>
-      <label className="block mb-1 font-medium text-gray-700">Email</label>
-      <input
-        type="email"
-        placeholder="john@example.com"
-        value={formData.email}
-        onChange={(e) => updateFormData("email", e.target.value)}
-        className="w-full border border-gray-300 px-4 py-2 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition shadow-sm"
-      />
-    </div>
+                    <div className="flex flex-wrap gap-3">
+                      {opts.addOns.map((addon: string) => (
+                        <label
+                          key={addon}
+                          className="flex items-center gap-2 cursor-pointer border rounded-xl px-3 py-2"
+                        >
+                          <input
+                            type="checkbox"
+                            checked={formData.addOns.includes(addon)}
+                            onChange={(e) => {
+                              const updated = e.target.checked
+                                ? [...formData.addOns, addon]
+                                : formData.addOns.filter((a) => a !== addon);
+                              updateFormData("addOns", updated);
+                            }}
+                            className="accent-blue-500 w-4 h-4"
+                          />
+                          <span>{addon}</span>
+                        </label>
+                      ))}
+                    </div>
 
-    {/* Phone */}
-    <div>
-  <label className="block mb-1 font-medium text-gray-700">Phone</label>
-  <div className="w-full">
-    <PhoneInput
-      country={"om"}
-      onlyCountries={["om", "ae", "sa", "qa", "bh", "kw", "in"]}
-      value={formData.phone}
-      onChange={(phone) => updateFormData("phone", phone)}
-      inputClass="!w-full !h-[44px] !pl-14 !pr-4 !border !border-gray-300 !rounded-xl !focus:ring-2 !focus:ring-blue-400 !focus:border-blue-400 !transition !shadow-sm !text-gray-700"
-      containerClass="!w-full"
-      buttonClass="!absolute !left-0 !top-0 !bottom-0 !rounded-l-xl !border-none !bg-transparent !pl-3"
-      dropdownClass="!rounded-xl !shadow-lg"
-    />
-  </div>
-</div>
+                    {/* Bank Account */}
+                    {formData.addOns.includes("Bank Account Assistance") && (
+                      <div>
+                        <label className="block mb-1">{labels.haveBankAccount}</label>
+                        <select
+                          value={formData.haveBankAccount}
+                          onChange={(e) =>
+                            updateFormData("haveBankAccount", e.target.value)
+                          }
+                          className="w-full border px-4 py-2 rounded-xl"
+                        >
+                          <option value="">Select</option>
+                          {opts.yesNo.map((v: string) => (
+                            <option key={v} value={v}>
+                              {v}
+                            </option>
+                          ))}
+                        </select>
+                      </div>
+                    )}
 
+                    {/* Visa Processing */}
+                    {formData.addOns.includes("PRO Services") && (
+                      <div>
+                        <label className="block mb-1">
+                          {labels.needVisaProcessing}
+                        </label>
+                        <select
+                          value={formData.needVisaProcessing}
+                          onChange={(e) =>
+                            updateFormData("needVisaProcessing", e.target.value)
+                          }
+                          className="w-full border px-4 py-2 rounded-xl"
+                        >
+                          <option value="">Select</option>
+                          {opts.yesNo.map((v: string) => (
+                            <option key={v} value={v}>
+                              {v}
+                            </option>
+                          ))}
+                        </select>
+                      </div>
+                    )}
+                  </div>
+                )}
 
-    {/* Notes */}
-    <div>
-      <label className="block mb-1 font-medium text-gray-700">Notes (optional)</label>
-      <textarea
-        rows={3}
-        value={formData.notes}
-        onChange={(e) => updateFormData("notes", e.target.value)}
-        className="w-full border border-gray-300 px-4 py-2 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition shadow-sm"
-        placeholder="Any extra info..."
-      />
-    </div>
-  </motion.div>
-                  )}
+                {/* ------------------------------------------
+                    STEP 6 — Contact Info
+                ------------------------------------------- */}
+                {step === 6 && (
+                  <div className="space-y-4">
+                    {/* Name */}
+                    <div>
+                      <label className="block mb-1">{labels.name}</label>
+                      <input
+                        type="text"
+                        placeholder={ph.name}
+                        value={formData.name}
+                        onChange={(e) => updateFormData("name", e.target.value)}
+                        className="w-full border px-4 py-2 rounded-xl"
+                      />
+                    </div>
 
-                  {/* STEP 7 — Review */}
-                  {step === 7 && (
-                    <motion.div key="s7" initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -40 }} className="space-y-4">
-                      <h3 className="text-lg font-medium">Review your details</h3>
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        {Object.entries(formData).map(([k, v]) => (
-                          <div key={k} className="p-3 border rounded-lg">
-                            <div className="text-xs text-gray-500">{k}</div>
-                            <div className="text-sm text-gray-800">{Array.isArray(v) ? (v.length ? v.join(", ") : "—") : v || "—"}</div>
+                    {/* Email */}
+                    <div>
+                      <label className="block mb-1">{labels.email}</label>
+                      <input
+                        type="email"
+                        placeholder={ph.email}
+                        value={formData.email}
+                        onChange={(e) => updateFormData("email", e.target.value)}
+                        className="w-full border px-4 py-2 rounded-xl"
+                      />
+                    </div>
+
+                    {/* Phone */}
+                    <div>
+                      <label className="block mb-1">{labels.phone}</label>
+                      <PhoneInput
+                        country={"om"}
+                        onlyCountries={["om", "ae", "sa", "qa", "bh", "kw", "in"]}
+                        value={formData.phone}
+                        onChange={(phone) => updateFormData("phone", phone)}
+                        inputClass="!w-full !h-[44px] !pl-14 !pr-4 !border !border-gray-300 !rounded-xl"
+                        containerClass="!w-full"
+                      />
+                    </div>
+
+                    {/* Notes */}
+                    <div>
+                      <label className="block mb-1">{labels.notes}</label>
+                      <textarea
+                        rows={3}
+                        placeholder={ph.notes}
+                        value={formData.notes}
+                        onChange={(e) =>
+                          updateFormData("notes", e.target.value)
+                        }
+                        className="w-full border px-4 py-2 rounded-xl"
+                      />
+                    </div>
+                  </div>
+                )}
+
+                {/* ------------------------------------------
+                    STEP 7 — Review
+                ------------------------------------------- */}
+                {step === 7 && (
+                  <div className="space-y-4">
+                    <h3 className="text-lg font-medium">{t("calculator.steps.6")}</h3>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {Object.entries(formData).map(([key, val]) => (
+                        <div key={key} className="p-3 border rounded-lg">
+                          <div className="text-xs text-gray-500">
+                            {labels[key] || key}
                           </div>
-                        ))}
-                      </div>
-                      <p className="text-xs text-gray-500">Click submit to send this to our team — we will follow up with an estimate.</p>
-                    </motion.div>
-                  )}
-
+                          <div className="text-sm text-gray-800">
+                            {Array.isArray(val) ? val.join(", ") || "—" : val || "—"}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
 
-              {/* Sticky footer */}
-              <div className="bg-white border-t p-4 sm:p-6 flex justify-between items-center">
+              {/* FOOTER BUTTONS */}
+              <div className="bg-white border-t p-4 flex justify-between items-center">
+                {/* BACK */}
                 <button
                   onClick={handleBack}
                   disabled={step === 1}
-                  className="px-3 py-1.5 sm:px-4 sm:py-2 bg-gray-200 text-gray-700 rounded-lg disabled:opacity-50 hover:bg-gray-300 flex items-center gap-1 sm:gap-2 text-sm sm:text-base"
+                  className="px-4 py-2 bg-gray-200 rounded-lg disabled:opacity-50"
                 >
-                  <ArrowLeft className="w-3 h-3 sm:w-4 sm:h-4" /> Back
+                  {buttons.back}
                 </button>
+
+                {/* NEXT / SUBMIT */}
                 {step < steps.length ? (
                   <button
                     onClick={handleNext}
-                    className="px-3 py-1.5 sm:px-4 sm:py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 flex items-center gap-1 sm:gap-2 text-sm sm:text-base"
+                    className="px-4 py-2 bg-blue-500 text-white rounded-lg"
                   >
-                    Next <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4" />
+                    {buttons.next}
                   </button>
                 ) : (
                   <button
                     onClick={handleSubmit}
                     disabled={isSubmitting}
-                    className="px-3 py-1.5 sm:px-4 sm:py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 flex items-center gap-1 sm:gap-2 disabled:opacity-50 text-sm sm:text-base"
+                    className="px-4 py-2 bg-green-500 text-white rounded-lg disabled:opacity-50"
                   >
-                    {isSubmitting ? "Submitting..." : "Submit Estimate"} <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4" />
+                    {isSubmitting ? buttons.submitting : buttons.submit}
                   </button>
                 )}
               </div>
             </>
           ) : (
-            <motion.div
-              key="success"
-              className="text-center py-10 space-y-4"
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-            >
+            <div className="text-center py-10 space-y-4">
               <CheckCircle className="w-16 h-16 mx-auto text-green-500" />
-              <h3 className="text-xl sm:text-2xl font-semibold text-gray-800">Thank you!</h3>
-              <p className="text-gray-600 text-sm sm:text-base">We received your details — our team will reach out shortly.</p>
-              <button onClick={handleClose} className="px-6 py-2 sm:px-8 sm:py-3 bg-gray-200 rounded-lg hover:bg-gray-300 transition text-sm sm:text-base">
-                Close
+              <h3 className="text-xl font-semibold">{successText.title}</h3>
+              <p className="text-gray-600">{successText.message}</p>
+              <button
+                onClick={handleClose}
+                className="px-6 py-2 bg-gray-200 rounded-lg"
+              >
+                {buttons.close}
               </button>
-            </motion.div>
+            </div>
           )}
         </motion.div>
       </motion.div>

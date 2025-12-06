@@ -63,14 +63,19 @@ function App() {
   };
 
   return (
-    <I18nextProvider i18n={i18n}>
-      <Toaster position="top-right" />
-      <Router>
-        <ScrollToTop />
-        {showIntro && <IntroAnimation onComplete={handleIntroComplete} />}
-        {introComplete && (
-          <div className="min-h-screen bg-white">
-            <Header />
+   <I18nextProvider i18n={i18n}>
+    <Toaster position="top-right" />
+    <Router>
+      <ScrollToTop />
+
+      {showIntro && <IntroAnimation onComplete={handleIntroComplete} />}
+
+      {introComplete && (
+        <div
+          className="min-h-screen bg-white"
+          dir={i18n.dir()}      // ✅ APPLY GLOBAL RTL/LTR
+        >
+          <Header />
             <Routes>
               <Route path="*" element={<NotFound />} />
               <Route path="/" element={<Home1 />} />

@@ -6,25 +6,27 @@ export default {
       screens: {
         sm: "640px",
         md: "768px",
-        tab: "912px", // ✅ Surface Pro breakpoint
-        lg: "1024px", // ✅ iPad Pro breakpoint
+        tab: "912px",
+        lg: "1024px",
         xl: "1280px",
       },
       keyframes: {
         moveX: {
-          '0%, 100%': { transform: 'translateX(0)' },
-          '50%': { transform: 'translateX(40px)' },
+          "0%, 100%": { transform: "translateX(0)" },
+          "50%": { transform: "translateX(40px)" },
         },
         moveY: {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(30px)' },
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(30px)" },
         },
       },
-      animation: {  
-        'move-x': 'moveX 6s ease-in-out infinite',
-        'move-y': 'moveY 8s ease-in-out infinite',
+      animation: {
+        "move-x": "moveX 6s ease-in-out infinite",
+        "move-y": "moveY 8s ease-in-out infinite",
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require("tailwindcss-rtl"),  // ✅ RTL PLUGIN
+  ],
 };

@@ -70,28 +70,28 @@ export default function Home1() {
     {
       icon: Building2,
       title: t("service.companyRegistration.title"),
-      description: t("services.companyRegistration.desc"),
+      description: t("service.companyRegistration.desc"),
       img: '/images/service1.jpeg',
       link: '/services/company-registration'
     },
     {
       icon: FileText,
       title: t("service.visaEmigration.title"),
-      description: t("services.visaEmigration.desc"),
+      description: t("service.visaEmigration.desc"),
       img: '/images/service2.jpeg',
       link: '/services/visa-emigration'
     },
     {
       icon: Users,
       title: t("service.proServices.title"),
-      description: t("services.proServices.desc"),
+      description: t("service.proServices.desc"),
       img: '/images/service3.jpeg',
       link: '/services/pro-services'
     },
     {
       icon: Globe,
       title: t("service.ministryServices.title"),
-      description: t("services.ministryServices.desc"),
+      description: t("service.ministryServices.desc"),
       img: '/images/service4.jpeg',
       link: '/services/ministry-services'
     }
@@ -142,7 +142,13 @@ export default function Home1() {
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="max-w-3xl text-left mt-28 md:mt-32 lg:mt-28 text-center md:text-left"
+            className="
+  max-w-3xl 
+  text-left rtl:text-right
+  mt-28 md:mt-32 lg:mt-28
+  text-center md:text-left rtl:md:text-right
+"
+
           >
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
               {t("home.hero.title")}
@@ -183,11 +189,17 @@ export default function Home1() {
 
         {/* ===== WHATSAPP FLOAT BUTTON ===== */}
 <a
-  href="https://api.whatsapp.com/send?phone=96872596531&text=Hello!%20I'm%20interested%20in%20your%20business%20setup%20and%20visa%20services.%20Could%20you%20please%20assist%20me%3F"
+  href="https://api.whatsapp.com/send?phone=96872596531&text=Hello..."
   target="_blank"
   rel="noopener noreferrer"
   aria-label="Chat on WhatsApp"
-  className="fixed bottom-5 right-5 bg-[#25D366] hover:bg-[#1DA851] text-white p-4 rounded-full shadow-lg z-50 transition animate-bounce"
+  className="
+    fixed bottom-5 right-5
+    rtl:right-auto rtl:left-5
+    bg-[#25D366] hover:bg-[#1DA851]
+    text-white p-4 rounded-full shadow-lg 
+    z-50 transition animate-bounce
+  "
 >
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -200,15 +212,22 @@ export default function Home1() {
 
 
         {/* ===== CHATBOT (fixed left bottom) ===== */}
-        <div className="fixed bottom-5 left-5 z-50">
-          <Chatbot />
-        </div>
+        <div
+  className="
+    fixed bottom-5 left-5
+    rtl:left-auto rtl:right-5
+    z-50
+  "
+>
+  <Chatbot />
+</div>
+
       </section>
 
       {/* === SERVICES === */}
       <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-6 text-center">
-          <h2 className="text-4xl font-light mb-4">{t("home.services.title")}</h2>
+          <h2 className="text-4xl font-light mb-4 rtl:text-right">{t("home.services.title")}</h2>
           <p className="text-gray-600 max-w-2xl mx-auto mb-16">{t("home.services.subtitle")}</p>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
             {services.map((s, i) => (
@@ -223,7 +242,7 @@ export default function Home1() {
                   <div className="flip-card-back bg-[#42A5E1] text-white rounded-xl p-6 flex flex-col justify-center text-center">
                     <h3 className="text-xl font-semibold mb-3">{s.title}</h3>
                     <p className="text-sm mb-6">{s.description}</p>
-                    <span className="inline-block bg-white text-[#42A5E1] px-6 py-2 rounded-md font-medium transition-transform transform hover:scale-105 cursor-pointer">
+                    <span className="inline-block bg-white text-[#42A5E1] px-6 py-2 rounded-md font-medium transition-transform transform hover:scale-105 cursor-pointer rtl:text-right">
                       {t("home.services.learnMore")}
                     </span>
                   </div>

@@ -29,6 +29,7 @@
     "react-tsparticles": "^2.12.2",
     "resend": "^6.2.2",
     "sonner": "^2.0.7",
+    "tailwindcss-rtl": "^0.9.0",
     "tsparticles": "^3.9.1"
   },
   "devDependencies": {

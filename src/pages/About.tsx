@@ -580,7 +580,7 @@ const proTeam = [
         { name: "Maisarah Accounting", logo: "/images/Maisarah.png", link: "https://maisarah.net/" },
         { name: "Osan Studio", logo: "/OsanStudio.png", link: "https://osanstudio.net/" },
         { name: "ASAS Service Center", logo: "/images/ASAS.png", link: "https://asas.om/" },
-        { name: "Thamkeen Service Center", logo: "/images/TAMKEEN.png", link: "#" },
+        { name: "Tamkeen Service Center", logo: "/images/TAMKEEN.png", link: "#" },
         { name: "Amer Service Center", logo: "/images/AMER.png", link: "#" },
         { name: "Nameer Properties", logo: "/Nameer Properties.png", link: "#" },
       ].map((company, i) => (

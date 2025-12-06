@@ -17,17 +17,25 @@ export default function Footer() {
             <p className="text-blue-100 text-sm mb-4">{t('footer.tagline')}</p>
 
             {/* Social Icons - Desktop & Tablet */}
-            <div className="hidden md:flex gap-3">
-              {[Facebook, Twitter, Linkedin, Instagram].map((Icon, idx) => (
-                <a
-                  key={idx}
-                  href="#"
-                  className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white transition"
-                >
-                  <Icon size={16} className="text-white" />
-                </a>
-              ))}
-            </div>
+<div className="hidden md:flex gap-3">
+  {[
+    { Icon: Facebook, url: "https://www.facebook.com/osbicofficial/" },
+    // Twitter removed
+    { Icon: Linkedin, url: "https://www.linkedin.com/company/osbic" },
+    { Icon: Instagram, url: "https://www.instagram.com/osbicoman/" }
+  ].map(({ Icon, url }, idx) => (
+    <a
+      key={idx}
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white transition"
+    >
+      <Icon size={16} className="text-white" />
+    </a>
+  ))}
+</div>
+
           </div>
 
           {/* Quick Links */}
@@ -82,16 +90,24 @@ export default function Footer() {
 
 {/* Mobile Social Icons */}
 <div className="flex gap-3 mb-2 md:hidden justify-center">
-  {[Facebook, Twitter, Linkedin, Instagram].map((Icon, idx) => (
+  {[
+    { Icon: Facebook, url: "https://www.facebook.com/osbicofficial/" },
+    // Twitter removed
+    { Icon: Linkedin, url: "https://www.linkedin.com/company/osbic" },
+    { Icon: Instagram, url: "https://www.instagram.com/osbicoman/" }
+  ].map(({ Icon, url }, idx) => (
     <a
       key={idx}
-      href="#"
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
       className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white transition"
     >
       <Icon size={16} className="text-white" />
     </a>
   ))}
 </div>
+
 
 <p>{t("footer.copyright")}</p>
 
