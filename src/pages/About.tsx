@@ -96,13 +96,13 @@ const team = [
     objectPosition: "top center",
     expertise: ["Visa Services", "PRO Work", "CR Updates"],
   },
-  {
-    name: "Misba Sadia",
-    image: "/images/TEAM/misba.1.jpg",
-    roleKey: "about.team.roles.businessDevelopmentExecutive",
-    objectPosition: "top center",
-    expertise: ["Business Licensing", "Sponsor Transfer", "Employment Visa"],
-  },
+  // {
+  //   name: "Misba Sadia",
+  //   image: "/images/TEAM/misba.1.jpg",
+  //   roleKey: "about.team.roles.businessDevelopmentExecutive",
+  //   objectPosition: "top center",
+  //   expertise: ["Business Licensing", "Sponsor Transfer", "Employment Visa"],
+  // },
   {
     name: "Sadaf Etehad",
     image: "/images/TEAM/sadaf.2.jpg",
@@ -420,6 +420,9 @@ const proTeam = [
     </div>
   </div>
 </section>
+
+
+
 
 {/* PRO Team Section */}
 {/* <section className="py-24 bg-white">
