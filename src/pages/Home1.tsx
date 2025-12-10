@@ -227,7 +227,10 @@ export default function Home1() {
       {/* === SERVICES === */}
       <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-6 text-center">
-          <h2 className="text-4xl font-light mb-4 rtl:text-right">{t("home.services.title")}</h2>
+          <h2 className="text-4xl font-light mb-4 text-center">
+  {t("home.services.title")}
+</h2>
+
           <p className="text-gray-600 max-w-2xl mx-auto mb-16">{t("home.services.subtitle")}</p>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
             {services.map((s, i) => (

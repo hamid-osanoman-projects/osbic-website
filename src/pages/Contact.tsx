@@ -170,14 +170,15 @@ export default function Contact() {
               <h1 className="text-5xl font-light mb-4">{t("contact.hero.title")}</h1>
               <p className="text-lg text-blue-100 mb-10">{t("contact.hero.subtitle")}</p>
               <a
-                href="https://wa.me/96896328888"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 bg-white text-[#42A5E1] font-medium px-10 py-4 rounded-full text-lg shadow-lg hover:bg-blue-50 transition duration-300"
-              >
-                <FaWhatsapp size={24} className="text-[#42A5E1]" />
-                {t("contact.hero.cta")}
-              </a>
+  href="https://api.whatsapp.com/send?phone=96896328888&text=Hello!%20I%27m%20interested%20in%20your%20services.%20Please%20assist%20me."
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex items-center gap-3 bg-white text-[#42A5E1] font-medium px-10 py-4 rounded-full text-lg shadow-lg hover:bg-blue-50 transition duration-300"
+>
+  <FaWhatsapp size={24} className="text-[#42A5E1]" />
+  {t("contact.hero.cta")}
+</a>
+
             </motion.div>
           </div>
         </section>
