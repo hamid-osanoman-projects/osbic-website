@@ -1,0 +1,15 @@
+{
+  "short_name": "OSBIC",
+  "name": "OSBIC — Business Setup in Oman",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#ffffff",
+  "theme_color": "#42A5E1",
+  "display": "standalone"
+}
