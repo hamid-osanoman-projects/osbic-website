@@ -242,13 +242,14 @@ export default function Home1() {
                       <h3 className="text-lg font-semibold">{s.title}</h3>
                     </div>
                   </div>
-                  <div className="flip-card-back bg-[#42A5E1] text-white rounded-xl p-6 flex flex-col justify-center text-center">
-                    <h3 className="text-xl font-semibold mb-3">{s.title}</h3>
-                    <p className="text-sm mb-6">{s.description}</p>
-                    <span className="inline-block bg-white text-[#42A5E1] px-6 py-2 rounded-md font-medium transition-transform transform hover:scale-105 cursor-pointer rtl:text-right">
-                      {t("home.services.learnMore")}
-                    </span>
-                  </div>
+                  <div className="flip-card-back bg-[#1e88e5] text-white rounded-xl p-6 flex flex-col justify-center text-center"> 
+  {/* Changed bg-[#42A5E1] to bg-[#1e88e5] for better contrast against white text */}
+  <h3 className="text-xl font-semibold mb-3">{s.title}</h3>
+  <p className="text-sm mb-6 text-white">{s.description}</p>
+  <span className="inline-block bg-white text-[#1e88e5] px-6 py-2 rounded-md font-medium transition-transform transform hover:scale-105 cursor-pointer rtl:text-right">
+    {t("home.services.learnMore")}
+  </span>
+</div>
                 </div>
               </Link>
             ))}

@@ -139,7 +139,7 @@ export default function Header() {
 
             {/* Mobile Hamburger */}
             <div className="lg:hidden">
-              <button onClick={() => setMobileOpen(!mobileOpen)} className="text-gray-700 focus:outline-none">
+              <button onClick={() => setMobileOpen(!mobileOpen)} className="text-gray-700 focus:outline-none" aria-label={mobileOpen ? "Close Menu" : "Open Menu"} >
                 {mobileOpen ? <X size={26} /> : <Menu size={26} />}
               </button>
             </div>

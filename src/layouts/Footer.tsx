@@ -43,9 +43,9 @@ export default function Footer() {
           <h3 className="text-lg font-semibold mb-4">{t("footer.quickLinks.title")}</h3>
 <ul className="space-y-2 text-sm">
   <li><Link to="/about" className="text-blue-100 hover:text-white transition">{t("footer.quickLinks.about")}</Link></li>
-  <li><Link to="/case-studies" className="text-blue-100 hover:text-white transition">{t("footer.quickLinks.caseStudies")}</Link></li>
-  <li><Link to="/testimonials" className="text-blue-100 hover:text-white transition">{t("footer.quickLinks.testimonials")}</Link></li>
-  <li><Link to="/careers" className="text-blue-100 hover:text-white transition">{t("footer.quickLinks.careers")}</Link></li>
+  <li><Link to="#" className="text-blue-100 hover:text-white transition">{t("footer.quickLinks.caseStudies")}</Link></li>
+  <li><Link to="#" className="text-blue-100 hover:text-white transition">{t("footer.quickLinks.testimonials")}</Link></li>
+  <li><Link to="#" className="text-blue-100 hover:text-white transition">{t("footer.quickLinks.careers")}</Link></li>
 </ul>
           </div>
 
@@ -101,6 +101,7 @@ export default function Footer() {
       href={url}
       target="_blank"
       rel="noopener noreferrer"
+      aria-label={`Visit our ${name} page`} // <--- ADD THIS
       className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white transition"
     >
       <Icon size={16} className="text-white" />
@@ -113,13 +114,13 @@ export default function Footer() {
 
 {/* Legal Links */}
 <div className="flex gap-4 mt-2 md:mt-0 hidden md:flex">
-  <Link to="/legal/privacy" className="hover:text-white transition">
+  <Link to="#" className="hover:text-white transition">
     {t("footer.legal.privacy")}
   </Link>
-  <Link to="/legal/terms" className="hover:text-white transition">
+  <Link to="#" className="hover:text-white transition">
     {t("footer.legal.terms")}
   </Link>
-  <Link to="/legal/cookies" className="hover:text-white transition">
+  <Link to="#" className="hover:text-white transition">
     {t("footer.legal.cookies")}
   </Link>
 </div>
