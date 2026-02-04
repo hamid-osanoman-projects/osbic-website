@@ -98,11 +98,11 @@ export default function Home1() {
   ];
 
   const gccCountries = [
-    { name: t("countries.oman"), img: "/images/oman.jpeg", link: "/business-setup/oman" },
+    { name: t("countries.oman"), img: "/images/oman.webp", link: "/business-setup/oman" },
     { name: t("countries.saudi"), img: "/images/saudi.jpeg", link: "/business-setup/saudi-arabia" },
-    { name: t("countries.qatar"), img: "/images/qatar.jpeg", link: "/business-setup/qatar" },
+    { name: t("countries.qatar"), img: "/images/qatar.webp", link: "/business-setup/qatar" },
     { name: t("countries.uae"), img: "/images/uae.jpeg", link: "/business-setup/uae" },
-    { name: t("countries.kuwait"), img: "/images/kuwait.jpg", link: "/business-setup/kuwait" },
+    { name: t("countries.kuwait"), img: "/images/kuwait.webp", link: "/business-setup/kuwait" },
     { name: t("countries.bahrain"), img: "/images/bahrain.jpg", link: "/business-setup/bahrain" },
     { name: t("countries.iran"), img: "/images/iran.jpg", link: "/business-setup/iran" },
     { name: t("countries.india"), img: "/images/india.jpg", link: "/business-setup/india" },
@@ -410,7 +410,7 @@ export default function Home1() {
             <div className="bg-white flex-1 flex flex-col justify-center p-10 space-y-10">
               <div className="overflow-hidden mx-auto w-[1100px]">
                 <ContinuousScrollingLogos
-                  images={["power.jpeg","power7.png","power2.jpeg","power3.jpeg","power11.jpg","power5.png"]}
+                  images={["power.jpeg","power7.png","power2.webp","power3.webp","power11.webp","power5.png"]}
                   size={{ width: 150, height: 150 }}
                   gap={24}
                   speed={80}
@@ -419,7 +419,7 @@ export default function Home1() {
               </div>
               <div className="overflow-hidden mx-auto w-[1100px]">
                 <ContinuousScrollingLogos
-                  images={["power6.png","power1.jpeg","power9.png","power8.png","power10.png","power12.png",]}
+                  images={["power6.png","power1.jpeg","power9.webp","power8.png","power10.webp","power12.webp",]}
                   size={{ width: 150, height: 150 }}
                   gap={24}
                   speed={90}
