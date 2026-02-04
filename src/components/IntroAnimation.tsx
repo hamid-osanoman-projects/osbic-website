@@ -52,6 +52,7 @@ export default function IntroAnimation({ onComplete }: { onComplete: () => void 
               fontFamily: 'Outfit, sans-serif',
               fontWeight: 300,
               letterSpacing: '0.1em',
+              willChange: 'transform, opacity'
             }}
           >
             {ch}

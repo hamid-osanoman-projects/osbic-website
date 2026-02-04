@@ -131,7 +131,7 @@ export default function Home1() {
       <section
         className="relative min-h-screen flex flex-col text-white overflow-hidden"
         style={{
-          backgroundImage: "url('/images/hero-bg.jpg')",
+          backgroundImage: "url('/images/hero-bg.webp')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -237,7 +237,8 @@ export default function Home1() {
               <Link key={i} to={s.link} className="flip-card cursor-pointer">
                 <div className="flip-card-inner">
                   <div className="flip-card-front overflow-hidden rounded-xl shadow-lg flex flex-col justify-end h-full">
-                    <img src={s.img} alt={s.title} className="w-full h-64 object-cover transform transition-transform duration-500 hover:scale-105" />
+                    <img src={s.img} alt={s.title} loading="lazy" className="w-full h-64 object-cover transform transition-transform duration-500 hover:scale-105" width="400" // <--- Tell the browser the size to prevent Layout Shift
+  height="300" />
                     <div className="bg-white bg-opacity-80 p-4 text-center">
                       <h3 className="text-lg font-semibold">{s.title}</h3>
                     </div>
