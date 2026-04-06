@@ -71,28 +71,28 @@ export default function Home1() {
       icon: Building2,
       title: t("service.companyRegistration.title"),
       description: t("service.companyRegistration.desc"),
-      img: '/images/service1.jpeg',
+      img: '/images/company_registration (1).jpg',
       link: '/services/company-registration'
     },
     {
       icon: FileText,
       title: t("service.visaEmigration.title"),
       description: t("service.visaEmigration.desc"),
-      img: '/images/service2.jpeg',
+      img: '/images/visa_immigration (1).jpg',
       link: '/services/visa-emigration'
     },
     {
       icon: Users,
       title: t("service.proServices.title"),
       description: t("service.proServices.desc"),
-      img: '/images/service3.jpeg',
+      img: '/images/pro_serivices (1).jpg',
       link: '/services/pro-services'
     },
     {
       icon: Globe,
       title: t("service.ministryServices.title"),
       description: t("service.ministryServices.desc"),
-      img: '/images/service4.jpeg',
+      img: '/images/ministry_services (1).jpg',
       link: '/services/ministry-services'
     }
   ];
@@ -188,69 +188,84 @@ export default function Home1() {
         </div>
 
         {/* ===== WHATSAPP FLOAT BUTTON ===== */}
-<a
-  href="https://api.whatsapp.com/send?phone=96872596531&text=Hello..."
-  target="_blank"
-  rel="noopener noreferrer"
-  aria-label="Chat on WhatsApp"
-  className="
+        <a
+          href="https://api.whatsapp.com/send?phone=96872596531&text=Hello..."
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Chat on WhatsApp"
+          className="
     fixed bottom-5 right-5
     rtl:right-auto rtl:left-5
     bg-[#25D366] hover:bg-[#1DA851]
     text-white p-4 rounded-full shadow-lg 
     z-50 transition animate-bounce
   "
->
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 32 32"
-    className="w-7 h-7 fill-white"
-  >
-    <path d="M16.027 3C9.4 3 4 8.4 4 15.027c0 2.65.877 5.102 2.358 7.073L4 29l7.066-2.307a12.9 12.9 0 0 0 4.96.985c6.627 0 12.027-5.4 12.027-12.027C28.053 8.4 22.653 3 16.027 3zm0 21.734c-1.676 0-3.31-.44-4.76-1.275l-.34-.2-4.195 1.37 1.378-4.09-.222-.352a9.33 9.33 0 0 1-1.437-4.99c0-5.176 4.2-9.377 9.376-9.377 5.177 0 9.377 4.2 9.377 9.377 0 5.177-4.2 9.377-9.377 9.377zm5.09-7.032c-.278-.14-1.647-.813-1.9-.906-.256-.093-.444-.14-.63.14-.187.28-.72.906-.882 1.09-.163.186-.324.21-.602.07-.278-.14-1.176-.434-2.24-1.384-.828-.738-1.387-1.65-1.55-1.93-.163-.28-.018-.43.122-.57.126-.126.28-.324.42-.486.14-.163.187-.28.28-.466.093-.187.047-.35-.023-.49-.07-.14-.63-1.522-.863-2.086-.226-.542-.456-.47-.63-.48-.163-.007-.35-.01-.538-.01-.187 0-.49.07-.747.35-.256.28-.98.958-.98 2.33 0 1.373 1.003 2.7 1.146 2.884.14.187 1.97 3.01 4.82 4.22.674.29 1.2.464 1.61.595.677.215 1.294.185 1.784.112.544-.08 1.647-.672 1.88-1.32.233-.65.233-1.207.163-1.326-.07-.12-.256-.187-.533-.327z" />
-  </svg>
-</a>
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 32 32"
+            className="w-7 h-7 fill-white"
+          >
+            <path d="M16.027 3C9.4 3 4 8.4 4 15.027c0 2.65.877 5.102 2.358 7.073L4 29l7.066-2.307a12.9 12.9 0 0 0 4.96.985c6.627 0 12.027-5.4 12.027-12.027C28.053 8.4 22.653 3 16.027 3zm0 21.734c-1.676 0-3.31-.44-4.76-1.275l-.34-.2-4.195 1.37 1.378-4.09-.222-.352a9.33 9.33 0 0 1-1.437-4.99c0-5.176 4.2-9.377 9.376-9.377 5.177 0 9.377 4.2 9.377 9.377 0 5.177-4.2 9.377-9.377 9.377zm5.09-7.032c-.278-.14-1.647-.813-1.9-.906-.256-.093-.444-.14-.63.14-.187.28-.72.906-.882 1.09-.163.186-.324.21-.602.07-.278-.14-1.176-.434-2.24-1.384-.828-.738-1.387-1.65-1.55-1.93-.163-.28-.018-.43.122-.57.126-.126.28-.324.42-.486.14-.163.187-.28.28-.466.093-.187.047-.35-.023-.49-.07-.14-.63-1.522-.863-2.086-.226-.542-.456-.47-.63-.48-.163-.007-.35-.01-.538-.01-.187 0-.49.07-.747.35-.256.28-.98.958-.98 2.33 0 1.373 1.003 2.7 1.146 2.884.14.187 1.97 3.01 4.82 4.22.674.29 1.2.464 1.61.595.677.215 1.294.185 1.784.112.544-.08 1.647-.672 1.88-1.32.233-.65.233-1.207.163-1.326-.07-.12-.256-.187-.533-.327z" />
+          </svg>
+        </a>
 
 
         {/* ===== CHATBOT (fixed left bottom) ===== */}
         <div
-  className="
+          className="
     fixed bottom-5 left-5
     rtl:left-auto rtl:right-5
     z-50
   "
->
-  <Chatbot />
-</div>
+        >
+          <Chatbot />
+        </div>
 
       </section>
 
       {/* === SERVICES === */}
       <section className="py-24 bg-gray-50">
-        <div className="container mx-auto px-6 text-center">
+        <div className="container mx-auto px-6">
           <h2 className="text-4xl font-light mb-4 text-center">
-  {t("home.services.title")}
-</h2>
+            {t("home.services.title")}
+          </h2>
 
-          <p className="text-gray-600 max-w-2xl mx-auto mb-16">{t("home.services.subtitle")}</p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+          <p className="text-gray-600 max-w-2xl mx-auto mb-16 text-center">
+            {t("home.services.subtitle")}
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((s, i) => (
-              <Link key={i} to={s.link} className="flip-card cursor-pointer">
+              <Link key={i} to={s.link} className="flip-card cursor-pointer group">
                 <div className="flip-card-inner">
-                  <div className="flip-card-front overflow-hidden rounded-xl shadow-lg flex flex-col justify-end h-full">
-                    <img src={s.img} alt={s.title} loading="lazy" className="w-full h-64 object-cover transform transition-transform duration-500 hover:scale-105" width="400" // <--- Tell the browser the size to prevent Layout Shift
-  height="300" />
-                    <div className="bg-white bg-opacity-80 p-4 text-center">
-                      <h3 className="text-lg font-semibold">{s.title}</h3>
+                  {/* Front of Card */}
+                  <div className="flip-card-front overflow-hidden rounded-xl shadow-lg flex flex-col h-full bg-white">
+                    <div className="relative w-full aspect-[4/3] overflow-hidden">
+                      <img
+                        src={s.img}
+                        alt={s.title}
+                        loading="lazy"
+                        className={`w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105 ${i === 1 || i === 2 ? 'object-[center_20%]' : 'object-center'
+                          }`}
+                      /* 'object-[center_20%]' moves the image down slightly 
+                        so the heads are higher up in the frame 
+                      */
+                      />
+                    </div>
+                    <div className="bg-white p-4 text-center flex-grow flex items-center justify-center">
+                      <h3 className="text-lg font-semibold text-gray-700 uppercase">{s.title}</h3>
                     </div>
                   </div>
-                  <div className="flip-card-back bg-[#1e88e5] text-white rounded-xl p-6 flex flex-col justify-center text-center"> 
-  {/* Changed bg-[#42A5E1] to bg-[#1e88e5] for better contrast against white text */}
-  <h3 className="text-xl font-semibold mb-3">{s.title}</h3>
-  <p className="text-sm mb-6 text-white">{s.description}</p>
-  <span className="inline-block bg-white text-[#1e88e5] px-6 py-2 rounded-md font-medium transition-transform transform hover:scale-105 cursor-pointer rtl:text-right">
-    {t("home.services.learnMore")}
-  </span>
-</div>
+
+                  {/* Back of Card */}
+                  <div className="flip-card-back bg-[#1e88e5] text-white rounded-xl p-6 flex flex-col justify-center text-center">
+                    <h3 className="text-xl font-semibold mb-3">{s.title}</h3>
+                    <p className="text-sm mb-6 text-white/90">{s.description}</p>
+                    <span className="inline-block bg-white text-[#1e88e5] px-6 py-2 rounded-md font-medium transition-transform transform hover:scale-105">
+                      {t("home.services.learnMore")}
+                    </span>
+                  </div>
                 </div>
               </Link>
             ))}
@@ -259,7 +274,7 @@ export default function Home1() {
       </section>
 
       {/* Client Logos Section */}
-{/* <section className="py-16 bg-white border-t">
+      {/* <section className="py-16 bg-white border-t">
   <div className="container mx-auto px-6 text-center">
     <h2 className="text-3xl font-light text-[#1a2332] mb-10">
       {t("home.clients.heading")}
@@ -293,7 +308,7 @@ export default function Home1() {
 </section> */}
 
       {/* Testimonials Section */}
-{/* <section className="py-20 bg-gray-50">
+      {/* <section className="py-20 bg-gray-50">
   <div className="container mx-auto px-6 text-center">
 
     <h2 className="text-3xl font-light text-[#1a2332] mb-12">
@@ -411,7 +426,7 @@ export default function Home1() {
             <div className="bg-white flex-1 flex flex-col justify-center p-10 space-y-10">
               <div className="overflow-hidden mx-auto w-[1100px]">
                 <ContinuousScrollingLogos
-                  images={["power.jpeg","power7.png","power2.webp","power3.webp","power11.webp","power5.png"]}
+                  images={["power.jpeg", "power7.png", "power2.webp", "power3.webp", "power11.webp", "power5.png"]}
                   size={{ width: 150, height: 150 }}
                   gap={24}
                   speed={80}
@@ -420,7 +435,7 @@ export default function Home1() {
               </div>
               <div className="overflow-hidden mx-auto w-[1100px]">
                 <ContinuousScrollingLogos
-                  images={["power6.png","power1.jpeg","power9.webp","power8.png","power10.webp","power12.webp",]}
+                  images={["power6.png", "power1.jpeg", "power9.webp", "power8.png", "power10.webp", "power12.webp",]}
                   size={{ width: 150, height: 150 }}
                   gap={24}
                   speed={90}

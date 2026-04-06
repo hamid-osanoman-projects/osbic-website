@@ -20,25 +20,25 @@
   "footer": {
     "tagline": "Your trusted partner for business setup and visa services in Oman.",
     "quickLinks": {
-  "title": "Quick Links",
-  "about": "About Us",
-  "caseStudies": "Case Studies",
-  "testimonials": "Testimonials",
-  "careers": "Careers"
-},
-"services": {
-  "title": "Services",
-  "companyRegistration": "Company Registration",
-  "visaEmigration": "Visa & Emigration",
-  "ropServices": "ROP Services",
-  "proServices": "PRO Services"
-},
-"contactInfo": {
-  "title": "Contact Info",
-  "address": "Near Al Maha Petrol Pump & Asas Service Center, Building No: 271, Office No: 7, Grand Mosque St, 101",
-  "phone": "+968 7222 9827",
-  "email": "info@osbic.net"
-},
+      "title": "Quick Links",
+      "about": "About Us",
+      "caseStudies": "Case Studies",
+      "testimonials": "Testimonials",
+      "careers": "Careers"
+    },
+    "services": {
+      "title": "Services",
+      "companyRegistration": "Company Registration",
+      "visaEmigration": "Visa & Immigration",
+      "ropServices": "ROP Services",
+      "proServices": "PRO Services"
+    },
+    "contactInfo": {
+      "title": "Contact Info",
+      "address": "Near Al Maha Petrol Pump & Asas Service Center, Building No: 271, Office No: 7, Grand Mosque St, 101",
+      "phone": "+968 7222 9827",
+      "email": "info@osbic.net"
+    },
     "legal": {
       "privacy": "Privacy Policy",
       "terms": "Terms of Service",
@@ -67,8 +67,8 @@
         "desc": "Complete business setup and registration services"
       },
       "visaEmigration": {
-        "title": "Visa & Emigration",
-        "desc": "Comprehensive visa processing and emigration support"
+        "title": "Visa & Immigration",
+        "desc": "Comprehensive visa processing and immigration support"
       },
       "proServices": {
         "title": "PRO Services",
@@ -120,27 +120,26 @@
     "clients": {
       "heading": "Our Clients"
     },
-     "testimonials": {
-  "heading": "What Our Clients Say",
-  "list": [
-    {
-      "name": "Mohammed Al Rashidi",
-      "feedback": "OSBIC handled my full company registration smoothly and professionally.",
-      "image": "/images/testimonials/mohammed.jpg"
-    },
-    {
-      "name": "Sarah K.",
-      "feedback": "Very fast visa processing and supportive team. Highly recommended!",
-      "image": "/images/testimonials/sarah.jpg"
-    },
-    {
-      "name": "Ahmed Hussain",
-      "feedback": "Transparent pricing and excellent customer communication.",
-      "image": "/images/testimonials/ahmed.jpg"
+    "testimonials": {
+      "heading": "What Our Clients Say",
+      "list": [
+        {
+          "name": "Mohammed Al Rashidi",
+          "feedback": "OSBIC handled my full company registration smoothly and professionally.",
+          "image": "/images/testimonials/mohammed.jpg"
+        },
+        {
+          "name": "Sarah K.",
+          "feedback": "Very fast visa processing and supportive team. Highly recommended!",
+          "image": "/images/testimonials/sarah.jpg"
+        },
+        {
+          "name": "Ahmed Hussain",
+          "feedback": "Transparent pricing and excellent customer communication.",
+          "image": "/images/testimonials/ahmed.jpg"
+        }
+      ]
     }
-  ]
-}
-
   },
   "countries": {
     "oman": "OMAN",
@@ -153,129 +152,128 @@
     "india": "INDIA"
   },
   "about": {
-  "hero": {
-    "title": "About OSBIC International",
-    "subtitle": "Your trusted partner for business setup and corporate solutions across the GCC and beyond since 2011."
-  },
-  "story": {
-    "heading": "Our Story",
-    "officeAlt": "OSBIC Office",
-    "p1": "Founded in 2011, OSBIC International has grown from a local consultancy in Muscat, Oman, into one of the GCC’s leading business setup and corporate service providers.With over 15 years of expertise, OSBIC has helped more than 3,000 entrepreneurs, investors, and companies successfully establish and expand their businesses in Oman, the UAE, Saudi Arabia, Qatar, Bahrain, and other Gulf countries.",
-    "p2": "As a trusted business setup company in Oman, we offer end-to-end corporate services — including commercial registration (CR), company formation, visa and PRO services, and government liaison support.Whether you’re a foreign investor looking to start a new company in Oman or a local entrepreneur seeking to expand across the GCC, OSBIC ensures your setup process is compliant, transparent, and efficient.",
-    "p3":"Today, OSBIC continues to lead as a top-rated business consultancy in Oman, known for transparency, professionalism, and innovation. Our dedicated team ensures every client receives tailored business setup guidance, strategic advice, and seamless support throughout their journey in Oman and beyond."
-  },
-  "core": {
-    "heading": "Our Core Principles",
-    "sub": "The foundation of OSBIC’s excellence — our guiding beliefs and commitments."
-  },
-  "cards": {
-    "mission": {
-      "title": "Our Mission",
-      "text": "To simplify business processes and empower entrepreneurs to achieve their goals across the GCC through exceptional service and expertise."
+    "hero": {
+      "title": "About OSBIC International",
+      "subtitle": "Your trusted partner for business setup and corporate solutions across the GCC and beyond since 2011."
     },
-    "vision": {
-      "title": "Our Vision",
-      "text": "To be the leading business services provider in the region, recognized for innovation, integrity, and customer-centric solutions."
+    "story": {
+      "heading": "Our Story",
+      "officeAlt": "OSBIC Office",
+      "p1": "Founded in 2011, OSBIC International has grown from a local consultancy in Muscat, Oman, into one of the GCC’s leading business setup and corporate service providers.With over 15 years of expertise, OSBIC has helped more than 3,000 entrepreneurs, investors, and companies successfully establish and expand their businesses in Oman, the UAE, Saudi Arabia, Qatar, Bahrain, and other Gulf countries.",
+      "p2": "As a trusted business setup company in Oman, we offer end-to-end corporate services — including commercial registration (CR), company formation, visa and PRO services, and government liaison support.Whether you’re a foreign investor looking to start a new company in Oman or a local entrepreneur seeking to expand across the GCC, OSBIC ensures your setup process is compliant, transparent, and efficient.",
+      "p3": "Today, OSBIC continues to lead as a top-rated business consultancy in Oman, known for transparency, professionalism, and innovation. Our dedicated team ensures every client receives tailored business setup guidance, strategic advice, and seamless support throughout their journey in Oman and beyond."
     },
-    "values": {
-      "title": "Our Values",
-      "text": "Excellence, integrity, transparency, and customer satisfaction drive everything we do at OSBIC International."
-    }
-  },
-  "founder": {
-    "heading": "Meet Our Founder",
-    "sub": "Leadership that inspires trust, growth, and vision.",
-    "name": "Abdullah Al-Hasani",
-    "role": "Founder & CEO",
-    "bio": "Abdullah Al-Hasani is the Founder and Chief Executive Officer of OSBIC International, a leading business setup and corporate services firm based in Muscat, Oman. With over 20 years of experience in business consultancy, investment advisory, and government relations across the GCC, he established OSBIC with a vision to simplify company formation and empower entrepreneurs to grow their businesses in Oman and the wider Gulf region.",
-    "bio1": "Under his leadership, OSBIC International has become one of the most trusted names in business setup, corporate structuring, and PRO services—recognized for its transparency, innovation, and client-centric approach."
-  },
-  "team": {
-    "heading": "Our Experts",
-    "sub": "Experienced professionals committed to delivering excellence.",
-    "roles": {
-      "businessDevelopmentManager": "Business Development Manager",
-      "businessDevelopmentExecutive": "Business Development Executive"
-    }
-  },
-   "pro": {
-    "heading": "Oman PRO & Government Relations Specialists",
-    "sub": "Our dedicated PRO team ensures fast and reliable processing for all government-related services—visa work, documentation, licensing, and more.",
-
-    "members": {
-      "salim": {
-        "name": "Salim",
-        "role": "Senior PRO Specialist",
-        "expertise": [
-          "Visa Processing",
-          "Labor Clearance",
-          "PRO Documentation"
-        ]
+    "core": {
+      "heading": "Our Core Principles",
+      "sub": "The foundation of OSBIC’s excellence — our guiding beliefs and commitments."
+    },
+    "cards": {
+      "mission": {
+        "title": "Our Mission",
+        "text": "To simplify business processes and empower entrepreneurs to achieve their goals across the GCC through exceptional service and expertise."
       },
-      "abdul": {
-        "name": "Abdul Rahman",
-        "role": "Government Relations Officer",
-        "expertise": [
-          "ROP Clearance",
-          "License Renewal",
-          "CR Amendments"
-        ]
+      "vision": {
+        "title": "Our Vision",
+        "text": "To be the leading business services provider in the region, recognized for innovation, integrity, and customer-centric solutions."
       },
-      "waleed": {
-        "name": "Waleed",
-        "role": "Corporate PRO Executive",
-        "expertise": [
-          "Immigration Services",
-          "MoCI Works",
-          "Sponsor Transfers"
-        ]
+      "values": {
+        "title": "Our Values",
+        "text": "Excellence, integrity, transparency, and customer satisfaction drive everything we do at OSBIC International."
       }
+    },
+    "founder": {
+      "heading": "Meet Our Founder",
+      "sub": "Leadership that inspires trust, growth, and vision.",
+      "name": "Abdullah Al-Hasani",
+      "role": "Founder & CEO",
+      "bio": "Abdullah Al-Hasani is the Founder and Chief Executive Officer of OSBIC International, a leading business setup and corporate services firm based in Muscat, Oman. With over 20 years of experience in business consultancy, investment advisory, and government relations across the GCC, he established OSBIC with a vision to simplify company formation and empower entrepreneurs to grow their businesses in Oman and the wider Gulf region.",
+      "bio1": "Under his leadership, OSBIC International has become one of the most trusted names in business setup, corporate structuring, and PRO services—recognized for its transparency, innovation, and client-centric approach."
+    },
+    "team": {
+      "heading": "Our Experts",
+      "sub": "Experienced professionals committed to delivering excellence.",
+      "roles": {
+        "businessDevelopmentManager": "Business Development Manager",
+        "businessDevelopmentExecutive": "Business Development Executive"
+      }
+    },
+    "pro": {
+      "heading": "Oman PRO & Government Relations Specialists",
+      "sub": "Our dedicated PRO team ensures fast and reliable processing for all government-related services—visa work, documentation, licensing, and more.",
+      "members": {
+        "salim": {
+          "name": "Salim",
+          "role": "Senior PRO Specialist",
+          "expertise": [
+            "Visa Processing",
+            "Labor Clearance",
+            "PRO Documentation"
+          ]
+        },
+        "abdul": {
+          "name": "Abdul Rahman",
+          "role": "Government Relations Officer",
+          "expertise": [
+            "ROP Clearance",
+            "License Renewal",
+            "CR Amendments"
+          ]
+        },
+        "waleed": {
+          "name": "Waleed",
+          "role": "Corporate PRO Executive",
+          "expertise": [
+            "Immigration Services",
+            "MoCI Works",
+            "Sponsor Transfers"
+          ]
+        }
+      }
+    },
+    "group": {
+      "heading": "Meet the Team",
+      "sub": "The dedicated professionals behind OSBIC’s success — driven by passion, expertise, and excellence.",
+      "imageAlt": "OSBIC Team"
+    },
+    "groupCompanies": {
+      "heading": "Part of the OSAN Group",
+      "sub": "A network of specialized firms under OSAN Group, offering expertise across accounting, creative, and service industries."
     }
   },
-  "group": {
-    "heading": "Meet the Team",
-    "sub": "The dedicated professionals behind OSBIC’s success — driven by passion, expertise, and excellence.",
-    "imageAlt": "OSBIC Team"
+  "servicesPage": {
+    "title": "Our Services",
+    "subtitle": "End-to-end business setup and government services for investors and entrepreneurs in Oman."
   },
-  "groupCompanies": {
-    "heading": "Part of the OSAN Group",
-    "sub": "A network of specialized firms under OSAN Group, offering expertise across accounting, creative, and service industries."
-  }
-},
-"servicesPage": {
-  "title": "Our Services",
-  "subtitle": "End-to-end business setup and government services for investors and entrepreneurs in Oman."
-},
-"service": {
-  "companyRegistration": {
-    "title": "Company Registration",
-    "desc": "Support for CR, trade name, licensing, shareholders & business setup."
+  "service": {
+    "companyRegistration": {
+      "title": "Company Registration",
+      "desc": "Support for CR, trade name, licensing, shareholders & business setup."
+    },
+    "visaEmigration": {
+      "title": "Visa & Immigration Services",
+      "desc": "Employment, investor, and family visa processing."
+    },
+    "ropServices": {
+      "title": "ROP Services",
+      "desc": "Visa stamping, clearance certificates, and vehicle services."
+    },
+    "proServices": {
+      "title": "PRO Services",
+      "desc": "Government liaison & document attestation."
+    },
+    "ministryServices": {
+      "title": "Ministry Services",
+      "desc": "MOCI, Labour, and Municipality registrations & renewals."
+    },
+    "additionalServices": {
+      "title": "Additional Services",
+      "desc": "Accounting, translation, branding, IT setup & more."
+    }
   },
-  "visaEmigration": {
-    "title": "Visa & Emigration Services",
-    "desc": "Employment, investor, and family visa processing."
+  "general": {
+    "learnMore": "Learn More"
   },
-  "ropServices": {
-    "title": "ROP Services",
-    "desc": "Visa stamping, clearance certificates, and vehicle services."
-  },
-  "proServices": {
-    "title": "PRO Services",
-    "desc": "Government liaison & document attestation."
-  },
-  "ministryServices": {
-    "title": "Ministry Services",
-    "desc": "MOCI, Labour, and Municipality registrations & renewals."
-  },
-  "additionalServices": {
-    "title": "Additional Services",
-    "desc": "Accounting, translation, branding, IT setup & more."
-  }
-},
-"general": {
-  "learnMore": "Learn More"
-},
-"services": {
+  "services": {
     "company-registration": {
       "title": "Company Registration",
       "overview": "We provide complete company setup and Commercial Registration (CR) services in Oman — from trade name reservation to licensing and post-registration management.",
@@ -295,11 +293,26 @@
         "Expert guidance through Invest Easy and ministry processes"
       ],
       "process": [
-        {"step": "Step 1", "description": "Select legal entity type (LLC, branch, or establishment)."},
-        {"step": "Step 2", "description": "Reserve a trade name through the Invest Easy portal."},
-        {"step": "Step 3", "description": "Submit documents and complete shareholder KYC verification."},
-        {"step": "Step 4", "description": "Obtain Commercial Registration certificate."},
-        {"step": "Step 5", "description": "Apply for initial and operational licenses as required."}
+        {
+          "step": "Step 1",
+          "description": "Select legal entity type (LLC, branch, or establishment)."
+        },
+        {
+          "step": "Step 2",
+          "description": "Reserve a trade name through the Invest Easy portal."
+        },
+        {
+          "step": "Step 3",
+          "description": "Submit documents and complete shareholder KYC verification."
+        },
+        {
+          "step": "Step 4",
+          "description": "Obtain Commercial Registration certificate."
+        },
+        {
+          "step": "Step 5",
+          "description": "Apply for initial and operational licenses as required."
+        }
       ],
       "requirements": [
         "Shareholder passport copies and contact details",
@@ -308,12 +321,18 @@
         "Lease agreement or proof of office address"
       ],
       "faqs": [
-        {"question": "Can foreigners fully own a company in Oman?", "answer": "Yes, 100% foreign ownership is permitted in most activities, except restricted ones."},
-        {"question": "How long does CR registration take?", "answer": "Typically 3–5 business days after submitting complete documents."}
+        {
+          "question": "Can foreigners fully own a company in Oman?",
+          "answer": "Yes, 100% foreign ownership is permitted in most activities, except restricted ones."
+        },
+        {
+          "question": "How long does CR registration take?",
+          "answer": "Typically 3–5 business days after submitting complete documents."
+        }
       ]
     },
     "visa-emigration": {
-      "title": "Visa & Emigration Services",
+      "title": "Visa & Immigration Services",
       "overview": "Our visa specialists assist investors, employees, and families with all visa and residency applications in Oman — including Golden Visa, Employment Visa, and family sponsorship.",
       "subServices": [
         "Investor visa",
@@ -330,10 +349,22 @@
         "Renewal and cancellation assistance"
       ],
       "process": [
-        {"step": "Step 1", "description": "Prepare required documents (passport, medical, photo, etc.)."},
-        {"step": "Step 2", "description": "Apply via Royal Oman Police eVisa or Ministry of Labour portal."},
-        {"step": "Step 3", "description": "Complete medical test and biometric registration if required."},
-        {"step": "Step 4", "description": "Receive visa approval and collect Civil ID."}
+        {
+          "step": "Step 1",
+          "description": "Prepare required documents (passport, medical, photo, etc.)."
+        },
+        {
+          "step": "Step 2",
+          "description": "Apply via Royal Oman Police eVisa or Ministry of Labour portal."
+        },
+        {
+          "step": "Step 3",
+          "description": "Complete medical test and biometric registration if required."
+        },
+        {
+          "step": "Step 4",
+          "description": "Receive visa approval and collect Civil ID."
+        }
       ],
       "requirements": [
         "Valid passport (6+ months)",
@@ -342,8 +373,14 @@
         "Visa application form"
       ],
       "faqs": [
-        {"question": "How long does visa processing take?", "answer": "Usually 3–7 working days after complete submission."},
-        {"question": "Can dependents join on my visa?", "answer": "Yes, family members can apply under family sponsorship."}
+        {
+          "question": "How long does visa processing take?",
+          "answer": "Usually 3–7 working days after complete submission."
+        },
+        {
+          "question": "Can dependents join on my visa?",
+          "answer": "Yes, family members can apply under family sponsorship."
+        }
       ]
     },
     "rop-services": {
@@ -363,10 +400,22 @@
         "Quick processing of police clearance certificates"
       ],
       "process": [
-        {"step": "Step 1", "description": "Gather all required documents (passport, ID, photos, etc.)."},
-        {"step": "Step 2", "description": "Submit applications via the ROP e-services portal or in person."},
-        {"step": "Step 3", "description": "Complete biometric verification if required."},
-        {"step": "Step 4", "description": "Receive approvals and collect your official documents."}
+        {
+          "step": "Step 1",
+          "description": "Gather all required documents (passport, ID, photos, etc.)."
+        },
+        {
+          "step": "Step 2",
+          "description": "Submit applications via the ROP e-services portal or in person."
+        },
+        {
+          "step": "Step 3",
+          "description": "Complete biometric verification if required."
+        },
+        {
+          "step": "Step 4",
+          "description": "Receive approvals and collect your official documents."
+        }
       ],
       "requirements": [
         "Passport or Civil ID copy",
@@ -375,8 +424,14 @@
         "Payment receipt or fee confirmation"
       ],
       "faqs": [
-        {"question": "Can I apply online for police clearance?", "answer": "Yes, ROP’s e-service portal allows online applications for clearance certificates."},
-        {"question": "Is vehicle registration renewal possible online?", "answer": "Yes, through ROP’s official e-services portal."}
+        {
+          "question": "Can I apply online for police clearance?",
+          "answer": "Yes, ROP’s e-service portal allows online applications for clearance certificates."
+        },
+        {
+          "question": "Is vehicle registration renewal possible online?",
+          "answer": "Yes, through ROP’s official e-services portal."
+        }
       ]
     },
     "pro-services": {
@@ -396,10 +451,22 @@
         "Save time and avoid queues or delays"
       ],
       "process": [
-        {"step": "Step 1", "description": "Collect documents for submission (licenses, ID, applications)."},
-        {"step": "Step 2", "description": "Our PRO visits the relevant authority or ministry."},
-        {"step": "Step 3", "description": "We track and follow up on approvals or renewals."},
-        {"step": "Step 4", "description": "Receive completed and attested documents."}
+        {
+          "step": "Step 1",
+          "description": "Collect documents for submission (licenses, ID, applications)."
+        },
+        {
+          "step": "Step 2",
+          "description": "Our PRO visits the relevant authority or ministry."
+        },
+        {
+          "step": "Step 3",
+          "description": "We track and follow up on approvals or renewals."
+        },
+        {
+          "step": "Step 4",
+          "description": "Receive completed and attested documents."
+        }
       ],
       "requirements": [
         "Authorization letter or power of attorney",
@@ -408,8 +475,14 @@
         "Documents requiring attestation or renewal"
       ],
       "faqs": [
-        {"question": "Do I need a full-time PRO for my business?", "answer": "Not necessarily — we offer on-demand and monthly PRO services as needed."},
-        {"question": "Can you handle document attestation outside Oman?", "answer": "Yes, through our embassy and notary partners."}
+        {
+          "question": "Do I need a full-time PRO for my business?",
+          "answer": "Not necessarily — we offer on-demand and monthly PRO services as needed."
+        },
+        {
+          "question": "Can you handle document attestation outside Oman?",
+          "answer": "Yes, through our embassy and notary partners."
+        }
       ]
     },
     "ministry-services": {
@@ -429,10 +502,22 @@
         "Municipality license renewals and trade inspections"
       ],
       "process": [
-        {"step": "Step 1", "description": "Identify the required ministry or department for your service."},
-        {"step": "Step 2", "description": "Prepare and submit required documents and applications."},
-        {"step": "Step 3", "description": "Follow up on approvals, renewals, or updates."},
-        {"step": "Step 4", "description": "Receive final certificates or approvals from the ministry."}
+        {
+          "step": "Step 1",
+          "description": "Identify the required ministry or department for your service."
+        },
+        {
+          "step": "Step 2",
+          "description": "Prepare and submit required documents and applications."
+        },
+        {
+          "step": "Step 3",
+          "description": "Follow up on approvals, renewals, or updates."
+        },
+        {
+          "step": "Step 4",
+          "description": "Receive final certificates or approvals from the ministry."
+        }
       ],
       "requirements": [
         "Commercial Registration (CR) certificate",
@@ -441,8 +526,14 @@
         "Completed application forms for each ministry"
       ],
       "faqs": [
-        {"question": "Do I need a physical office to get a municipality license?", "answer": "Yes, a valid lease agreement or office address is required."},
-        {"question": "Can you renew my MOCI license?", "answer": "Yes, we handle renewals and updates through Invest Easy or directly at MOCI."}
+        {
+          "question": "Do I need a physical office to get a municipality license?",
+          "answer": "Yes, a valid lease agreement or office address is required."
+        },
+        {
+          "question": "Can you renew my MOCI license?",
+          "answer": "Yes, we handle renewals and updates through Invest Easy or directly at MOCI."
+        }
       ]
     },
     "additional-services": {
@@ -463,10 +554,22 @@
         "Website, domain, and email setup assistance"
       ],
       "process": [
-        {"step": "Step 1", "description": "Assess your business support needs."},
-        {"step": "Step 2", "description": "Assign the relevant experts for accounting, legal, or IT setup."},
-        {"step": "Step 3", "description": "Complete setup of accounts, translation, branding, or website."},
-        {"step": "Step 4", "description": "Provide final guidance and support for smooth operations."}
+        {
+          "step": "Step 1",
+          "description": "Assess your business support needs."
+        },
+        {
+          "step": "Step 2",
+          "description": "Assign the relevant experts for accounting, legal, or IT setup."
+        },
+        {
+          "step": "Step 3",
+          "description": "Complete setup of accounts, translation, branding, or website."
+        },
+        {
+          "step": "Step 4",
+          "description": "Provide final guidance and support for smooth operations."
+        }
       ],
       "requirements": [
         "Company CR and license",
@@ -475,17 +578,23 @@
         "Branding or IT requirements details"
       ],
       "faqs": [
-        {"question": "Can you set up corporate bank accounts for foreign investors?", "answer": "Yes, we guide you through bank selection, KYC, and account opening."},
-        {"question": "Do you provide VAT accounting services?", "answer": "Yes, we provide full VAT registration and bookkeeping support."}
+        {
+          "question": "Can you set up corporate bank accounts for foreign investors?",
+          "answer": "Yes, we guide you through bank selection, KYC, and account opening."
+        },
+        {
+          "question": "Do you provide VAT accounting services?",
+          "answer": "Yes, we provide full VAT registration and bookkeeping support."
+        }
       ]
     }
-},
-"serviceDetails": {
+  },
+  "serviceDetails": {
     "tabs": {
-      "serviceOverview":"Service Overview",
-      "serviceProvide":"Services We Provide",
+      "serviceOverview": "Service Overview",
+      "serviceProvide": "Services We Provide",
       "overview": "Overview",
-      "subServices":"Sub Survices",
+      "subServices": "Sub Survices",
       "benefits": "Benefits",
       "process": "Process",
       "requirements": "Requirements",
@@ -496,728 +605,757 @@
       "message": "The service you are looking for does not exist.",
       "homeBtn": "Back to Home"
     }
-    
-},
-"businessSetup": {
-      "OMAN": {
-        "hero": {
-          "title": "Business Setup in Oman",
-          "subtitle": "End-to-end business setup and government services for investors and entrepreneurs in Oman.",
-          "cta": "Connect With Us"
+  },
+  "businessSetup": {
+    "OMAN": {
+      "hero": {
+        "title": "Business Setup in Oman",
+        "subtitle": "End-to-end business setup and government services for investors and entrepreneurs in Oman.",
+        "cta": "Connect With Us"
+      },
+      "whyChooseOman": {
+        "title": "Why Choose Oman for Your Business?",
+        "description": "Oman offers a unique blend of modern infrastructure, strategic location, and business-friendly policies.",
+        "benefits": [
+          "Tax-free zones available",
+          "100% foreign ownership in free zones",
+          "No currency restrictions",
+          "Modern infrastructure",
+          "Strategic location bridging Asia, Africa, and Europe",
+          "Stable political and economic environment",
+          "Easy repatriation of profits",
+          "Strong legal framework"
+        ]
+      },
+      "businessTypes": {
+        "title": "Types of Business Structures",
+        "description": "Choose the right business structure for your needs.",
+        "subtitle": {
+          "ownershipHead": "Ownership",
+          "minimumCapital": "Minimum Capital",
+          "setupTime": "Setup Time"
         },
-        "whyChooseOman": {
-          "title": "Why Choose Oman for Your Business?",
-          "description": "Oman offers a unique blend of modern infrastructure, strategic location, and business-friendly policies.",
-          "benefits": [
-            "Tax-free zones available",
-            "100% foreign ownership in free zones",
-            "No currency restrictions",
-            "Modern infrastructure",
-            "Strategic location bridging Asia, Africa, and Europe",
-            "Stable political and economic environment",
-            "Easy repatriation of profits",
-            "Strong legal framework"
-          ]
-        },
-        "businessTypes": {
-          "title": "Types of Business Structures",
-          "description": "Choose the right business structure for your needs.",
-          "subtitle": {
-            "ownershipHead": "Ownership",
-            "minimumCapital": "Minimum Capital",
-            "setupTime": "Setup Time"
+        "types": [
+          {
+            "title": "Joint Partnership",
+            "description": "A business owned by two or more partners sharing profits, losses, and responsibilities equally or as per agreement."
           },
-            "types": [ { "title": "Joint Partnership", "description": "A business owned by two or more partners sharing profits, losses, and responsibilities equally or as per agreement." }, { "title": "Individual Firm / Merchant", "description": "A single-owner business where the individual operates under their trade name, commonly used for small local businesses." }, { "title": "Limited Partnership", "description": "Includes both general and limited partners, where limited partners have restricted liability based on their investment." }, { "title": "Limited Liability Company (LLC)", "description": "Most common structure for SMEs in Oman, offering limited liability and flexible ownership options." }, { "title": "Sole Proprietor Company", "description": "Owned and managed by a single individual who assumes full responsibility for the company’s assets and obligations." }, { "title": "Closed Joint Stock Company", "description": "A company with shareholders (minimum 3) whose shares are privately held and not publicly traded." }, { "title": "Public Joint Stock Company", "description": "A larger corporate entity whose shares can be publicly offered, regulated under Omani commercial law." }, { "title": "Foreign Company Branch", "description": "Allows foreign companies to establish a branch in Oman for executing specific government or private contracts." }, { "title": "Commercial Representative Office", "description": "Set up mainly for marketing and research purposes, without engaging in direct trading activities." }, { "title": "Non-Profit Organization", "description": "Formed to support social, charitable, or cultural activities under Omani regulations." }, { "title": "Freelance", "description": "An individual professional license allowing self-employed individuals to offer services independently." } ]
-
-
+          {
+            "title": "Individual Firm / Merchant",
+            "description": "A single-owner business where the individual operates under their trade name, commonly used for small local businesses."
+          },
+          {
+            "title": "Limited Partnership",
+            "description": "Includes both general and limited partners, where limited partners have restricted liability based on their investment."
+          },
+          {
+            "title": "Limited Liability Company (LLC)",
+            "description": "Most common structure for SMEs in Oman, offering limited liability and flexible ownership options."
+          },
+          {
+            "title": "Sole Proprietor Company",
+            "description": "Owned and managed by a single individual who assumes full responsibility for the company’s assets and obligations."
+          },
+          {
+            "title": "Closed Joint Stock Company",
+            "description": "A company with shareholders (minimum 3) whose shares are privately held and not publicly traded."
+          },
+          {
+            "title": "Public Joint Stock Company",
+            "description": "A larger corporate entity whose shares can be publicly offered, regulated under Omani commercial law."
+          },
+          {
+            "title": "Foreign Company Branch",
+            "description": "Allows foreign companies to establish a branch in Oman for executing specific government or private contracts."
+          },
+          {
+            "title": "Commercial Representative Office",
+            "description": "Set up mainly for marketing and research purposes, without engaging in direct trading activities."
+          },
+          {
+            "title": "Non-Profit Organization",
+            "description": "Formed to support social, charitable, or cultural activities under Omani regulations."
+          },
+          {
+            "title": "Freelance",
+            "description": "An individual professional license allowing self-employed individuals to offer services independently."
+          }
+        ]
+      },
+      "setupProcess": {
+        "title": "Business Setup Process",
+        "description": "A simple 5-step process to launch your business in Oman.",
+        "steps": [
+          {
+            "step": "1",
+            "title": "Business Activity & Name Selection",
+            "description": "Choose your business activity and reserve your company name with the Ministry of Commerce"
+          },
+          {
+            "step": "2",
+            "title": "Documentation Preparation",
+            "description": "Prepare all required documents including passport copies, NOC, business plan, and articles of association"
+          },
+          {
+            "step": "3",
+            "title": "Commercial Registration",
+            "description": "Submit application and documents to obtain Commercial Registration Certificate"
+          },
+          {
+            "step": "4",
+            "title": "License Issuance",
+            "description": "Receive your trade license and municipal approvals"
+          },
+          {
+            "step": "5",
+            "title": "Bank Account & Visa Processing",
+            "description": "Open corporate bank account and process investor/employee visas"
+          }
+        ]
+      },
+      "documentsSectors": {
+        "documentsTitle": "Required Documents",
+        "documents": [
+          "Valid passport copies of all shareholders and directors",
+          "Proof of address (utility bill or bank statement)",
+          "Business plan and feasibility study",
+          "No Objection Certificate (NOC) from sponsor if required",
+          "Board resolution and power of attorney",
+          "Memorandum and Articles of Association",
+          "Bank reference letter",
+          "Educational certificates (for professional activities)"
+        ],
+        "sectorsTitle": "Popular Business Sectors",
+        "sectors": [
+          "Trading & Distribution",
+          "Manufacturing",
+          "Tourism & Hospitality",
+          "Construction & Real Estate",
+          "Oil & Gas Services",
+          "Technology & IT Services",
+          "Healthcare Services",
+          "Educational Services",
+          "Consulting Services",
+          "Logistics & Transportation"
+        ]
+      },
+      "cta": {
+        "title": "Ready to Start Your Business in Oman?",
+        "description": "Our expert team will guide you through every step of the process.",
+        "button": "Connect With Us"
+      }
+    },
+    "UAE": {
+      "hero": {
+        "title": "Business Setup in UAE",
+        "subtitle": "End-to-end business setup and government services for investors and entrepreneurs in the UAE.",
+        "cta": "Connect With Us",
+        "whatsappLink": "https://api.whatsapp.com/send?phone=96896328888&text=Hello!%20I'm%20interested%20in%20your%20business%20setup%20services%20in%20UAE.%20Could%20you%20please%20assist%20me%3F"
+      },
+      "whyChooseUAE": {
+        "title": "Why Choose UAE for Your Business?",
+        "subtitle": "UAE provides a strategic location, world-class infrastructure, and a favorable business environment.",
+        "benefits": [
+          "Federal business options available",
+          "100% foreign ownership in free zones",
+          "Access to all GCC markets",
+          "Modern banking and financial systems",
+          "World-class infrastructure",
+          "Strategic global location",
+          "Easy profit repatriation",
+          "Business-friendly legal framework"
+        ]
+      },
+      "businessTypes": {
+        "title": "Types of Business Structures",
+        "subtitle": {
+          "ownershipHead": "Ownership",
+          "minimumCapital": "Minimum Capital",
+          "setupTime": "Setup Time"
         },
-        "setupProcess": {
-          "title": "Business Setup Process",
-          "description": "A simple 5-step process to launch your business in Oman.",
-          "steps": [
-            {
-              "step": "1",
-              "title": "Business Activity & Name Selection",
-              "description": "Choose your business activity and reserve your company name with the Ministry of Commerce"
-            },
-            {
-              "step": "2",
-              "title": "Documentation Preparation",
-              "description": "Prepare all required documents including passport copies, NOC, business plan, and articles of association"
-            },
-            {
-              "step": "3",
-              "title": "Commercial Registration",
-              "description": "Submit application and documents to obtain Commercial Registration Certificate"
-            },
-            {
-              "step": "4",
-              "title": "License Issuance",
-              "description": "Receive your trade license and municipal approvals"
-            },
-            {
-              "step": "5",
-              "title": "Bank Account & Visa Processing",
-              "description": "Open corporate bank account and process investor/employee visas"
-            }
-          ]
+        "description": "Choose the right business structure for your UAE venture.",
+        "types": [
+          {
+            "title": "Limited Liability Company (LLC)",
+            "description": "Most common structure for mainland UAE business",
+            "ownership": "Minimum 51% UAE national ownership for mainland",
+            "minCapital": "OMR 3,000 (approx. AED 15,000)",
+            "setup": "10-14 days"
+          },
+          {
+            "title": "Free Zone Company",
+            "description": "Ideal for international business and trade",
+            "ownership": "100% foreign ownership allowed",
+            "minCapital": "OMR 1,000 (approx. AED 5,000)",
+            "setup": "7-10 days"
+          },
+          {
+            "title": "Branch Office",
+            "description": "Extension of a foreign company in UAE",
+            "ownership": "100% foreign ownership",
+            "minCapital": "As per parent company",
+            "setup": "14-21 days"
+          },
+          {
+            "title": "Representative Office",
+            "description": "For market research and promotion",
+            "ownership": "100% foreign ownership",
+            "minCapital": "No minimum capital",
+            "setup": "10-15 days"
+          }
+        ]
+      },
+      "setupProcess": {
+        "title": "Business Setup Process",
+        "subtitle": "A simple 5-step process to launch your business in UAE.",
+        "steps": [
+          {
+            "step": "1",
+            "title": "Business Activity & Name Selection",
+            "description": "Select your business activity and reserve your company name with relevant UAE authority"
+          },
+          {
+            "step": "2",
+            "title": "Documentation Preparation",
+            "description": "Prepare required documents: passport copies, NOC (if applicable), business plan, and MOA"
+          },
+          {
+            "step": "3",
+            "title": "Commercial Registration",
+            "description": "Submit application to obtain trade license"
+          },
+          {
+            "step": "4",
+            "title": "License Issuance",
+            "description": "Receive your trade license and approvals from authorities"
+          },
+          {
+            "step": "5",
+            "title": "Bank Account & Visa Processing",
+            "description": "Open corporate bank account and process investor/employee visas"
+          }
+        ]
+      },
+      "documentsSectors": {
+        "documentsTitle": "Required Documents",
+        "documents": [
+          "Valid passport copies of all shareholders and directors",
+          "Proof of address (utility bill or bank statement)",
+          "Business plan and feasibility study",
+          "No Objection Certificate (NOC) if required",
+          "Board resolution and power of attorney",
+          "Memorandum and Articles of Association",
+          "Bank reference letter",
+          "Educational/professional certificates if applicable"
+        ],
+        "sectorsTitle": "Popular Business Sectors",
+        "sectors": [
+          "Trading & Distribution",
+          "Manufacturing",
+          "Tourism & Hospitality",
+          "Construction & Real Estate",
+          "Oil & Gas Services",
+          "Technology & IT Services",
+          "Healthcare Services",
+          "Educational Services",
+          "Consulting Services",
+          "Logistics & Transportation"
+        ]
+      },
+      "cta": {
+        "title": "Ready to Start Your Business in UAE?",
+        "description": "Our expert team will guide you through every step of the process.",
+        "button": "Connect With Us"
+      }
+    },
+    "saudiArabia": {
+      "hero": {
+        "title": "Business Setup in Saudi Arabia",
+        "subtitle": "Tap into the largest Middle Eastern market and Vision 2030 opportunities.",
+        "cta": "Connect With Us",
+        "whatsappLink": "https://api.whatsapp.com/send?phone=96896328888&text=Hello!%20I'm%20interested%20in%20your%20business%20setup%20services%20in%20Saudi%20Arabia.%20Could%20you%20please%20assist%20me%3F"
+      },
+      "whyChooseSaudi": {
+        "title": "Why Saudi Arabia?",
+        "subtitle": "Saudi Arabia offers the largest economy in the region, strong investment incentives, and transformative Vision 2030 reforms.",
+        "benefits": [
+          "Largest regional market",
+          "Vision 2030 mega projects",
+          "100% foreign ownership allowed",
+          "Tax incentives and free zones",
+          "Modern infrastructure",
+          "Strategic location bridging Asia, Africa, Europe",
+          "Growing private sector",
+          "Strong and diversified economy"
+        ]
+      },
+      "businessTypes": {
+        "title": "Types of Business Structures",
+        "description": "Choose the right business structure for your Saudi venture.",
+        "subtitle": {
+          "ownershipHead": "Ownership",
+          "minimumCapital": "Minimum Capital",
+          "setupTime": "Setup Time"
         },
-        "documentsSectors": {
-          "documentsTitle": "Required Documents",
-          "documents": [
-            "Valid passport copies of all shareholders and directors",
-            "Proof of address (utility bill or bank statement)",
-            "Business plan and feasibility study",
-            "No Objection Certificate (NOC) from sponsor if required",
-            "Board resolution and power of attorney",
-            "Memorandum and Articles of Association",
-            "Bank reference letter",
-            "Educational certificates (for professional activities)"
-          ],
-          "sectorsTitle": "Popular Business Sectors",
-          "sectors": [
-            "Trading & Distribution",
-            "Manufacturing",
-            "Tourism & Hospitality",
-            "Construction & Real Estate",
-            "Oil & Gas Services",
-            "Technology & IT Services",
-            "Healthcare Services",
-            "Educational Services",
-            "Consulting Services",
-            "Logistics & Transportation"
-          ]
+        "types": [
+          {
+            "title": "Limited Liability Company (LLC)",
+            "description": "Common mainland structure for investors."
+          },
+          {
+            "title": "Joint Stock Company",
+            "description": "For larger scale operations and public offerings."
+          },
+          {
+            "title": "Branch Office",
+            "description": "Extension of a foreign company in KSA."
+          },
+          {
+            "title": "Representative Office",
+            "description": "For market research and promotion only."
+          }
+        ]
+      },
+      "setupProcess": {
+        "title": "Business Setup Process",
+        "subtitle": "A simple 5-step process to launch your business in Saudi Arabia.",
+        "steps": [
+          {
+            "step": "1",
+            "title": "Business Activity & Name Selection",
+            "description": "Choose your business activity and reserve your company name with Ministry of Commerce"
+          },
+          {
+            "step": "2",
+            "title": "Documentation Preparation",
+            "description": "Prepare required documents: passport copies, NOC, business plan, MOA"
+          },
+          {
+            "step": "3",
+            "title": "Commercial Registration",
+            "description": "Apply and obtain Commercial Registration Certificate"
+          },
+          {
+            "step": "4",
+            "title": "License Issuance",
+            "description": "Receive trade license and relevant approvals"
+          },
+          {
+            "step": "5",
+            "title": "Bank Account & Visa Processing",
+            "description": "Open corporate bank account and process investor/employee visas"
+          }
+        ]
+      },
+      "documentsSectors": {
+        "documentsTitle": "Required Documents",
+        "documents": [
+          "Valid passport copies of shareholders and directors",
+          "Proof of address (utility bill or bank statement)",
+          "Business plan and feasibility study",
+          "No Objection Certificate (NOC) if required",
+          "Board resolution and power of attorney",
+          "Memorandum and Articles of Association",
+          "Bank reference letter",
+          "Professional/educational certificates if applicable"
+        ],
+        "sectorsTitle": "Popular Business Sectors",
+        "sectors": [
+          "Trading & Distribution",
+          "Manufacturing",
+          "Tourism & Hospitality",
+          "Construction & Real Estate",
+          "Oil & Gas Services",
+          "Technology & IT Services",
+          "Healthcare Services",
+          "Educational Services",
+          "Consulting Services",
+          "Logistics & Transportation"
+        ]
+      },
+      "cta": {
+        "title": "Ready to Start Your Business in Saudi Arabia?",
+        "description": "Our expert team will guide you through every step of the process.",
+        "button": "Connect With Us"
+      }
+    },
+    "qatar": {
+      "hero": {
+        "title": "Business Setup in Qatar",
+        "subtitle": "Zero income tax and 100% foreign ownership in one of the world’s fastest-growing economies."
+      },
+      "why": {
+        "title": "Why Qatar?",
+        "desc": "Qatar offers a tax-free environment, strong infrastructure, and investor-friendly regulations."
+      },
+      "benefits": {
+        "b1": "Zero income tax",
+        "b2": "100% foreign ownership allowed",
+        "b3": "Strong and stable economy",
+        "b4": "Major infrastructure projects",
+        "b5": "Strategic location in GCC",
+        "b6": "Business-friendly laws",
+        "b7": "Modern banking system",
+        "b8": "World-class infrastructure",
+        "b9": "Stable government and policies"
+      },
+      "businessTypes": {
+        "title": "Types of Business Structures",
+        "description": "Choose the right business structure for your Qatar venture.",
+        "types": [
+          {
+            "title": "Limited Liability Company (LLC)",
+            "description": "Common structure for mainland business operations."
+          },
+          {
+            "title": "Qatar Financial Centre (QFC) Company",
+            "description": "International company structure with 100% foreign ownership."
+          },
+          {
+            "title": "Branch Office",
+            "description": "Extension of a foreign company in Qatar."
+          },
+          {
+            "title": "Representative Office",
+            "description": "Only for marketing and market research activities."
+          }
+        ]
+      },
+      "steps": {
+        "title": "Business Setup Process",
+        "s1": {
+          "title": "Business Activity & Name Selection",
+          "desc": "Choose business activity and reserve trade name"
         },
-        "cta": {
-          "title": "Ready to Start Your Business in Oman?",
-          "description": "Our expert team will guide you through every step of the process.",
-          "button": "Connect With Us"
+        "s2": {
+          "title": "Documentation Preparation",
+          "desc": "Prepare passport, NOC, MOA, business plan & other documents"
+        },
+        "s3": {
+          "title": "Commercial Registration",
+          "desc": "Apply to obtain Commercial Registration certificate"
+        },
+        "s4": {
+          "title": "License Issuance",
+          "desc": "Receive trade license and government approvals"
+        },
+        "s5": {
+          "title": "Bank Account & Visa Processing",
+          "desc": "Open corporate bank account and apply for visas"
         }
       },
-      "UAE": {
-        "hero": {
-          "title": "Business Setup in UAE",
-          "subtitle": "End-to-end business setup and government services for investors and entrepreneurs in the UAE.",
-          "cta": "Connect With Us",
-          "whatsappLink": "https://api.whatsapp.com/send?phone=96896328888&text=Hello!%20I'm%20interested%20in%20your%20business%20setup%20services%20in%20UAE.%20Could%20you%20please%20assist%20me%3F"
-        },
-        "whyChooseUAE": {
-          "title": "Why Choose UAE for Your Business?",
-          "subtitle": "UAE provides a strategic location, world-class infrastructure, and a favorable business environment.",
-          "benefits": [
-            "Federal business options available",
-            "100% foreign ownership in free zones",
-            "Access to all GCC markets",
-            "Modern banking and financial systems",
-            "World-class infrastructure",
-            "Strategic global location",
-            "Easy profit repatriation",
-            "Business-friendly legal framework"
-          ]
-        },
-        "businessTypes": {
-          "title": "Types of Business Structures",
-          "subtitle": {
-            "ownershipHead": "Ownership",
-            "minimumCapital": "Minimum Capital",
-            "setupTime": "Setup Time"
+      "docs": {
+        "title": "Required Documents",
+        "d1": "Passport copies of shareholders and directors",
+        "d2": "Proof of address",
+        "d3": "Business plan",
+        "d4": "No Objection Certificate (if required)",
+        "d5": "Board resolution",
+        "d6": "MOA & Articles of Association",
+        "d7": "Bank reference letter",
+        "d8": "Academic/professional certificates"
+      },
+      "sectors": {
+        "title": "Popular Business Sectors",
+        "s1": "Trading & Distribution",
+        "s2": "Manufacturing",
+        "s3": "Tourism & Hospitality",
+        "s4": "Construction & Real Estate",
+        "s5": "Oil & Gas Services",
+        "s6": "Technology & IT",
+        "s7": "Healthcare Services",
+        "s8": "Education Services",
+        "s9": "Consulting",
+        "s10": "Logistics & Transportation"
+      }
+    },
+    "global": {
+      "days": "days",
+      "contact": "Connect With Us"
+    },
+    "kuwait": {
+      "hero": {
+        "title": "Business Setup in Kuwait",
+        "subtitle": "Establish your business in one of the region's most prosperous economies."
+      },
+      "why": {
+        "title": "Why Choose Kuwait?",
+        "desc": "Kuwait provides a business-friendly environment with low taxes and strong growth opportunities."
+      },
+      "benefits": {
+        "b1": "Strong economy",
+        "b2": "Low corporate tax",
+        "b3": "Modern infrastructure",
+        "b4": "Strategic location",
+        "b5": "Growing private sector",
+        "b6": "Business opportunities",
+        "b7": "Skilled workforce",
+        "b8": "Stable currency",
+        "b9": "GCC member"
+      },
+      "services": {
+        "title": "Our Professional Services",
+        "description": "Explore our comprehensive services designed to help businesses establish, operate, and thrive in Kuwait with ease and compliance.",
+        "types": [
+          {
+            "title": "Business Setup",
+            "description": "Expert guidance to establish your company in Kuwait, ensuring compliance with all local regulations and requirements."
           },
-          "description": "Choose the right business structure for your UAE venture.",
-          "types": [
-            {
-              "title": "Limited Liability Company (LLC)",
-              "description": "Most common structure for mainland UAE business",
-              "ownership": "Minimum 51% UAE national ownership for mainland",
-              "minCapital": "OMR 3,000 (approx. AED 15,000)",
-              "setup": "10-14 days"
-            },
-            {
-              "title": "Free Zone Company",
-              "description": "Ideal for international business and trade",
-              "ownership": "100% foreign ownership allowed",
-              "minCapital": "OMR 1,000 (approx. AED 5,000)",
-              "setup": "7-10 days"
-            },
-            {
-              "title": "Branch Office",
-              "description": "Extension of a foreign company in UAE",
-              "ownership": "100% foreign ownership",
-              "minCapital": "As per parent company",
-              "setup": "14-21 days"
-            },
-            {
-              "title": "Representative Office",
-              "description": "For market research and promotion",
-              "ownership": "100% foreign ownership",
-              "minCapital": "No minimum capital",
-              "setup": "10-15 days"
-            }
-          ]
+          {
+            "title": "Trade License",
+            "description": "Professional support in obtaining and renewing trade licenses for your business operations in Kuwait."
+          },
+          {
+            "title": "Work Visa Services",
+            "description": "Efficient processing of work visas for employees and executives, ensuring smooth onboarding and legal compliance."
+          },
+          {
+            "title": "Partnership Arrangements",
+            "description": "Facilitating partnership agreements and collaborations tailored to your business needs in Kuwait."
+          },
+          {
+            "title": "Legal Documentation",
+            "description": "Assistance in preparing and managing all legal documents required for corporate and operational compliance."
+          },
+          {
+            "title": "Ministry Approvals",
+            "description": "Guidance and support to obtain approvals from relevant ministries and regulatory authorities in Kuwait."
+          },
+          {
+            "title": "Company Registration",
+            "description": "Comprehensive services for registering your company, including CR, permits, and official documentation."
+          },
+          {
+            "title": "Banking Support",
+            "description": "Helping you open corporate bank accounts and manage financial operations effectively."
+          }
+        ]
+      }
+    },
+    "bahrain": {
+      "hero": {
+        "title": "Business Setup in Bahrain",
+        "subtitle": "Fast setup, low costs, and 100% foreign ownership opportunities."
+      },
+      "subtitle": {
+        "ownershipHead": "Ownership",
+        "minimumCapital": "Minimum Capital",
+        "setupTime": "Setup Time"
+      },
+      "why": {
+        "title": "Why Bahrain?",
+        "desc": "Bahrain offers an investor-friendly environment with low costs and quick business registration."
+      },
+      "benefits": {
+        "b1": "100% foreign ownership allowed",
+        "b2": "Low setup costs",
+        "b3": "Quick registration (5-10 days)",
+        "b4": "No currency restrictions",
+        "b5": "Business-friendly laws",
+        "b6": "Strategic location in GCC",
+        "b7": "Modern infrastructure",
+        "b8": "Skilled workforce",
+        "b9": "Liberal economy"
+      },
+      "types": {
+        "title": "Business Structure Options",
+        "llc": {
+          "title": "Limited Liability Company (LLC)",
+          "desc": "A common legal form for small and medium-sized businesses in Bahrain."
         },
-        "setupProcess": {
-          "title": "Business Setup Process",
-          "subtitle": "A simple 5-step process to launch your business in UAE.",
-          "steps": [
-            {
-              "step": "1",
-              "title": "Business Activity & Name Selection",
-              "description": "Select your business activity and reserve your company name with relevant UAE authority"
-            },
-            {
-              "step": "2",
-              "title": "Documentation Preparation",
-              "description": "Prepare required documents: passport copies, NOC (if applicable), business plan, and MOA"
-            },
-            {
-              "step": "3",
-              "title": "Commercial Registration",
-              "description": "Submit application to obtain trade license"
-            },
-            {
-              "step": "4",
-              "title": "License Issuance",
-              "description": "Receive your trade license and approvals from authorities"
-            },
-            {
-              "step": "5",
-              "title": "Bank Account & Visa Processing",
-              "description": "Open corporate bank account and process investor/employee visas"
-            }
-          ]
+        "branch": {
+          "title": "Branch Office",
+          "desc": "An extension of a foreign company, allowing it to operate in Bahrain."
         },
-        "documentsSectors": {
-          "documentsTitle": "Required Documents",
-          "documents": [
-            "Valid passport copies of all shareholders and directors",
-            "Proof of address (utility bill or bank statement)",
-            "Business plan and feasibility study",
-            "No Objection Certificate (NOC) if required",
-            "Board resolution and power of attorney",
-            "Memorandum and Articles of Association",
-            "Bank reference letter",
-            "Educational/professional certificates if applicable"
-          ],
-          "sectorsTitle": "Popular Business Sectors",
-          "sectors": [
-            "Trading & Distribution",
-            "Manufacturing",
-            "Tourism & Hospitality",
-            "Construction & Real Estate",
-            "Oil & Gas Services",
-            "Technology & IT Services",
-            "Healthcare Services",
-            "Educational Services",
-            "Consulting Services",
-            "Logistics & Transportation"
-          ]
-        },
-        "cta": {
-          "title": "Ready to Start Your Business in UAE?",
-          "description": "Our expert team will guide you through every step of the process.",
-          "button": "Connect With Us"
+        "rep": {
+          "title": "Representative Office",
+          "desc": "Used for marketing, liaison, and business promotion purposes only."
         }
       },
-      "saudiArabia": {
-  "hero": {
-    "title": "Business Setup in Saudi Arabia",
-    "subtitle": "Tap into the largest Middle Eastern market and Vision 2030 opportunities.",
-    "cta": "Connect With Us",
-    "whatsappLink": "https://api.whatsapp.com/send?phone=96896328888&text=Hello!%20I'm%20interested%20in%20your%20business%20setup%20services%20in%20Saudi%20Arabia.%20Could%20you%20please%20assist%20me%3F"
-  },
-  "whyChooseSaudi": {
-    "title": "Why Saudi Arabia?",
-    "subtitle": "Saudi Arabia offers the largest economy in the region, strong investment incentives, and transformative Vision 2030 reforms.",
-    "benefits": [
-      "Largest regional market",
-      "Vision 2030 mega projects",
-      "100% foreign ownership allowed",
-      "Tax incentives and free zones",
-      "Modern infrastructure",
-      "Strategic location bridging Asia, Africa, Europe",
-      "Growing private sector",
-      "Strong and diversified economy"
-    ]
-  },
-  "businessTypes": {
-    "title": "Types of Business Structures",
-    "description": "Choose the right business structure for your Saudi venture.",
-    "subtitle": {
-      "ownershipHead": "Ownership",
-      "minimumCapital": "Minimum Capital",
-      "setupTime": "Setup Time"
+      "docs": {
+        "title": "Required Documents",
+        "d1": "Passport copies of shareholders and directors",
+        "d2": "Proof of address",
+        "d3": "Articles and Memorandum of Association",
+        "d4": "Board resolution for foreign shareholders",
+        "d5": "Business plan (if required)",
+        "d6": "Bank reference letter",
+        "d7": "Company name reservation certificate"
+      },
+      "sectors": {
+        "title": "Popular Business Sectors",
+        "s1": "Finance & Banking",
+        "s2": "Trading & Distribution",
+        "s3": "Technology & IT Services",
+        "s4": "Logistics & Transportation",
+        "s5": "Tourism & Hospitality",
+        "s6": "Manufacturing & Industry"
+      },
+      "global": {
+        "days": "days",
+        "contact": "Connect With Us"
+      }
     },
-     "types": [
-      {
-        "title": "Limited Liability Company (LLC)",
-        "description": "Common mainland structure for investors."
+    "iran": {
+      "hero": {
+        "title": "Business Setup in Iran",
+        "subtitle": "Establish your business in one of the Middle East’s fastest-growing markets.",
+        "cta": "Connect With Us"
       },
-      {
-        "title": "Joint Stock Company",
-        "description": "For larger scale operations and public offerings."
+      "why_choose": {
+        "title": "Why Choose Iran?",
+        "desc": "Iran offers a unique gateway to Asian and Middle Eastern markets with cost-effective opportunities.",
+        "benefits": [
+          "Access to an 85+ million consumer market",
+          "Strategic location linking Asia, Europe, and the Middle East",
+          "Low operational and labor costs",
+          "Growing industrial and technology sectors",
+          "Government support for investment projects",
+          "Availability of skilled workforce",
+          "Special Economic and Free Trade Zones with incentives",
+          "Gateway to CIS and Central Asian markets"
+        ]
       },
-      {
-        "title": "Branch Office",
-        "description": "Extension of a foreign company in KSA."
-      },
-      {
-        "title": "Representative Office",
-        "description": "For market research and promotion only."
-      }
-    ]
-  },
-  "setupProcess": {
-    "title": "Business Setup Process",
-    "subtitle": "A simple 5-step process to launch your business in Saudi Arabia.",
-    "steps": [
-      {
-        "step": "1",
-        "title": "Business Activity & Name Selection",
-        "description": "Choose your business activity and reserve your company name with Ministry of Commerce"
-      },
-      {
-        "step": "2",
-        "title": "Documentation Preparation",
-        "description": "Prepare required documents: passport copies, NOC, business plan, MOA"
-      },
-      {
-        "step": "3",
-        "title": "Commercial Registration",
-        "description": "Apply and obtain Commercial Registration Certificate"
-      },
-      {
-        "step": "4",
-        "title": "License Issuance",
-        "description": "Receive trade license and relevant approvals"
-      },
-      {
-        "step": "5",
-        "title": "Bank Account & Visa Processing",
-        "description": "Open corporate bank account and process investor/employee visas"
-      }
-    ]
-  },
-  "documentsSectors": {
-    "documentsTitle": "Required Documents",
-    "documents": [
-      "Valid passport copies of shareholders and directors",
-      "Proof of address (utility bill or bank statement)",
-      "Business plan and feasibility study",
-      "No Objection Certificate (NOC) if required",
-      "Board resolution and power of attorney",
-      "Memorandum and Articles of Association",
-      "Bank reference letter",
-      "Professional/educational certificates if applicable"
-    ],
-    "sectorsTitle": "Popular Business Sectors",
-    "sectors": [
-      "Trading & Distribution",
-      "Manufacturing",
-      "Tourism & Hospitality",
-      "Construction & Real Estate",
-      "Oil & Gas Services",
-      "Technology & IT Services",
-      "Healthcare Services",
-      "Educational Services",
-      "Consulting Services",
-      "Logistics & Transportation"
-    ]
-  },
-  "cta": {
-    "title": "Ready to Start Your Business in Saudi Arabia?",
-    "description": "Our expert team will guide you through every step of the process.",
-    "button": "Connect With Us"
-  }
-      },
-      "qatar": {
-          "hero": {
-            "title": "Business Setup in Qatar",
-            "subtitle": "Zero income tax and 100% foreign ownership in one of the world’s fastest-growing economies."
+      "business_structures": {
+        "title": "Business Structure Options in Iran",
+        "types": [
+          {
+            "title": "Limited Liability Company (LLC)",
+            "description": "The most common legal form for foreign investors in Iran."
           },
-          "why": {
-            "title": "Why Qatar?",
-            "desc": "Qatar offers a tax-free environment, strong infrastructure, and investor-friendly regulations."
+          {
+            "title": "Joint Stock Company (Private or Public)",
+            "description": "Suitable for larger operations and investment projects."
           },
-          "benefits": {
-            "b1": "Zero income tax",
-            "b2": "100% foreign ownership allowed",
-            "b3": "Strong and stable economy",
-            "b4": "Major infrastructure projects",
-            "b5": "Strategic location in GCC",
-            "b6": "Business-friendly laws",
-            "b7": "Modern banking system",
-            "b8": "World-class infrastructure",
-            "b9": "Stable government and policies"
+          {
+            "title": "Branch Office",
+            "description": "Extension of a foreign company to operate in Iran."
           },
-          
-  "businessTypes": {
-    "title": "Types of Business Structures",
-    "description": "Choose the right business structure for your Qatar venture.",
-    "types": [
-      {
-        "title": "Limited Liability Company (LLC)",
-        "description": "Common structure for mainland business operations."
-      },
-      {
-        "title": "Qatar Financial Centre (QFC) Company",
-        "description": "International company structure with 100% foreign ownership."
-      },
-      {
-        "title": "Branch Office",
-        "description": "Extension of a foreign company in Qatar."
-      },
-      {
-        "title": "Representative Office",
-        "description": "Only for marketing and market research activities."
-      }
-    ]
-  
-},
-
-          "steps": {
-            "title": "Business Setup Process",
-            "s1": { "title": "Business Activity & Name Selection", "desc": "Choose business activity and reserve trade name" },
-            "s2": { "title": "Documentation Preparation", "desc": "Prepare passport, NOC, MOA, business plan & other documents" },
-            "s3": { "title": "Commercial Registration", "desc": "Apply to obtain Commercial Registration certificate" },
-            "s4": { "title": "License Issuance", "desc": "Receive trade license and government approvals" },
-            "s5": { "title": "Bank Account & Visa Processing", "desc": "Open corporate bank account and apply for visas" }
-          },
-          "docs": {
-            "title": "Required Documents",
-            "d1": "Passport copies of shareholders and directors",
-            "d2": "Proof of address",
-            "d3": "Business plan",
-            "d4": "No Objection Certificate (if required)",
-            "d5": "Board resolution",
-            "d6": "MOA & Articles of Association",
-            "d7": "Bank reference letter",
-            "d8": "Academic/professional certificates"
-          },
-          "sectors": {
-            "title": "Popular Business Sectors",
-            "s1": "Trading & Distribution",
-            "s2": "Manufacturing",
-            "s3": "Tourism & Hospitality",
-            "s4": "Construction & Real Estate",
-            "s5": "Oil & Gas Services",
-            "s6": "Technology & IT",
-            "s7": "Healthcare Services",
-            "s8": "Education Services",
-            "s9": "Consulting",
-            "s10": "Logistics & Transportation"
+          {
+            "title": "Representative Office",
+            "description": "For market research, marketing, and liaison purposes."
           }
+        ]
       },
-        "global": {
-          "days": "days",
-          "contact": "Connect With Us"
-      },
-        "kuwait": {
-          "hero": {
-            "title": "Business Setup in Kuwait",
-            "subtitle": "Establish your business in one of the region's most prosperous economies."
+      "process": {
+        "title": "Setup Process",
+        "steps": [
+          {
+            "title": "Choose Business Structure",
+            "desc": "Select a suitable company type and define shareholders"
           },
-          "why": {
-            "title": "Why Choose Kuwait?",
-            "desc": "Kuwait provides a business-friendly environment with low taxes and strong growth opportunities."
+          {
+            "title": "Reserve Company Name",
+            "desc": "Get name approval from the Company Registration Office"
           },
-          "benefits": {
-            "b1": "Strong economy",
-            "b2": "Low corporate tax",
-            "b3": "Modern infrastructure",
-            "b4": "Strategic location",
-            "b5": "Growing private sector",
-            "b6": "Business opportunities",
-            "b7": "Skilled workforce",
-            "b8": "Stable currency",
-            "b9": "GCC member"
+          {
+            "title": "Prepare and Submit Documents",
+            "desc": "Submit articles of association, identification, and application forms"
           },
-          "services": {
-      "title": "Our Professional Services",
-      "description": "Explore our comprehensive services designed to help businesses establish, operate, and thrive in Kuwait with ease and compliance.",
-      "types": [
-        {
-          "title": "Business Setup",
-          "description": "Expert guidance to establish your company in Kuwait, ensuring compliance with all local regulations and requirements."
-        },
-        {
-          "title": "Trade License",
-          "description": "Professional support in obtaining and renewing trade licenses for your business operations in Kuwait."
-        },
-        {
-          "title": "Work Visa Services",
-          "description": "Efficient processing of work visas for employees and executives, ensuring smooth onboarding and legal compliance."
-        },
-        {
-          "title": "Partnership Arrangements",
-          "description": "Facilitating partnership agreements and collaborations tailored to your business needs in Kuwait."
-        },
-        {
-          "title": "Legal Documentation",
-          "description": "Assistance in preparing and managing all legal documents required for corporate and operational compliance."
-        },
-        {
-          "title": "Ministry Approvals",
-          "description": "Guidance and support to obtain approvals from relevant ministries and regulatory authorities in Kuwait."
-        },
-        {
-          "title": "Company Registration",
-          "description": "Comprehensive services for registering your company, including CR, permits, and official documentation."
-        },
-        {
-          "title": "Banking Support",
-          "description": "Helping you open corporate bank accounts and manage financial operations effectively."
-        }
-      ]
-    }
-
-      },
-        "bahrain": {
-          "hero": {
-            "title": "Business Setup in Bahrain",
-            "subtitle": "Fast setup, low costs, and 100% foreign ownership opportunities."
+          {
+            "title": "Register with the Ministry of Economic Affairs",
+            "desc": "Obtain official registration and company number"
           },
-          "subtitle": {
-            "ownershipHead": "Ownership",
-            "minimumCapital": "Minimum Capital",
-            "setupTime": "Setup Time"
-          },
-          "why": {
-            "title": "Why Bahrain?",
-            "desc": "Bahrain offers an investor-friendly environment with low costs and quick business registration."
-          },
-          "benefits": {
-            "b1": "100% foreign ownership allowed",
-            "b2": "Low setup costs",
-            "b3": "Quick registration (5-10 days)",
-            "b4": "No currency restrictions",
-            "b5": "Business-friendly laws",
-            "b6": "Strategic location in GCC",
-            "b7": "Modern infrastructure",
-            "b8": "Skilled workforce",
-            "b9": "Liberal economy"
-          },
-          "types": {
-  "title": "Business Structure Options",
-  "llc": {
-    "title": "Limited Liability Company (LLC)",
-    "desc": "A common legal form for small and medium-sized businesses in Bahrain."
-  },
-  "branch": {
-    "title": "Branch Office",
-    "desc": "An extension of a foreign company, allowing it to operate in Bahrain."
-  },
-  "rep": {
-    "title": "Representative Office",
-    "desc": "Used for marketing, liaison, and business promotion purposes only."
-  }
-},
-
-          "docs": {
-            "title": "Required Documents",
-            "d1": "Passport copies of shareholders and directors",
-            "d2": "Proof of address",
-            "d3": "Articles and Memorandum of Association",
-            "d4": "Board resolution for foreign shareholders",
-            "d5": "Business plan (if required)",
-            "d6": "Bank reference letter",
-            "d7": "Company name reservation certificate"
-          },
-          "sectors": {
-            "title": "Popular Business Sectors",
-            "s1": "Finance & Banking",
-            "s2": "Trading & Distribution",
-            "s3": "Technology & IT Services",
-            "s4": "Logistics & Transportation",
-            "s5": "Tourism & Hospitality",
-            "s6": "Manufacturing & Industry"
-          },
-          "global": {
-            "days": "days",
-            "contact": "Connect With Us"
+          {
+            "title": "Tax and Bank Account Setup",
+            "desc": "Register for tax and open a corporate bank account"
           }
+        ]
       },
-
-        "iran": {
-          "hero": {
-            "title": "Business Setup in Iran",
-            "subtitle": "Establish your business in one of the Middle East’s fastest-growing markets.",
-            "cta": "Connect With Us"
-          },
-      
-          "why_choose": {
-            "title": "Why Choose Iran?",
-            "desc": "Iran offers a unique gateway to Asian and Middle Eastern markets with cost-effective opportunities.",
-            "benefits": [
-              "Access to an 85+ million consumer market",
-              "Strategic location linking Asia, Europe, and the Middle East",
-              "Low operational and labor costs",
-              "Growing industrial and technology sectors",
-              "Government support for investment projects",
-              "Availability of skilled workforce",
-              "Special Economic and Free Trade Zones with incentives",
-              "Gateway to CIS and Central Asian markets"
-            ]
-          },
-      
-          "business_structures": {
-  "title": "Business Structure Options in Iran",
-  "types": [
-    {
-      "title": "Limited Liability Company (LLC)",
-      "description": "The most common legal form for foreign investors in Iran."
-    },
-    {
-      "title": "Joint Stock Company (Private or Public)",
-      "description": "Suitable for larger operations and investment projects."
-    },
-    {
-      "title": "Branch Office",
-      "description": "Extension of a foreign company to operate in Iran."
-    },
-    {
-      "title": "Representative Office",
-      "description": "For market research, marketing, and liaison purposes."
-    }
-  ]
-},
-
-      
-          "process": {
-            "title": "Setup Process",
-            "steps": [
-              {
-                "title": "Choose Business Structure",
-                "desc": "Select a suitable company type and define shareholders"
-              },
-              {
-                "title": "Reserve Company Name",
-                "desc": "Get name approval from the Company Registration Office"
-              },
-              {
-                "title": "Prepare and Submit Documents",
-                "desc": "Submit articles of association, identification, and application forms"
-              },
-              {
-                "title": "Register with the Ministry of Economic Affairs",
-                "desc": "Obtain official registration and company number"
-              },
-              {
-                "title": "Tax and Bank Account Setup",
-                "desc": "Register for tax and open a corporate bank account"
-              }
-            ]
-          },
-      
-          "documents": {
-            "title": "Required Documents",
-            "list": [
-              "Passport copies of shareholders and directors",
-              "Proof of address for all shareholders",
-              "Articles and Memorandum of Association",
-              "Business plan (if required)",
-              "Bank reference letter",
-              "Power of Attorney (if applicable)",
-              "Board resolution for foreign shareholders",
-              "Company name reservation certificate"
-            ]
-          },
-      
-          "freezones": {
-            "title": "Free Trade & Economic Zones",
-            "zones": [
-              "Kish Free Trade Zone",
-              "Qeshm Free Trade Zone",
-              "Chabahar Free Zone",
-              "Aras Free Zone",
-              "Anzali Free Zone",
-              "Arvand Free Zone",
-              "Maku Free Zone",
-              "Payam Special Economic Zone"
-            ]
-          }
+      "documents": {
+        "title": "Required Documents",
+        "list": [
+          "Passport copies of shareholders and directors",
+          "Proof of address for all shareholders",
+          "Articles and Memorandum of Association",
+          "Business plan (if required)",
+          "Bank reference letter",
+          "Power of Attorney (if applicable)",
+          "Board resolution for foreign shareholders",
+          "Company name reservation certificate"
+        ]
       },
-        "india": {
-    "hero": {
-      "title": "Business Setup in India",
-      "subtitle": "Access the world's fastest-growing major economy with 1.4 billion consumers.",
-      "cta": "Connect With Us"
-    },
-    "why_choose": {
-      "title": "Why Choose India?",
-      "desc": "India offers a huge market, growing economy, and investor-friendly policies.",
-      "benefits": [
-        "Massive market potential",
-        "Fast-growing economy",
-        "Skilled workforce",
-        "Digital infrastructure",
-        "100% FDI in many sectors",
-        "Startup-friendly policies",
-        "Low operational costs",
-        "English-speaking workforce",
-        "Strategic location"
-      ]
-    },
-   "services": {
-  "title": "Our Professional Services",
-  "description": "Comprehensive support for businesses to establish, register, and operate in India with compliance and efficiency.",
-  "types": [
-    {
-      "title": "Private Limited Company",
-      "description": "Complete assistance to register and manage your Private Limited Company in India, including all regulatory filings."
-    },
-    {
-      "title": "LLP Registration",
-      "description": "Expert guidance for registering a Limited Liability Partnership, ensuring compliance with Indian laws."
-    },
-    {
-      "title": "Branch Office Setup",
-      "description": "Support in establishing a branch office in India as an extension of your foreign company."
-    },
-    {
-      "title": "Liaison Office",
-      "description": "Assistance in setting up a liaison office for marketing, communication, and coordination purposes."
-    },
-    {
-      "title": "GST Registration",
-      "description": "Professional services for registering under Goods and Services Tax, ensuring smooth taxation compliance."
-    },
-    {
-      "title": "Import Export Code (IEC)",
-      "description": "Guidance in obtaining IEC to legally engage in import and export activities across India."
-    },
-    {
-      "title": "PAN & TAN Registration",
-      "description": "Complete support to obtain PAN and TAN numbers for your company and employees in India."
-    },
-    {
-      "title": "Trademark Registration",
-      "description": "Assistance to register your trademarks in India and protect your brand legally."
-    }
-  ]
-}
-,
-    "cta": {
-      "title": "Ready to Start Your Business in India?",
-      "desc": "Our expert team will guide you through every step of the process.",
-      "button": "Connect With Us"
-    }
+      "freezones": {
+        "title": "Free Trade & Economic Zones",
+        "zones": [
+          "Kish Free Trade Zone",
+          "Qeshm Free Trade Zone",
+          "Chabahar Free Zone",
+          "Aras Free Zone",
+          "Anzali Free Zone",
+          "Arvand Free Zone",
+          "Maku Free Zone",
+          "Payam Special Economic Zone"
+        ]
       }
-    
-      
-      
-      
-
-      
-      
-
-        
-      
-      
-      
-
-
-
-},
-"contact": {
+    },
+    "india": {
+      "hero": {
+        "title": "Business Setup in India",
+        "subtitle": "Access the world's fastest-growing major economy with 1.4 billion consumers.",
+        "cta": "Connect With Us"
+      },
+      "why_choose": {
+        "title": "Why Choose India?",
+        "desc": "India offers a huge market, growing economy, and investor-friendly policies.",
+        "benefits": [
+          "Massive market potential",
+          "Fast-growing economy",
+          "Skilled workforce",
+          "Digital infrastructure",
+          "100% FDI in many sectors",
+          "Startup-friendly policies",
+          "Low operational costs",
+          "English-speaking workforce",
+          "Strategic location"
+        ]
+      },
+      "services": {
+        "title": "Our Professional Services",
+        "description": "Comprehensive support for businesses to establish, register, and operate in India with compliance and efficiency.",
+        "types": [
+          {
+            "title": "Private Limited Company",
+            "description": "Complete assistance to register and manage your Private Limited Company in India, including all regulatory filings."
+          },
+          {
+            "title": "LLP Registration",
+            "description": "Expert guidance for registering a Limited Liability Partnership, ensuring compliance with Indian laws."
+          },
+          {
+            "title": "Branch Office Setup",
+            "description": "Support in establishing a branch office in India as an extension of your foreign company."
+          },
+          {
+            "title": "Liaison Office",
+            "description": "Assistance in setting up a liaison office for marketing, communication, and coordination purposes."
+          },
+          {
+            "title": "GST Registration",
+            "description": "Professional services for registering under Goods and Services Tax, ensuring smooth taxation compliance."
+          },
+          {
+            "title": "Import Export Code (IEC)",
+            "description": "Guidance in obtaining IEC to legally engage in import and export activities across India."
+          },
+          {
+            "title": "PAN & TAN Registration",
+            "description": "Complete support to obtain PAN and TAN numbers for your company and employees in India."
+          },
+          {
+            "title": "Trademark Registration",
+            "description": "Assistance to register your trademarks in India and protect your brand legally."
+          }
+        ]
+      },
+      "cta": {
+        "title": "Ready to Start Your Business in India?",
+        "desc": "Our expert team will guide you through every step of the process.",
+        "button": "Connect With Us"
+      }
+    }
+  },
+  "contact": {
     "hero": {
       "title": "Contact Us",
       "subtitle": "We’re ready to provide the right solution according to your needs",
@@ -1258,7 +1396,7 @@
         "label": "Service Interested In",
         "options": [
           "Company Registration",
-          "Visa & Emigration Services",
+          "Visa & Immigration Services",
           "ROP Services",
           "PRO Services",
           "Ministry Services",
@@ -1287,8 +1425,8 @@
       "sheet_error": "Something went wrong while sending to Google Sheet. Please try again.",
       "general_error": "Something went wrong. Please try again."
     }
-},
-"costCalculator": {
+  },
+  "costCalculator": {
     "header": "Get Instant Quote",
     "steps": [
       "Country & Type",
@@ -1344,49 +1482,81 @@
       "Accounting / Bookkeeping",
       "Website / Branding"
     ],
-    "countries": ["Oman", "UAE", "Saudi Arabia", "Qatar", "Kuwait", "Bahrain", "Iran", "India"],
-    "businessTypes": ["LLC", "Free Zone", "Branch", "Offshore"],
-    "industries": ["Trading", "Services", "Tech / Software", "Manufacturing", "Consulting"],
-    "timelines": ["Immediately", "Within a month", "1-3 months", "3+ months"],
-    "urgencies": ["Normal", "Expedited (+fees)"],
-    "officeOptions": ["Yes — physical office", "Serviced / virtual office", "No"]
-},
-"chatBot":{
-  "welcome": {
-    "message": "Hello! I'm your OSBIC virtual assistant. I can help you with:\n\n• Company registration inquiries\n• Visa and PRO services\n• Cost estimates\n• General questions\n\nHow may I assist you today?"
+    "countries": [
+      "Oman",
+      "UAE",
+      "Saudi Arabia",
+      "Qatar",
+      "Kuwait",
+      "Bahrain",
+      "Iran",
+      "India"
+    ],
+    "businessTypes": [
+      "LLC",
+      "Free Zone",
+      "Branch",
+      "Offshore"
+    ],
+    "industries": [
+      "Trading",
+      "Services",
+      "Tech / Software",
+      "Manufacturing",
+      "Consulting"
+    ],
+    "timelines": [
+      "Immediately",
+      "Within a month",
+      "1-3 months",
+      "3+ months"
+    ],
+    "urgencies": [
+      "Normal",
+      "Expedited (+fees)"
+    ],
+    "officeOptions": [
+      "Yes — physical office",
+      "Serviced / virtual office",
+      "No"
+    ]
   },
-  "header": {
-    "title": "OSBIC Assistant",
-    "subtitle": "How can we help you today?"
+  "chatBot": {
+    "welcome": {
+      "message": "Hello! I'm your OSBIC virtual assistant. I can help you with:\n\n• Company registration inquiries\n• Visa and PRO services\n• Cost estimates\n• General questions\n\nHow may I assist you today?"
+    },
+    "header": {
+      "title": "OSBIC Assistant",
+      "subtitle": "How can we help you today?"
+    },
+    "bubble": {
+      "text": "Need any help"
+    },
+    "input": {
+      "placeholder": "Type your message..."
+    },
+    "quickReplies": {
+      "companyRegistration": "Company registration",
+      "visaServices": "Visa services"
+    },
+    "errors": {
+      "general": "Sorry, I encountered an error. Please try again or contact our support team."
+    },
+    "footer": {
+      "consultantText": "Talk to a Human Consultant"
+    }
   },
-  "bubble": {
-    "text": "Need any help"
+  "response": {
+    "companyRegistration": "Great! I can help you with company registration in Oman and other GCC countries.\n\nHere's what we offer:\n• LLC Company Registration\n• Branch Office Setup\n• Free Zone Company Formation\n• Mainland Company Registration\n\nOur process typically takes 7-14 business days and includes:\n✅ All government approvals\n✅ Trade license\n✅ Chamber of Commerce registration\n✅ Bank account opening assistance\n\nWould you like a detailed quote for your specific business type?",
+    "visaServices": "I'd be happy to help with visa and immigration services!\n\nWe provide:\n• Employment Visa Processing\n• Family Visa Applications\n• Visit Visa Services\n• Visa Renewals & Transfers\n• PRO Services for all government procedures\n\nOur visa services include:\n✅ Complete documentation support\n✅ Government liaison services\n✅ Status tracking and updates\n✅ Fast processing times\n\nWhich type of visa service do you need?",
+    "costEstimate": "I can provide you with a detailed cost estimate!\n\nOur pricing varies based on:\n• Company type (LLC, Branch, Free Zone)\n• Business activities\n• Number of partners\n• Additional services needed\n\nTypical costs range from:\n• LLC Registration: OMR 1,200 - 2,500\n• Branch Office: OMR 800 - 1,500\n• Free Zone: OMR 1,500 - 3,000\n\nWould you like me to connect you with our team for a personalized quote?",
+    "proServices": "Our PRO (Public Relations Officer) services are comprehensive and include:\n\n• Ministry of Commerce registrations\n• Labor card applications\n• Municipality approvals\n• Chamber of Commerce membership\n• Bank account opening assistance\n• Document attestation services\n\nWe have certified PRO staff who handle all government procedures efficiently. What specific PRO service do you need?",
+    "processingTime": "Our typical processing times are:\n\n• Company Registration: 7-14 business days\n• Visa Processing: 3-7 business days\n• PRO Services: 1-5 business days\n• Document Attestation: 2-3 business days\n\nThese timelines can vary based on government processing times and document completeness. We always keep you updated on progress!",
+    "contactInfo": "You can reach us through:\n\n📞 Phone: +968 7259 6531\n📧 Email: info@osbic.com\n🌐 Website: www.osbic.com\n📍 Location: Muscat, Oman\n\nWe're available Sunday to Thursday, 8 AM to 6 PM (GST).\n\nWould you like to schedule a free consultation?",
+    "help": "I'm here to help! I can assist you with:\n\n• Company registration inquiries\n• Visa and immigration services\n• Cost estimates and quotes\n• PRO services information\n• General business setup questions\n\nWhat specific information do you need?",
+    "default": "Thank you for your message! I understand you're interested in our services.\n\nTo provide you with the most accurate information, could you please specify:\n• What type of business setup are you looking for?\n• Which country are you interested in?\n• Do you need visa services as well?\n\nYou can also contact our team directly for immediate assistance at +968 7259 6531."
   },
-  "input": {
-    "placeholder": "Type your message..."
-  },
-  "quickReplies": {
-    "companyRegistration": "Company registration",
-    "visaServices": "Visa services"
-  },
-  "errors": {
-    "general": "Sorry, I encountered an error. Please try again or contact our support team."
-  },
-  "footer": {
-    "consultantText": "Talk to a Human Consultant"
-  }
-},
-"response":{
-  "companyRegistration": "Great! I can help you with company registration in Oman and other GCC countries.\n\nHere's what we offer:\n• LLC Company Registration\n• Branch Office Setup\n• Free Zone Company Formation\n• Mainland Company Registration\n\nOur process typically takes 7-14 business days and includes:\n✅ All government approvals\n✅ Trade license\n✅ Chamber of Commerce registration\n✅ Bank account opening assistance\n\nWould you like a detailed quote for your specific business type?",
-  "visaServices": "I'd be happy to help with visa and immigration services!\n\nWe provide:\n• Employment Visa Processing\n• Family Visa Applications\n• Visit Visa Services\n• Visa Renewals & Transfers\n• PRO Services for all government procedures\n\nOur visa services include:\n✅ Complete documentation support\n✅ Government liaison services\n✅ Status tracking and updates\n✅ Fast processing times\n\nWhich type of visa service do you need?",
-  "costEstimate": "I can provide you with a detailed cost estimate!\n\nOur pricing varies based on:\n• Company type (LLC, Branch, Free Zone)\n• Business activities\n• Number of partners\n• Additional services needed\n\nTypical costs range from:\n• LLC Registration: OMR 1,200 - 2,500\n• Branch Office: OMR 800 - 1,500\n• Free Zone: OMR 1,500 - 3,000\n\nWould you like me to connect you with our team for a personalized quote?",
-  "proServices": "Our PRO (Public Relations Officer) services are comprehensive and include:\n\n• Ministry of Commerce registrations\n• Labor card applications\n• Municipality approvals\n• Chamber of Commerce membership\n• Bank account opening assistance\n• Document attestation services\n\nWe have certified PRO staff who handle all government procedures efficiently. What specific PRO service do you need?",
-  "processingTime": "Our typical processing times are:\n\n• Company Registration: 7-14 business days\n• Visa Processing: 3-7 business days\n• PRO Services: 1-5 business days\n• Document Attestation: 2-3 business days\n\nThese timelines can vary based on government processing times and document completeness. We always keep you updated on progress!",
-  "contactInfo": "You can reach us through:\n\n📞 Phone: +968 7259 6531\n📧 Email: info@osbic.com\n🌐 Website: www.osbic.com\n📍 Location: Muscat, Oman\n\nWe're available Sunday to Thursday, 8 AM to 6 PM (GST).\n\nWould you like to schedule a free consultation?",
-  "help": "I'm here to help! I can assist you with:\n\n• Company registration inquiries\n• Visa and immigration services\n• Cost estimates and quotes\n• PRO services information\n• General business setup questions\n\nWhat specific information do you need?",
-  "default": "Thank you for your message! I understand you're interested in our services.\n\nTo provide you with the most accurate information, could you please specify:\n• What type of business setup are you looking for?\n• Which country are you interested in?\n• Do you need visa services as well?\n\nYou can also contact our team directly for immediate assistance at +968 7259 6531."
-},
-"calculator": {
+  "calculator": {
     "title": "Get Instant Quote",
     "steps": [
       "Country & Type",
@@ -1510,12 +1680,5 @@
         "Website / Branding"
       ]
     }
-}
-
-
-
-  
-  
-
-
+  }
 }
