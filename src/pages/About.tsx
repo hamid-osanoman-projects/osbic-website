@@ -8,156 +8,198 @@ export default function About() {
 
 
 
-// const team = [
-//   {
-//     name: "Ayoob Saleem",
-//     image: "/images/TEAM/ayoob.5.jpeg",
-//     roleKey: "about.team.roles.businessDevelopmentManager",
-//     objectPosition: "center center",
-//     // scale: "scale-85", // zoom OUT 
-//   },
-//   {
-//     name: "Suvaid Mahmood",
-//     image: "/images/TEAM/suvia.2.JPG",
-//     roleKey: "about.team.roles.businessDevelopmentExecutive",
-//     objectPosition: "top center", // more headspace
-//     // scale: "scale-100",
-//   },
-//   {
-//     name: "Nafih Nasser",
-//     image: "/images/TEAM/nafi.2.jpg",
-//     roleKey: "about.team.roles.businessDevelopmentExecutive",
-//     objectPosition: "top center",
-//     // scale: "scale-100",
-//   },
-//   {
-//     name: "Ameena Rafeek",
-//     image: "/images/TEAM/ameena.1.jpg",
-//     roleKey: "about.team.roles.businessDevelopmentExecutive",
-//     objectPosition: "top center",
-//     // scale: "scale-100",
-//   },
-//   {
-//     name: "Misba Sadia",
-//     image: "/images/TEAM/misba.1.jpg",
-//     roleKey: "about.team.roles.businessDevelopmentExecutive",
-//     objectPosition: "top center",
-//     // scale: "scale-100",
-//   },
-//   {
-//     name: "Sadaf Etehad",
-//     image: "/images/TEAM/sadaf.2.jpg",
-//     roleKey: "about.team.roles.businessDevelopmentExecutive",
-//     objectPosition: "center center", // this one already perfect
-//     // scale: "scale-100",
-//   },
-//   {
-//     name: "Albin Thomas",
-//     image: "/images/TEAM/albin.1.jpg",
-//     roleKey: "about.team.roles.businessDevelopmentExecutive",
-//     objectPosition: "top center",
-//     // scale: "scale-100",
-//   },
-//   {
-//     name: "Maadir",
-//     image: "/images/TEAM/maadir.1.jpg",
-//     roleKey: "about.team.roles.businessDevelopmentExecutive",
-//     objectPosition: "center center",
-//     // scale: "scale-100",
-//   },
-// ];
+  // const team = [
+  //   {
+  //     name: "Ayoob Saleem",
+  //     image: "/images/TEAM/ayoob.5.jpeg",
+  //     roleKey: "about.team.roles.businessDevelopmentManager",
+  //     objectPosition: "center center",
+  //     // scale: "scale-85", // zoom OUT 
+  //   },
+  //   {
+  //     name: "Suvaid Mahmood",
+  //     image: "/images/TEAM/suvia.2.JPG",
+  //     roleKey: "about.team.roles.businessDevelopmentExecutive",
+  //     objectPosition: "top center", // more headspace
+  //     // scale: "scale-100",
+  //   },
+  //   {
+  //     name: "Nafih Nasser",
+  //     image: "/images/TEAM/nafi.2.jpg",
+  //     roleKey: "about.team.roles.businessDevelopmentExecutive",
+  //     objectPosition: "top center",
+  //     // scale: "scale-100",
+  //   },
+  //   {
+  //     name: "Ameena Rafeek",
+  //     image: "/images/TEAM/ameena.1.jpg",
+  //     roleKey: "about.team.roles.businessDevelopmentExecutive",
+  //     objectPosition: "top center",
+  //     // scale: "scale-100",
+  //   },
+  //   {
+  //     name: "Misba Sadia",
+  //     image: "/images/TEAM/misba.1.jpg",
+  //     roleKey: "about.team.roles.businessDevelopmentExecutive",
+  //     objectPosition: "top center",
+  //     // scale: "scale-100",
+  //   },
+  //   {
+  //     name: "Sadaf Etehad",
+  //     image: "/images/TEAM/sadaf.2.jpg",
+  //     roleKey: "about.team.roles.businessDevelopmentExecutive",
+  //     objectPosition: "center center", // this one already perfect
+  //     // scale: "scale-100",
+  //   },
+  //   {
+  //     name: "Albin Thomas",
+  //     image: "/images/TEAM/albin.1.jpg",
+  //     roleKey: "about.team.roles.businessDevelopmentExecutive",
+  //     objectPosition: "top center",
+  //     // scale: "scale-100",
+  //   },
+  //   {
+  //     name: "Maadir",
+  //     image: "/images/TEAM/maadir.1.jpg",
+  //     roleKey: "about.team.roles.businessDevelopmentExecutive",
+  //     objectPosition: "center center",
+  //     // scale: "scale-100",
+  //   },
+  // ];
 
-const team = [
-  {
-    name: "Ayoob Saleem",
-    image: "/images/TEAM/ayoob.5.jpeg",
-    roleKey: "about.team.roles.businessDevelopmentManager",
-    objectPosition: "center center",
-    expertise: ["Business Setup", "CR Registration", "Investor Visa"],
-  },
-  {
-    name: "Suvaid Mahmood",
-    image: "/images/TEAM/suvia.2.JPG",
-    roleKey: "about.team.roles.businessDevelopmentExecutive",
-    objectPosition: "top center",
-    expertise: ["Visa Processing", "PRO Services", "License Renewal"],
-  },
-  {
-    name: "Nafih Nasser",
-    image: "/images/TEAM/nafi.2.jpg",
-    roleKey: "about.team.roles.businessDevelopmentExecutive",
-    objectPosition: "top center",
-    expertise: ["LLC Setup", "Document Clearance", "MoCI Services"],
-  },
-  {
-    name: "Ameena Rafeek",
-    image: "/images/TEAM/ameena.1.jpg",
-    roleKey: "about.team.roles.businessDevelopmentExecutive",
-    objectPosition: "top center",
-    expertise: ["Visa Services", "PRO Work", "CR Updates"],
-  },
-  // {
-  //   name: "Misba Sadia",
-  //   image: "/images/TEAM/misba.1.jpg",
-  //   roleKey: "about.team.roles.businessDevelopmentExecutive",
-  //   objectPosition: "top center",
-  //   expertise: ["Business Licensing", "Sponsor Transfer", "Employment Visa"],
-  // },
-  {
-    name: "Sadaf Etehad",
-    image: "/images/TEAM/sadaf.2.jpg",
-    roleKey: "about.team.roles.businessDevelopmentExecutive",
-    objectPosition: "center center",
-    expertise: ["Typing Services", "Visa Typing", "Document Support"],
-  },
-  {
-    name: "Albin Thomas",
-    image: "/images/TEAM/albin.1.jpg",
-    roleKey: "about.team.roles.businessDevelopmentExecutive",
-    objectPosition: "top center",
-    expertise: ["Company Amendments", "MoCI Portal", "CR Related Work"],
-  },
-  {
-    name: "Maadir",
-    image: "/images/TEAM/maadir.1.jpg",
-    roleKey: "about.team.roles.businessDevelopmentExecutive",
-    objectPosition: "center center",
-    expertise: ["Admin Support", "Business Setup Coordination", "Client Handling"],
-  },
-];
+  const team = [
+    {
+      name: "Ayoob Saleem",
+      image: "/images/TEAM/ayoob.5.webp",
+      roleKey: "about.team.roles.businessDevelopmentManager",
+      objectPosition: "center center",
+      expertise: ["Business Setup", "CR Registration", "Investor Visa"],
+    },
+    {
+      name: "Suvaid Mahmood",
+      image: "/images/TEAM/suvia.2.webp",
+      roleKey: "about.team.roles.businessDevelopmentExecutive",
+      objectPosition: "top center",
+      expertise: ["Visa Processing", "PRO Services", "License Renewal"],
+    },
+    {
+      name: "Nafih Nasser",
+      image: "/images/TEAM/nafi.2.webp",
+      roleKey: "about.team.roles.businessDevelopmentExecutive",
+      objectPosition: "top center",
+      expertise: ["LLC Setup", "Document Clearance", "MoCI Services"],
+    },
+    {
+      name: "Ameena Rafeek",
+      image: "/images/TEAM/ameena.1.webp",
+      roleKey: "about.team.roles.businessDevelopmentExecutive",
+      objectPosition: "top center",
+      expertise: ["Visa Services", "PRO Work", "CR Updates"],
+    },
+    // {
+    //   name: "Misba Sadia",
+    //   image: "/images/TEAM/misba.1.jpg",
+    //   roleKey: "about.team.roles.businessDevelopmentExecutive",
+    //   objectPosition: "top center",
+    //   expertise: ["Business Licensing", "Sponsor Transfer", "Employment Visa"],
+    // },
+    {
+      name: "Sadaf Etehad",
+      image: "/images/TEAM/sadaf.2.webp",
+      roleKey: "about.team.roles.businessDevelopmentExecutive",
+      objectPosition: "center center",
+      expertise: ["Typing Services", "Visa Typing", "Document Support"],
+    },
+    {
+      name: "Maathir",
+      image: "/images/TEAM/maadir.1.webp",
+      roleKey: "about.team.roles.businessDevelopmentExecutive",
+      objectPosition: "center center",
+      expertise: ["Admin Support", "Business Setup Coordination", "Client Handling"],
+    },
+    {
+      name: "Kamal",
+      image: "/images/TEAM/kamal.webp",
+      roleKey: "about.team.roles.businessDevelopmentExecutive",
+      objectPosition: "center center",
+      expertise: ["Business Setup", "PRO Services", "Government Liaison"],
+    },
+    {
+      name: "Ansar",
+      image: "/images/TEAM/ansar.webp",
+      roleKey: "about.team.roles.businessDevelopmentExecutive",
+      objectPosition: "center center",
+      expertise: ["CR Registration", "Investor Visas", "LLC Setup"],
+    },
+    {
+      name: "Raya",
+      image: "/images/TEAM/raya.webp",
+      roleKey: "about.team.roles.businessDevelopmentExecutive",
+      objectPosition: "center center",
+      expertise: ["Client Support", "Administration", "Government Portals"],
+    },
+    {
+      name: "Aadil",
+      image: "/images/TEAM/aadil.webp",
+      roleKey: "about.team.roles.businessDevelopmentExecutive",
+      objectPosition: "center center",
+      expertise: ["Visa Processing", "ROP Services", "Labor Approvals"],
+    },
+    {
+      name: "Shafeek",
+      image: "/images/TEAM/shafeek.webp",
+      roleKey: "about.team.roles.businessDevelopmentExecutive",
+      objectPosition: "center center",
+      expertise: ["Company Formation", "License Renewals", "PRO Services"],
+    },
+    {
+      name: "Nadir",
+      image: "/images/TEAM/nadir.webp",
+      roleKey: "about.team.roles.businessDevelopmentExecutive",
+      objectPosition: "center center",
+      expertise: ["Local Sponsorship", "Chamber of Commerce", "Business Advisory"],
+    },
+    {
+      name: "Saranya",
+      image: "/images/TEAM/saranya.webp",
+      roleKey: "about.team.roles.businessDevelopmentExecutive",
+      objectPosition: "center center",
+      expertise: ["Admin Support", "Client Management", "Operations"],
+    }
+  ];
 
-const proTeam = [
-  {
-    nameKey: "about.pro.members.salim.name",
-    roleKey: "about.pro.members.salim.role",
-    image: "/images/pros/mohammed.jpg",
-    expertiseKeys: [
-      "about.pro.members.salim.expertise.0",
-      "about.pro.members.salim.expertise.1",
-      "about.pro.members.salim.expertise.2",
-    ],
-  },
-  {
-    nameKey: "about.pro.members.abdul.name",
-    roleKey: "about.pro.members.abdul.role",
-    image: "/images/pros/fahad.jpg",
-    expertiseKeys: [
-      "about.pro.members.abdul.expertise.0",
-      "about.pro.members.abdul.expertise.1",
-      "about.pro.members.abdul.expertise.2",
-    ],
-  },
-  {
-    nameKey: "about.pro.members.waleed.name",
-    roleKey: "about.pro.members.waleed.role",
-    image: "/images/pros/rashid.jpg",
-    expertiseKeys: [
-      "about.pro.members.waleed.expertise.0",
-      "about.pro.members.waleed.expertise.1",
-      "about.pro.members.waleed.expertise.2",
-    ],
-  },
-];
+  const proTeam = [
+    {
+      nameKey: "about.pro.members.salim.name",
+      roleKey: "about.pro.members.salim.role",
+      image: "/images/pros/mohammed.jpg",
+      expertiseKeys: [
+        "about.pro.members.salim.expertise.0",
+        "about.pro.members.salim.expertise.1",
+        "about.pro.members.salim.expertise.2",
+      ],
+    },
+    {
+      nameKey: "about.pro.members.abdul.name",
+      roleKey: "about.pro.members.abdul.role",
+      image: "/images/pros/fahad.jpg",
+      expertiseKeys: [
+        "about.pro.members.abdul.expertise.0",
+        "about.pro.members.abdul.expertise.1",
+        "about.pro.members.abdul.expertise.2",
+      ],
+    },
+    {
+      nameKey: "about.pro.members.waleed.name",
+      roleKey: "about.pro.members.waleed.role",
+      image: "/images/pros/rashid.jpg",
+      expertiseKeys: [
+        "about.pro.members.waleed.expertise.0",
+        "about.pro.members.waleed.expertise.1",
+        "about.pro.members.waleed.expertise.2",
+      ],
+    },
+  ];
 
 
   const infoCards = [
@@ -194,45 +236,45 @@ const proTeam = [
       </section>
 
       {/* Story Section (UPDATED: mobile & tablet show only one paragraph) */}
-<section className="py-20 bg-white">
-  <div className="container mx-auto px-6 grid md:grid-cols-2 gap-14 items-center">
-    <motion.img
-      initial={{ opacity: 0, x: -40 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true }}
-      src="/images/office.2.JPG"
-      alt={t("about.story.officeAlt")}
-      className="rounded-2xl shadow-xl object-cover"
-    />
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-6 grid md:grid-cols-2 gap-14 items-center">
+          <motion.img
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            src="/images/office.2.webp"
+            alt={t("about.story.officeAlt")}
+            className="rounded-2xl shadow-xl object-cover"
+          />
 
-    <motion.div
-      initial={{ opacity: 0, x: 40 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true }}
-    >
-      <h2 className="text-4xl font-light text-[#1a2332] mb-6">
-        {t("about.story.heading")}
-      </h2>
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl font-light text-[#1a2332] mb-6">
+              {t("about.story.heading")}
+            </h2>
 
-      {/* Single paragraph for mobile & tablet (md and below) */}
-      <p className="text-gray-600 mb-4 leading-relaxed lg:hidden">
-        {t("about.story.p1")}
-      </p>
+            {/* Single paragraph for mobile & tablet (md and below) */}
+            <p className="text-gray-600 mb-4 leading-relaxed lg:hidden">
+              {t("about.story.p1")}
+            </p>
 
-      {/* Full content for desktop (lg and up) */}
-      <div className="hidden lg:block">
-        <p className="text-gray-600 mb-4 leading-relaxed">{t("about.story.p1")}</p>
-        <p className="text-gray-600 mb-4 leading-relaxed">{t("about.story.p2")}</p>
-        <p className="text-gray-600 mb-4 leading-relaxed">{t("about.story.p3")}</p>
-      </div>
-    </motion.div>
-  </div>
-</section>
+            {/* Full content for desktop (lg and up) */}
+            <div className="hidden lg:block">
+              <p className="text-gray-600 mb-4 leading-relaxed">{t("about.story.p1")}</p>
+              <p className="text-gray-600 mb-4 leading-relaxed">{t("about.story.p2")}</p>
+              <p className="text-gray-600 mb-4 leading-relaxed">{t("about.story.p3")}</p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
 
 
       {/* Core Values Section */}
       <section className="py-20 bg-gradient-to-br from-[#f9fafb] to-[#eef1f5]">
-        
+
         <div className="container mx-auto px-6">
           <div className="text-center mb-14">
             <h2 className="text-4xl font-light text-[#1a2332] mb-4">
@@ -263,94 +305,94 @@ const proTeam = [
       </section>
 
       {/* Founder Section (UPDATED: mobile & tablet show only short text) */}
-<section className="py-24 bg-white">
-  <div className="container mx-auto px-6 max-w-6xl">
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      className="text-center mb-12"
-    >
-      <h2 className="text-4xl font-light text-[#1a2332] mb-4">
-        {t("about.founder.heading")}
-      </h2>
-      <p className="text-gray-600">{t("about.founder.sub")}</p>
-    </motion.div>
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-6 max-w-6xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-4xl font-light text-[#1a2332] mb-4">
+              {t("about.founder.heading")}
+            </h2>
+            <p className="text-gray-600">{t("about.founder.sub")}</p>
+          </motion.div>
 
-    <div className="bg-gray-50 rounded-2xl p-10 md:p-14 shadow-lg">
-      <div className="grid md:grid-cols-3 gap-10 items-center">
-        
-        {/* Founder Image (UNCHANGED for all screens) */}
-        <div>
-          <img
-            src="/images/IMG_3928.jpg"
-            alt={t("about.founder.name")}
-            className="rounded-xl shadow-lg w-full object-cover"
-          />
-        </div>
+          <div className="bg-gray-50 rounded-2xl p-10 md:p-14 shadow-lg">
+            <div className="grid md:grid-cols-3 gap-10 items-center">
 
-        <div className="md:col-span-2">
-          <h3 className="text-3xl font-semibold text-[#1a2332] mb-2">
-            {t("about.founder.name")}
-          </h3>
-          <p className="text-[#42A5E1] font-medium mb-4">
-            {t("about.founder.role")}
-          </p>
+              {/* Founder Image (UNCHANGED for all screens) */}
+              <div>
+                <img
+                  src="/images/IMG_3928.webp"
+                  alt={t("about.founder.name")}
+                  className="rounded-xl shadow-lg w-full object-cover"
+                />
+              </div>
 
-          {/* Short content for mobile & tablet (md and below) */}
-          <p className="text-gray-600 leading-relaxed lg:hidden">
-            {t("about.founder.bio")}
-          </p>
+              <div className="md:col-span-2">
+                <h3 className="text-3xl font-semibold text-[#1a2332] mb-2">
+                  {t("about.founder.name")}
+                </h3>
+                <p className="text-[#42A5E1] font-medium mb-4">
+                  {t("about.founder.role")}
+                </p>
 
-          {/* Full content only for desktop */}
-          <div className="hidden lg:block">
-            <p className="text-gray-600 leading-relaxed">
-              {t("about.founder.bio")}
-            </p>
-            <p className="text-gray-600 leading-relaxed mt-4">
-              {t("about.founder.bio1")}
-            </p>
+                {/* Short content for mobile & tablet (md and below) */}
+                <p className="text-gray-600 leading-relaxed lg:hidden">
+                  {t("about.founder.bio")}
+                </p>
+
+                {/* Full content only for desktop */}
+                <div className="hidden lg:block">
+                  <p className="text-gray-600 leading-relaxed">
+                    {t("about.founder.bio")}
+                  </p>
+                  <p className="text-gray-600 leading-relaxed mt-4">
+                    {t("about.founder.bio1")}
+                  </p>
+                </div>
+
+              </div>
+            </div>
           </div>
-
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
 
 
-      
+
       {/* Team Section */}
-<section className="py-28 bg-gray-50">
-  <div className="container mx-auto px-6">
-    {/* Heading */}
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      className="text-center mb-14"
-    >
-      <Users className="w-14 h-14 text-[#42A5E1] mx-auto mb-4" />
-      <h2 className="text-4xl font-light text-[#1a2332] mb-4">
-        {t("about.team.heading")}
-      </h2>
-      <p className="text-gray-600 max-w-2xl mx-auto">
-        {t("about.team.sub")}
-      </p>
-    </motion.div>
+      <section className="py-28 bg-gray-50">
+        <div className="container mx-auto px-6">
+          {/* Heading */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-14"
+          >
+            <Users className="w-14 h-14 text-[#42A5E1] mx-auto mb-4" />
+            <h2 className="text-4xl font-light text-[#1a2332] mb-4">
+              {t("about.team.heading")}
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              {t("about.team.sub")}
+            </p>
+          </motion.div>
 
-    {/* Team Grid */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-      {team.map((member, index) => (
-        <motion.div
-          key={index}
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: index * 0.1 }}
-          className="text-center"
-        >
-          {/* <div className="relative mb-4 group">
+          {/* Team Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            {team.map((member, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="text-center"
+              >
+                {/* <div className="relative mb-4 group">
             <img
   src={member.image}      // e.g., "/images/TEAM/ayoob.jpg"
   alt={member.name}
@@ -368,22 +410,22 @@ const proTeam = [
 
           </div> */}
 
-          <div className="relative mb-4 group overflow-hidden rounded-xl shadow-lg">
+                <div className="relative mb-4 group overflow-hidden rounded-xl shadow-lg">
 
-  {/* IMAGE */}
-  <img
-    src={member.image}
-    alt={member.name}
-    className="
+                  {/* IMAGE */}
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="
       w-full h-72 object-cover 
       transition duration-300
       group-hover:scale-105
       group-hover:brightness-50
     "
-  />
+                  />
 
-  {/* HOVER OVERLAY */}
-  {/* <div
+                  {/* HOVER OVERLAY */}
+                  {/* <div
     className="
       absolute inset-0 
       bg-gradient-to-t from-black/70 to-transparent
@@ -408,24 +450,24 @@ const proTeam = [
     </ul>
   </div> */}
 
-</div>
+                </div>
 
 
-          <h3 className="text-lg font-semibold text-[#1a2332] mb-1">
-            {member.name}
-          </h3>
-          <p className="text-sm text-gray-600">{t(member.roleKey)}</p>
-        </motion.div> 
-      ))}
-    </div>
-  </div>
-</section>
+                <h3 className="text-lg font-semibold text-[#1a2332] mb-1">
+                  {member.name}
+                </h3>
+                <p className="text-sm text-gray-600">{t(member.roleKey)}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
 
 
 
-{/* PRO Team Section */}
-{/* <section className="py-24 bg-white">
+      {/* PRO Team Section */}
+      {/* <section className="py-24 bg-white">
   <div className="container mx-auto px-6 max-w-6xl">
 
  
@@ -482,7 +524,7 @@ const proTeam = [
 </section> */}
 
       {/* Client Logos (About Page) */}
-{/* <section className="py-16 bg-white">
+      {/* <section className="py-16 bg-white">
   <div className="container mx-auto px-6 text-center">
     <h2 className="text-3xl font-light text-[#1a2332] mb-10">
       {t("about.clients.heading")}
@@ -546,7 +588,7 @@ const proTeam = [
             className="rounded-2xl overflow-hidden shadow-2xl max-w-4xl mx-auto"
           >
             <img
-              src="/images/TEAM/TeamPhoto.jpg"
+              src="/images/TEAM/TeamPhoto.webp"
               alt={t("about.group.imageAlt")}
               className="w-full object-cover"
             />
@@ -555,23 +597,23 @@ const proTeam = [
       </section>
 
       {/* Group Companies */}
-     <section className="py-20 bg-gradient-to-br from-[#f9fafb] to-[#eef1f5]">
-  <div className="container mx-auto px-6 text-center">
-    <motion.h2
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      viewport={{ once: true }}
-      className="text-4xl font-light text-[#1a2332] mb-4"
-    >
-      {t("about.groupCompanies.heading")}
-    </motion.h2>
+      <section className="py-20 bg-gradient-to-br from-[#f9fafb] to-[#eef1f5]">
+        <div className="container mx-auto px-6 text-center">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-4xl font-light text-[#1a2332] mb-4"
+          >
+            {t("about.groupCompanies.heading")}
+          </motion.h2>
 
-    <p className="text-gray-600 max-w-2xl mx-auto mb-10 text-sm md:text-base">
-      {t("about.groupCompanies.sub")}
-    </p>
+          <p className="text-gray-600 max-w-2xl mx-auto mb-10 text-sm md:text-base">
+            {t("about.groupCompanies.sub")}
+          </p>
 
-    <div className="
+          <div className="
       grid grid-cols-2
       sm:grid-cols-3 
       md:grid-cols-3 
@@ -579,38 +621,38 @@ const proTeam = [
       gap-8 md:gap-12 lg:gap-10 
       items-center justify-items-center
     ">
-      {[
-        { name: "Maisarah Accounting", logo: "/images/Maisarah.png", link: "https://maisarah.net/" },
-        { name: "Osan Studio", logo: "/OsanStudio.png", link: "https://osanstudio.net/" },
-        { name: "ASAS Service Center", logo: "/images/ASAS.png", link: "https://asas.om/" },
-        { name: "Tamkeen Service Center", logo: "/images/TAMKEEN.png", link: "#" },
-        { name: "Amer Service Center", logo: "/images/AMER.png", link: "#" },
-        { name: "Nameer Properties", logo: "/Nameer Properties.png", link: "#" },
-      ].map((company, i) => (
-        <motion.a
-          key={i}
-          href={company.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: i * 0.1 }}
-          viewport={{ once: true }}
-          className="flex flex-col items-center text-center"
-        >
-          <div className="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-all p-5 md:p-6 flex items-center justify-center w-36 h-24">
-            <img
-              src={company.logo}
-              alt={company.name}
-              className="max-h-10 object-contain"
-            />
+            {[
+              { name: "Maisarah Accounting", logo: "/images/Maisarah.png", link: "https://maisarah.net/" },
+              { name: "Osan Studio", logo: "/OsanStudio.png", link: "https://osanstudio.net/" },
+              { name: "ASAS Service Center", logo: "/images/ASAS.png", link: "https://asas.om/" },
+              { name: "Tamkeen Service Center", logo: "/images/TAMKEEN.png", link: "#" },
+              { name: "Amer Service Center", logo: "/images/AMER.png", link: "#" },
+              { name: "Nameer Properties", logo: "/Nameer Properties.png", link: "#" },
+            ].map((company, i) => (
+              <motion.a
+                key={i}
+                href={company.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.1 }}
+                viewport={{ once: true }}
+                className="flex flex-col items-center text-center"
+              >
+                <div className="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-all p-5 md:p-6 flex items-center justify-center w-36 h-24">
+                  <img
+                    src={company.logo}
+                    alt={company.name}
+                    className="max-h-10 object-contain"
+                  />
+                </div>
+                <p className="text-sm text-gray-600 mt-3">{company.name}</p>
+              </motion.a>
+            ))}
           </div>
-          <p className="text-sm text-gray-600 mt-3">{company.name}</p>
-        </motion.a>
-      ))}
-    </div>
-  </div>
-</section>
+        </div>
+      </section>
 
     </div>
   );

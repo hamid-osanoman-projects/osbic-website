@@ -71,28 +71,28 @@ export default function Home1() {
       icon: Building2,
       title: t("service.companyRegistration.title"),
       description: t("service.companyRegistration.desc"),
-      img: '/images/company_registration (1).jpg',
+      img: '/images/company_registration (1).webp',
       link: '/services/company-registration'
     },
     {
       icon: FileText,
       title: t("service.visaEmigration.title"),
       description: t("service.visaEmigration.desc"),
-      img: '/images/visa_immigration (1).jpg',
+      img: '/images/visa_immigration (1).webp',
       link: '/services/visa-emigration'
     },
     {
       icon: Users,
       title: t("service.proServices.title"),
       description: t("service.proServices.desc"),
-      img: '/images/pro_serivices (1).jpg',
+      img: '/images/pro_serivices (1).webp',
       link: '/services/pro-services'
     },
     {
       icon: Globe,
       title: t("service.ministryServices.title"),
       description: t("service.ministryServices.desc"),
-      img: '/images/ministry_services (1).jpg',
+      img: '/images/ministry_services (1).webp',
       link: '/services/ministry-services'
     }
   ];
@@ -104,7 +104,7 @@ export default function Home1() {
     { name: t("countries.uae"), img: "/images/uae.jpeg", link: "/business-setup/uae" },
     { name: t("countries.kuwait"), img: "/images/kuwait.webp", link: "/business-setup/kuwait" },
     { name: t("countries.bahrain"), img: "/images/bahrain.jpg", link: "/business-setup/bahrain" },
-    { name: t("countries.iran"), img: "/images/iran.jpg", link: "/business-setup/iran" },
+    { name: t("countries.iran"), img: "/images/iran.webp", link: "/business-setup/iran" },
     { name: t("countries.india"), img: "/images/india.jpg", link: "/business-setup/india" },
   ];
 
