@@ -1,7 +1,7 @@
 // Mock API handler for chat functionality
 // In a production environment, this would be a real API endpoint
 
-import { handleChatRequest } from '../../functions/chat/index';
+import { handleChatRequest } from '../functions/chat/index';
 
 // Mock API function that simulates a real API call
 export const chatAPI = async (message: string): Promise<{ response: string }> => {
